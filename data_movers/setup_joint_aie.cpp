@@ -33,22 +33,22 @@ extern "C" {
 
 void setup_aie(int image_size, int* histogram_rows, hls::stream<int>& s) {
 
-	#pragma HLS interface m_axi port=input depth=100 offset=slave bundle=gmem0
+	#pragma HLS interface m_axi port=histogram_rows depth=100 offset=slave bundle=gmem0
 	#pragma HLS interface axis port=s
-	#pragma HLS interface s_axilite port=input bundle=control
-	#pragma HLS interface s_axilite port=size bundle=control
+	#pragma HLS interface s_axilite port=histogram_rows bundle=control
+	#pragma HLS interface s_axilite port=image_size bundle=control
 	#pragma HLS interface s_axilite port=return bundle=control
 
 	s.write(image_size);
 	for (int j = 0; j < LOOPS_J; j++) {
-		s.write(input[j*4+0]);
-		s.write(input[j*4+1]);
-		s.write(input[j*4+2]);
-		s.write(input[j*4+3]);
-		s.write(input[j*4+4]);
-		s.write(input[j*4+5]);
-		s.write(input[j*4+6]);
-		s.write(input[j*4+7]);
+		s.write(histogram_rows[j*8+0]);
+		s.write(histogram_rows[j*8+1]);
+		s.write(histogram_rows[j*8+2]);
+		s.write(histogram_rows[j*8+3]);
+		s.write(histogram_rows[j*8+4]);
+		s.write(histogram_rows[j*8+5]);
+		s.write(histogram_rows[j*8+6]);
+		s.write(histogram_rows[j*8+7]);
 	}
 }
 }

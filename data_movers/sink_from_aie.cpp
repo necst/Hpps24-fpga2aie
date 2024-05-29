@@ -44,7 +44,6 @@ void sink_from_aie(
 #pragma HLS INTERFACE m_axi port=output depth=100 offset=slave bundle=gmem1
 #pragma HLS INTERFACE s_axilite port=output bundle=control
 // PRAGMA for AXI-LITE : required to move params from host to PL
-#pragma HLS interface s_axilite port=size bundle=control
 #pragma HLS interface s_axilite port=return bundle=control
    output = input_stream.read();
 }
