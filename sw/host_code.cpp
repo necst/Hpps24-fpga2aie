@@ -39,20 +39,23 @@ SOFTWARE.
 
 // every top function input that must be passed from the host to the kernel must have a unique index starting from 0
 
-// args indexes for setup_aie kernel
-#define arg_setup_aie_size 0
-#define arg_setup_aie_input 1
+// args indexes for setup_joint_aie kernel
+#define arg_setup_joint_aie_image_size 0
+#define arg_setup_joint_aie_histogram_rows 1
+
+// args indexes for setup_marginal_aie kernel
+#define arg_setup_marginal_aie_image_size 0
+#define arg_setup_marginal_aie_histogram_rows 1
 
 // args indexes for sink_from_aie kernel
 #define arg_sink_from_aie_output 1
-#define arg_sink_from_aie_size 2
 
 bool get_xclbin_path(std::string& xclbin_file);
 std::ostream& bold_on(std::ostream& os);
 std::ostream& bold_off(std::ostream& os);
 
-int checkResult(float reference, float aie_result) {
-    if (reference != aie_result) {
+int checkResult(float* nums_joint, float* nums_marginal, float* output_buffer, float image_size, float true_result) {
+    if (*output_buffer!=true_result) {
         printf("Error: %f != %f {reference, result}",reference, aie_result);
         return EXIT_FAILURE;
     }
@@ -62,7 +65,15 @@ int checkResult(float reference, float aie_result) {
 }
 
 int main(int argc, char *argv[]) {
-    float reference = 0.0;
+    int image_size = 1024000;
+    float result = 4.487615108;
+    float nums_joint[SYMBOLS*SYMBOLS];
+    for (int i=0; i<SYMBOLS*SYMBOLS; i++) 
+        nums_joint[i] = i;
+
+    float nums_marginal[2*SYMBOLS];
+    for (int i=0; i<2*SYMBOLS; i++) 
+        nums_marginal[i] = i;
 
 //------------------------------------------------LOADING XCLBIN------------------------------------------    
     std::string xclbin_file;
@@ -77,51 +88,64 @@ int main(int argc, char *argv[]) {
 //----------------------------------------------INITIALIZING THE BOARD------------------------------------------
 
     // create kernel objects
-    xrt::kernel krnl_setup_aie  = xrt::kernel(device, xclbin_uuid, "setup_aie");
+    xrt::kernel krnl_setup_joint_aie  = xrt::kernel(device, xclbin_uuid, "setup_joint_aie");
+    xrt::kernel krnl_setup_marginal_aie  = xrt::kernel(device, xclbin_uuid, "setup_marginal_aie");
     xrt::kernel krnl_sink_from_aie  = xrt::kernel(device, xclbin_uuid, "sink_from_aie");
 
     // get memory bank groups for device buffer - required for axi master input/ouput
     xrtMemoryGroup bank_output  = krnl_sink_from_aie.group_id(arg_sink_from_aie_output);
-    xrtMemoryGroup bank_input  = krnl_setup_aie.group_id(arg_setup_aie_input);
+    xrtMemoryGroup bank_input  = krnl_setup_joint_aie.group_id(arg_setup_joint_aie_histogram_rows);
+    xrtMemoryGroup bank_input  = krnl_setup_marginal_aie.group_id(arg_setup_marginal_aie_histogram_rows);
 
     // create device buffers - if you have to load some data, here they are
-    xrt::bo buffer_setup_aie= xrt::bo(device, size * sizeof(float), xrt::bo::flags::normal, bank_input); 
-    xrt::bo buffer_sink_from_aie = xrt::bo(device, size * sizeof(float), xrt::bo::flags::normal, bank_output); 
+    xrt::bo buffer_setup_joint_aie= xrt::bo(device, SYMBOLS*SYMBOLS * sizeof(float), xrt::bo::flags::normal, bank_input); 
+    xrt::bo buffer_setup_marginal_aie= xrt::bo(device, SYMBOLS*2 * sizeof(float), xrt::bo::flags::normal, bank_input); 
+    xrt::bo buffer_sink_from_aie = xrt::bo(device, 1 * sizeof(float), xrt::bo::flags::normal, bank_output); 
 
     // create runner instances
-    xrt::run run_setup_aie   = xrt::run(krnl_setup_aie);
+    xrt::run run_setup_joint_aie   = xrt::run(krnl_setup_joint_aie);
+    xrt::run run_setup_marginal_aie   = xrt::run(krnl_setup_marginal_aie);
     xrt::run run_sink_from_aie = xrt::run(krnl_sink_from_aie);
 
-    // set setup_aie kernel arguments
-    run_setup_aie.set_arg(arg_setup_aie_size,  size);
-    run_setup_aie.set_arg(arg_setup_aie_input, buffer_setup_aie);
+    // set setup_joint_aie kernel arguments
+    run_setup_joint_aie.set_arg(arg_setup_joint_aie_image_size,  image_size);
+    run_setup_joint_aie.set_arg(arg_setup_joint_aie_histogram_rows, buffer_setup_joint_aie);
+
+    // set setup_marginal_aie kernel arguments
+    run_setup_marginal_aie.set_arg(arg_setup_marginal_aie_image_size,  image_size);
+    run_setup_marginal_aie.set_arg(arg_setup_marginal_aie_histogram_rows, buffer_setup_marginal_aie);
 
     // set sink_from_aie kernel arguments
     run_sink_from_aie.set_arg(arg_sink_from_aie_output, buffer_sink_from_aie);
-    run_sink_from_aie.set_arg(arg_sink_from_aie_size, size);
 
     // write data into the input buffer
-    buffer_setup_aie.write(nums);
-    buffer_setup_aie.sync(XCL_BO_SYNC_BO_TO_DEVICE);
+    buffer_setup_joint_aie.write(nums_joint);
+    buffer_setup_joint_aie.sync(XCL_BO_SYNC_BO_TO_DEVICE);
+
+    // write data into the input buffer
+    buffer_setup_marginal_aie.write(nums_marginal);
+    buffer_setup_marginal_aie.sync(XCL_BO_SYNC_BO_TO_DEVICE);
 
     // run the kernel
     run_sink_from_aie.start();
-    run_setup_aie.start();
+    run_setup_joint_aie.start();
+    run_setup_marginal_aie.start();
 
     // wait for the kernel to finish
-    run_setup_aie.wait();
+    run_setup_joint_aie.wait();+
+    run_setup_marginal_aie.wait();
     run_sink_from_aie.wait();
 
     // read the output buffer
     buffer_sink_from_aie.sync(XCL_BO_SYNC_BO_FROM_DEVICE);
-    float output_buffer[size];
+    float output_buffer[1];
     buffer_sink_from_aie.read(output_buffer);
 
     // ---------------------------------CONFRONTO PER VERIFICARE L'ERRORE--------------------------------------
         
     // Here there should be a code for checking correctness of your application, like a software application
 
-    return checkResult(reference, output_buffer[0]);
+    return checkResult(nums_joint, nums_marginal, output_buffer, image_size, true_result);
     }
 
 
