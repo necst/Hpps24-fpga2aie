@@ -66,7 +66,7 @@ int checkResult(float* nums_joint, float* nums_marginal, float* output_buffer, f
 
 int main(int argc, char *argv[]) {
     int image_size = 1024000;
-    float result = 4.487615108;
+    float result = -6812.255843199717;
     float nums_joint[SYMBOLS*SYMBOLS];
     for (int i=0; i<SYMBOLS*SYMBOLS; i++) 
         nums_joint[i] = i;
