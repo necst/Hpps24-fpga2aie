@@ -42,11 +42,11 @@ int main(int argc, char* argv[]) {
     // You will need to create the input and output of your function
     hls::stream<int> s;
     int image_size = 1024000;
-    int *input = new int[LOOPS_M*8];
+    int *histogram_rows = new int[LOOPS_M*8];
     for (unsigned int i = 0; i < (int)LOOPS_M*8; i++) {
-        input[i] = i;
+        histogram_rows[i] = i;
     }
-    setup_aie(image_size, input, s);
+    setup_aie(image_size, histogram_rows, s);
 
     // If the function worked I can print values in the stream and check them
     for(unsigned int i = 0; i < (int) LOOPS_M*8 +1 ; i++) {
@@ -69,7 +69,7 @@ int main(int argc, char* argv[]) {
         //firstly I write the size, which will be, according to setup_aie, size/4
         file << image_size << std::endl;
         for (unsigned int i = 0; i < (int) LOOPS_M*8; i++) {
-            file << input[i] << std::endl;
+            file << histogram_rows[i] << std::endl;
         }
         file.close();
     } else {

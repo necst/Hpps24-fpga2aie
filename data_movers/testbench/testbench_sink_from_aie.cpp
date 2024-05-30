@@ -37,7 +37,8 @@ int main(int argc, char *argv[]) {
 
     // I will create a stream of data
     hls::stream<float> s;
-    float output;
+    float *output = new float(1);
+    
 
     // I have to read the output of AI Engine from the file. 
     // Otherwise, I have no input for my testbench
@@ -50,15 +51,12 @@ int main(int argc, char *argv[]) {
     float x;
     file >> x;
     s.write(x);
-
     sink_from_aie(s,output);
 
     // if the kernel is correct, it will contains the expected data.
     // I can print them, for example, to check that they are equal to the output of AIE
-    std::cout << output << std::endl;
-
-    delete output;
-
+    std::cout << *output << std::endl;
     // Note that: you may also have a code that runs the AI Engine from your kernel, and so a testbench
     // that simulates the entire application flow. It is useful, but still I would suggest to use single kernel testbench too.
+    return 0;
 }
