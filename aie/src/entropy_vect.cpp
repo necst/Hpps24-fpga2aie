@@ -1,7 +1,7 @@
 #include "mutual_entropy_kernels.h"
 
 #define POLY_GRADE 6
-inline aie::vector<float, 8> log2(aie::vector<float, 8> x);
+inline aie::vector<float, 8> log2v(aie::vector<float, 8> x);
 
 ////////////////////////////////////////////KERNELS/////////////////////////////////////////////////
 //#ifndef MARGINAL_ENTROPY_KERNELS
@@ -9,7 +9,7 @@ void log_kernel_function(input_stream<float>* restrict input, output_stream<floa
     for(int i = 0; i < 128; i++){
         aie::vector<float,8> x;
         x = readincr_v<8>(input);
-        aie::vector<float,8> y = log2(x);
+        aie::vector<float,8> y = log2v(x);
         writeincr(output, y);
     }
 }
@@ -28,8 +28,8 @@ void entropy_vec_kernel_function(input_stream<int32>* restrict input, output_str
         // read 8 int from input stream and cast to flow
         x = aie::to_float(readincr_v<8>(input),0);
         x = fpmul(div, x);
-        aie::vector<float, 8> log2x = log2(x);
-        acc = fpmac(acc,log2x, x);  
+        aie::vector<float, 8> log2x = log2v(x);
+        acc = fpmac(acc,log2x, x); 
     }
 
     writeincr(output, acc);
@@ -47,8 +47,8 @@ void entropy_vec_pass_kernel_function(input_stream<int32>* restrict input_PL, in
         // read 8 int from input stream and cast to flow
         x = aie::to_float(readincr_v<8>(input_PL),0);
         x = fpmul(div, x);
-        aie::vector<float, 8> log2x = log2(x);
-        acc = fpmac(acc,log2x, x);  
+        aie::vector<float, 8> log2x = log2v(x);
+        acc = fpmac(acc,log2x, x); 
     }
     
     aie::vector<float, 8> y = readincr_v<8>(input_AIE);
@@ -70,7 +70,7 @@ void marginal_entropy_kernel_function(input_stream<int32>* restrict input, outpu
         // read 8 int from input stream and cast to flow
         x = aie::to_float(readincr_v<8>(input),0);
         x = fpmul(div, x);
-        aie::vector<float, 8> log2x = log2(x);
+        aie::vector<float, 8> log2x = log2v(x);
         acc = fpmac(acc,log2x, x);  
     }
     acc = fpneg(acc);
@@ -225,7 +225,8 @@ const aie::vector<float,8> c[3] = {
     aie::broadcast<float, 8>(-0.33722549505883914)
 };
 #endif
-inline aie::vector<float, 8> log2(aie::vector<float, 8> x){
+
+inline aie::vector<float, 8> log2v(aie::vector<float, 8> x){
     //separate the mantissa and get the exponent
     aie::vector<int32, 8> m = as_v8int32(x);
     m = aie::downshift(m,23); // keep only mantissa
