@@ -179,30 +179,30 @@ public:
             connect<stream>(joint_histo[i].out[0], joint_entropy[i].in[0]);
                     
             runtime<ratio>(joint_entropy[i]) = 0.9;
-            }
+        }
 
-	        marginal_entropy = kernel::create(marginal_entropy_kernel_function);
+		marginal_entropy = kernel::create(marginal_entropy_kernel_function);
 
-		    marginal_histo = input_plio::create("marginal_histo", plio_32_bits, "data/marginal.txt");
+		marginal_histo = input_plio::create("marginal_histo", plio_32_bits, "data/marginal.txt");
 
-            source(marginal_entropy)  = "src/entropy_vect.cpp";
-		    headers(marginal_entropy) = {"src/mutual_entropy_kernels.h","../common/common.h"};
+		source(marginal_entropy)  = "src/entropy_vect.cpp";
+		headers(marginal_entropy) = {"src/mutual_entropy_kernels.h","../common/common.h"};
 
-            connect<stream>(marginal_histo.out[0], marginal_entropy.in[0]);
-                
-            runtime<ratio>(marginal_entropy) = 0.9;
+		connect<stream>(marginal_histo.out[0], marginal_entropy.in[0]);
+			
+		runtime<ratio>(marginal_entropy) = 0.9;
 
-            for(int i = 0; i < REDUCERS; i++){
-                if(i == 0){
-                    reduce[i] = kernel::create(reduce_kernel_function);
-                }
-                else{
-                    reduce[i] = kernel::create(reduce_vec_kernel_function);
-                }
-                source(reduce[i])  = "src/reduce.cpp";
-		        headers(reduce[i]) = {"src/mutual_entropy_kernels.h","../common/common.h"};
-                runtime<ratio>(reduce[i]) = 0.9;
-            }
+		for(int i = 0; i < REDUCERS; i++){
+			if(i == 0){
+				reduce[i] = kernel::create(reduce_kernel_function);
+			}
+			else{
+				reduce[i] = kernel::create(reduce_vec_kernel_function);
+			}
+			source(reduce[i])  = "src/reduce.cpp";
+			headers(reduce[i]) = {"src/mutual_entropy_kernels.h","../common/common.h"};
+			runtime<ratio>(reduce[i]) = 0.9;
+		}
 
 		out_1 = output_plio::create("out_plio_1", plio_32_bits, "data/out_plio_sink_1.txt");
 
@@ -248,7 +248,7 @@ public:
 
 	my_graph()
 	{
-        for(int i = 0; i < ENTROPY_KERNELS; i++){
+    for(int i = 0; i < ENTROPY_KERNELS; i++){
         joint_entropy[i] = kernel::create(entropy_vec_kernel_function);
 
         std::ostringstream input_name;
@@ -263,45 +263,240 @@ public:
         connect<stream>(joint_histo[i].out[0], joint_entropy[i].in[0]);
                     
         runtime<ratio>(joint_entropy[i]) = 0.9;
-        }
+    }
 
-	    marginal_entropy = kernel::create(marginal_entropy_kernel_function);
+	marginal_entropy = kernel::create(marginal_entropy_kernel_function);
+	marginal_histo = input_plio::create("marginal_histo", plio_32_bits, "data/marginal.txt");
 
-		marginal_histo = input_plio::create("marginal_histo", plio_32_bits, "data/marginal.txt");
+	source(marginal_entropy)  = "src/entropy_vect.cpp";
+	headers(marginal_entropy) = {"src/mutual_entropy_kernels.h","../common/common.h"};
 
-        source(marginal_entropy)  = "src/entropy_vect.cpp";
-		headers(marginal_entropy) = {"src/mutual_entropy_kernels.h","../common/common.h"};
+	connect<stream>(marginal_histo.out[0], marginal_entropy.in[0]);
+			
+	runtime<ratio>(marginal_entropy) = 0.9;
 
-        connect<stream>(marginal_histo.out[0], marginal_entropy.in[0]);
-                
-        runtime<ratio>(marginal_entropy) = 0.9;
+	for(int i = 0; i < REDUCERS; i++){
+		if(i == 0){
+			reduce[i] = kernel::create(reduce_kernel_function);
+		}
+		else{
+			reduce[i] = kernel::create(reduce_vec_kernel_function);
+		}
+		source(reduce[i])  = "src/reduce.cpp";
+		headers(reduce[i]) = {"src/mutual_entropy_kernels.h","../common/common.h"};
+		runtime<ratio>(reduce[i]) = 0.9;
+	}
 
-        for(int i = 0; i < REDUCERS; i++){
-            if(i == 0){
-                reduce[i] = kernel::create(reduce_kernel_function);
+	out_1 = output_plio::create("out_plio_1", plio_32_bits, "data/out_plio_sink_1.txt");
+
+	// connect marginal entropy
+	connect<stream>(marginal_entropy.out[0], reduce[0].in[0]);
+
+	// connect last row with reducer
+	connect<stream>(joint_entropy[0].out[0], reduce[2].in[0]);
+	connect<stream>(joint_entropy[1].out[0], reduce[2].in[1]);
+	connect<stream>(joint_entropy[2].out[0], reduce[3].in[0]);
+	connect<stream>(joint_entropy[3].out[0], reduce[3].in[1]);
+
+	// tree-like reducer
+	connect<stream>(reduce[2].out[0], reduce[1].in[0]);
+	connect<stream>(reduce[3].out[0], reduce[1].in[1]);
+	connect<stream>(reduce[1].out[0], reduce[0].in[1]);
+	connect<stream>(reduce[0].out[0], out_1.in[0]);
+	};
+};
+#endif
+
+#if GRAPH == EIGHT_BY_16_SYS_ARR
+class my_graph: public graph
+{
+
+private:
+	// ------kernel declaration------
+	kernel marginal_entropy;
+	kernel joint_entropy[ENTROPY_KERNELS];
+    kernel reduce[REDUCERS];
+
+public:
+	// ------Input and Output PLIO declaration------
+
+	input_plio joint_histo[ENTROPY_KERNELS];
+    input_plio marginal_histo;
+	output_plio out_1;
+
+	my_graph()
+	{
+        // Create Kernels and inputs for computing joint entropy
+        for(int i = 0; i < ENTROPY_KERNELS; i++){
+			std::ostringstream input_name;
+            std::ostringstream file_name;
+            input_name << "joint_histo_" << i;
+            file_name << "data/column_couples/two_columns_" << i << ".txt";
+		    joint_histo[i] = input_plio::create(input_name.str(), plio_32_bits, file_name.str());
+
+            if(i < (ENTROPY_KERNELS - KERNEL_ROWS + 1)){
+                joint_entropy[i] = kernel::create(entropy_vec_pass_kernel_function); 
             }
             else{
-                reduce[i] = kernel::create(reduce_vec_kernel_function);
+                joint_entropy[i] = kernel::create(entropy_vec_kernel_function); 
             }
-            source(reduce[i])  = "src/reduce.cpp";
-		    headers(reduce[i]) = {"src/mutual_entropy_kernels.h","../common/common.h"};
-            runtime<ratio>(reduce[i]) = 0.9;
+
+            source(joint_entropy[i])  = "src/entropy_vect.cpp";
+		    headers(joint_entropy[i]) = {"src/mutual_entropy_kernels.h","../common/common.h"};
+            connect<stream>(joint_histo[i].out[0], joint_entropy[i].in[0]);        
+            runtime<ratio>(joint_entropy[i]) = 0.9;
         }
+
+		// Create Kernels and inputs for computing marginal entropies
+		marginal_entropy = kernel::create(marginal_entropy_kernel_function);
+		marginal_histo = input_plio::create("marginal_histo", plio_32_bits, "data/marginal.txt");
+
+		source(marginal_entropy)  = "src/entropy_vect.cpp";
+		headers(marginal_entropy) = {"src/mutual_entropy_kernels.h","../common/common.h"};
+		connect<stream>(marginal_histo.out[0], marginal_entropy.in[0]);
+		runtime<ratio>(marginal_entropy) = 0.9;
+
+		//create reducers
+		for(int i = 0; i < REDUCERS; i++){
+			if(i == 0){
+				reduce[i] = kernel::create(reduce_kernel_function);
+			}
+			else{
+				reduce[i] = kernel::create(reduce_vec_kernel_function);
+			}
+			source(reduce[i])  = "src/reduce.cpp";
+			headers(reduce[i]) = {"src/mutual_entropy_kernels.h","../common/common.h"};
+			runtime<ratio>(reduce[i]) = 0.9;
+		}
 
 		out_1 = output_plio::create("out_plio_1", plio_32_bits, "data/out_plio_sink_1.txt");
 
         // connect marginal entropy
-        connect<stream>(marginal_entropy.out[0], reduce[0].in[0]);
+        connect<stream>(marginal_entropy.out[0], joint_entropy[ENTROPY_KERNELS - KERNEL_ROWS].in[1]);
+
+        // connect rows of the systolic array
+		for(int i = 0; i < ENTROPY_KERNELS - KERNEL_ROWS; i++){
+			connect<stream>(joint_entropy[i + KERNEL_ROWS].out[0], joint_entropy[i].in[1]);
+		}
 
         // connect last row with reducer
-        connect<stream>(joint_entropy[0].out[0], reduce[2].in[0]);
-        connect<stream>(joint_entropy[1].out[0], reduce[2].in[1]);
-        connect<stream>(joint_entropy[2].out[0], reduce[3].in[0]);
-        connect<stream>(joint_entropy[3].out[0], reduce[3].in[1]);
+        connect<stream>(joint_entropy[0].out[0], reduce[3].in[0]);
+        connect<stream>(joint_entropy[1].out[0], reduce[3].in[1]);
+        connect<stream>(joint_entropy[2].out[0], reduce[4].in[0]);
+        connect<stream>(joint_entropy[3].out[0], reduce[4].in[1]);
+		connect<stream>(joint_entropy[4].out[0], reduce[5].in[0]);
+        connect<stream>(joint_entropy[5].out[0], reduce[5].in[1]);
+        connect<stream>(joint_entropy[6].out[0], reduce[6].in[0]);
+        connect<stream>(joint_entropy[7].out[0], reduce[6].in[1]);
 
         // tree-like reducer
-		connect<stream>(reduce[2].out[0], reduce[1].in[0]);
-		connect<stream>(reduce[3].out[0], reduce[1].in[1]);
+		connect<stream>(reduce[3].out[0], reduce[1].in[0]);
+        connect<stream>(reduce[4].out[0], reduce[1].in[1]);
+		connect<stream>(reduce[5].out[0], reduce[2].in[0]);
+        connect<stream>(reduce[6].out[0], reduce[2].in[1]);
+		connect<stream>(reduce[2].out[0], reduce[0].in[0]);
+        connect<stream>(reduce[1].out[0], reduce[0].in[1]);
+		connect<stream>(reduce[0].out[0], out_1.in[0]);
+	};
+};
+#endif
+
+// too much input for the VCK5000 (258 vs maximum capacity of 234)
+#if GRAPH == EIGHT_BY_32_SYS_ARR
+class my_graph: public graph
+{
+
+private:
+	// ------kernel declaration------
+	kernel marginal_entropy[MARGINAL_ENTROPY_KERNELS];
+	kernel joint_entropy[ENTROPY_KERNELS];
+    kernel reduce[REDUCERS];
+
+public:
+	// ------Input and Output PLIO declaration------
+
+	input_plio joint_histo[ENTROPY_KERNELS];
+    input_plio marginal_histo[MARGINAL_ENTROPY_KERNELS];
+	output_plio out_1;
+
+	my_graph()
+	{
+        // Create Kernels and inputs for computing joint entropy
+        for(int i = 0; i < ENTROPY_KERNELS; i++){
+			std::ostringstream input_name;
+            std::ostringstream file_name;
+            input_name << "joint_histo_" << i+1;
+            file_name << "data/columns/column_" << i+1 << ".txt";
+		    joint_histo[i] = input_plio::create(input_name.str(), plio_32_bits, file_name.str());
+
+            if(i < (ENTROPY_KERNELS - KERNEL_ROWS + 2)){
+                joint_entropy[i] = kernel::create(entropy_vec_pass_kernel_function); 
+            }
+            else{
+                joint_entropy[i] = kernel::create(entropy_vec_kernel_function); 
+            }
+
+            source(joint_entropy[i])  = "src/entropy_vect.cpp";
+		    headers(joint_entropy[i]) = {"src/mutual_entropy_kernels.h","../common/common.h"};
+            connect<stream>(joint_histo[i].out[0], joint_entropy[i].in[0]);        
+            runtime<ratio>(joint_entropy[i]) = 0.9;
+        }
+
+		// Create Kernels and inputs for computing marginal entropies
+		for(int i = 0; i < MARGINAL_ENTROPY_KERNELS; i++){
+			std::ostringstream input_name;
+            std::ostringstream file_name;
+            input_name << "marginal_histo_" << i+1;
+            file_name << "data/marginal" << i+1 << ".txt";
+
+			marginal_entropy[i] = kernel::create(marginal_entropy_kernel_function);
+			marginal_histo[i] = input_plio::create(input_name.str(), plio_32_bits, file_name.str());
+
+			source(marginal_entropy[i])  = "src/entropy_vect.cpp";
+			headers(marginal_entropy[i]) = {"src/mutual_entropy_kernels.h","../common/common.h"};
+			connect<stream>(marginal_histo[i].out[0], marginal_entropy[i].in[0]);
+			runtime<ratio>(marginal_entropy[i]) = 0.9;
+		}
+		//create reducers
+		for(int i = 0; i < REDUCERS; i++){
+			if(i == 0){
+				reduce[i] = kernel::create(reduce_kernel_function);
+			}
+			else{
+				reduce[i] = kernel::create(reduce_vec_kernel_function);
+			}
+			source(reduce[i])  = "src/reduce.cpp";
+			headers(reduce[i]) = {"src/mutual_entropy_kernels.h","../common/common.h"};
+			runtime<ratio>(reduce[i]) = 0.9;
+		}
+
+		out_1 = output_plio::create("out_plio_1", plio_32_bits, "data/out_plio_sink_1.txt");
+
+        // connect marginal entropy
+        connect<stream>(marginal_entropy[0].out[0], joint_entropy[ENTROPY_KERNELS - KERNEL_ROWS].in[1]);
+		connect<stream>(marginal_entropy[1].out[0], joint_entropy[ENTROPY_KERNELS - KERNEL_ROWS + 1].in[1]);
+
+        // connect rows of the systolic array
+		for(int i = 0; i < ENTROPY_KERNELS - KERNEL_ROWS; i++){
+			connect<stream>(joint_entropy[i + KERNEL_ROWS].out[0], joint_entropy[i].in[1]);
+		}
+
+        // connect last row with reducer
+        connect<stream>(joint_entropy[0].out[0], reduce[3].in[0]);
+        connect<stream>(joint_entropy[1].out[0], reduce[3].in[1]);
+        connect<stream>(joint_entropy[2].out[0], reduce[4].in[0]);
+        connect<stream>(joint_entropy[3].out[0], reduce[4].in[1]);
+		connect<stream>(joint_entropy[4].out[0], reduce[5].in[0]);
+        connect<stream>(joint_entropy[5].out[0], reduce[5].in[1]);
+        connect<stream>(joint_entropy[6].out[0], reduce[6].in[0]);
+        connect<stream>(joint_entropy[7].out[0], reduce[6].in[1]);
+
+        // tree-like reducer
+		connect<stream>(reduce[3].out[0], reduce[1].in[0]);
+        connect<stream>(reduce[4].out[0], reduce[1].in[1]);
+		connect<stream>(reduce[5].out[0], reduce[2].in[0]);
+        connect<stream>(reduce[6].out[0], reduce[2].in[1]);
+		connect<stream>(reduce[2].out[0], reduce[0].in[0]);
         connect<stream>(reduce[1].out[0], reduce[0].in[1]);
 		connect<stream>(reduce[0].out[0], out_1.in[0]);
 	};
