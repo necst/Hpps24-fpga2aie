@@ -31,24 +31,120 @@ SOFTWARE.
 
 extern "C" {
 
-void setup_aie(int image_size, int* histogram_rows, hls::stream<int>& s) {
+void setup_aie(
+	int image_size, 
+	int* histogram_rows_0,
+	int* histogram_rows_1,
+	int* histogram_rows_2,
+	int* histogram_rows_3,
+	int* histogram_rows_4,
+	int* histogram_rows_5,
+	int* histogram_rows_6,
+	int* histogram_rows_7, 
+	hls::stream<int>& s_0, 
+	hls::stream<int>& s_1, 
+	hls::stream<int>& s_2, 
+	hls::stream<int>& s_3, 
+	hls::stream<int>& s_4,
+	hls::stream<int>& s_5,
+	hls::stream<int>& s_6,
+	hls::stream<int>& s_7) {
 
 	#pragma HLS interface m_axi port=histogram_rows depth=100 offset=slave bundle=gmem0
-	#pragma HLS interface axis port=s
+	#pragma HLS interface axis port=s_0
+	#pragma HLS interface axis port=s_1
+	#pragma HLS interface axis port=s_2
+	#pragma HLS interface axis port=s_3
+	#pragma HLS interface axis port=s_4
+	#pragma HLS interface axis port=s_5
+	#pragma HLS interface axis port=s_6
+	#pragma HLS interface axis port=s_7
 	#pragma HLS interface s_axilite port=histogram_rows bundle=control
 	#pragma HLS interface s_axilite port=image_size bundle=control
 	#pragma HLS interface s_axilite port=return bundle=control
 
-	s.write(image_size);
+	s_0.write(image_size);
+	s_1.write(image_size);
+	s_2.write(image_size);
+	s_3.write(image_size);
+	s_4.write(image_size);
+	s_5.write(image_size);
+	s_6.write(image_size);
+	s_7.write(image_size);
+
 	for (int j = 0; j < LOOPS_J; j++) {
-		s.write(histogram_rows[j*8+0]);
-		s.write(histogram_rows[j*8+1]);
-		s.write(histogram_rows[j*8+2]);
-		s.write(histogram_rows[j*8+3]);
-		s.write(histogram_rows[j*8+4]);
-		s.write(histogram_rows[j*8+5]);
-		s.write(histogram_rows[j*8+6]);
-		s.write(histogram_rows[j*8+7]);
+
+		s_0.write(histogram_rows_0[j*8+0]);
+		s_0.write(histogram_rows_0[j*8+1]);
+		s_0.write(histogram_rows_0[j*8+2]);
+		s_0.write(histogram_rows_0[j*8+3]);
+		s_0.write(histogram_rows_0[j*8+4]);
+		s_0.write(histogram_rows_0[j*8+5]);
+		s_0.write(histogram_rows_0[j*8+6]);
+		s_0.write(histogram_rows_0[j*8+7]);
+		
+		s_1.write(histogram_rows_1[j*8+0]);
+		s_1.write(histogram_rows_1[j*8+1]);
+		s_1.write(histogram_rows_1[j*8+2]);
+		s_1.write(histogram_rows_1[j*8+3]);
+		s_1.write(histogram_rows_1[j*8+4]);
+		s_1.write(histogram_rows_1[j*8+5]);
+		s_1.write(histogram_rows_1[j*8+6]);
+		s_1.write(histogram_rows_1[j*8+7]);
+
+		s_2.write(histogram_rows_2[j*8+0]);
+		s_2.write(histogram_rows_2[j*8+1]);
+		s_2.write(histogram_rows_2[j*8+2]);
+		s_2.write(histogram_rows_2[j*8+3]);
+		s_2.write(histogram_rows_2[j*8+4]);
+		s_2.write(histogram_rows_2[j*8+5]);
+		s_2.write(histogram_rows_2[j*8+6]);
+		s_2.write(histogram_rows_2[j*8+7]);
+
+		s_3.write(histogram_rows_3[j*8+0]);
+		s_3.write(histogram_rows_3[j*8+1]);
+		s_3.write(histogram_rows_3[j*8+2]);
+		s_3.write(histogram_rows_3[j*8+3]);
+		s_3.write(histogram_rows_3[j*8+4]);
+		s_3.write(histogram_rows_3[j*8+5]);
+		s_3.write(histogram_rows_3[j*8+6]);
+		s_3.write(histogram_rows_3[j*8+7]);
+
+		s_4.write(histogram_rows_4[j*8+0]);
+		s_4.write(histogram_rows_4[j*8+1]);
+		s_4.write(histogram_rows_4[j*8+2]);
+		s_4.write(histogram_rows_4[j*8+3]);
+		s_4.write(histogram_rows_4[j*8+4]);
+		s_4.write(histogram_rows_4[j*8+5]);
+		s_4.write(histogram_rows_4[j*8+6]);
+		s_4.write(histogram_rows_4[j*8+7]);
+
+		s_5.write(histogram_rows_5[j*8+0]);
+		s_5.write(histogram_rows_5[j*8+1]);
+		s_5.write(histogram_rows_5[j*8+2]);
+		s_5.write(histogram_rows_5[j*8+3]);
+		s_5.write(histogram_rows_5[j*8+4]);
+		s_5.write(histogram_rows_5[j*8+5]);
+		s_5.write(histogram_rows_5[j*8+6]);
+		s_5.write(histogram_rows_5[j*8+7]);
+
+		s_6.write(histogram_rows_6[j*8+0]);
+		s_6.write(histogram_rows_6[j*8+1]);
+		s_6.write(histogram_rows_6[j*8+2]);
+		s_6.write(histogram_rows_6[j*8+3]);
+		s_6.write(histogram_rows_6[j*8+4]);
+		s_6.write(histogram_rows_6[j*8+5]);
+		s_6.write(histogram_rows_6[j*8+6]);
+		s_6.write(histogram_rows_6[j*8+7]);
+
+		s_7.write(histogram_rows_7[j*8+0]);
+		s_7.write(histogram_rows_7[j*8+1]);
+		s_7.write(histogram_rows_7[j*8+2]);
+		s_7.write(histogram_rows_7[j*8+3]);
+		s_7.write(histogram_rows_7[j*8+4]);
+		s_7.write(histogram_rows_7[j*8+5]);
+		s_7.write(histogram_rows_7[j*8+6]);
+		s_7.write(histogram_rows_7[j*8+7]);
 	}
 }
 }

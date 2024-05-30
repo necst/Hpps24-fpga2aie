@@ -154,7 +154,7 @@ public:
 	// ------Input and Output PLIO declaration------
 
 	input_plio joint_histo[ENTROPY_KERNELS];
-        input_plio marginal_histo;
+    input_plio marginal_histo;
 	output_plio out_1;
 
 	my_graph()
