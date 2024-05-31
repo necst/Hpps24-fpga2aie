@@ -1,0 +1,18 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "setup_joint_aie",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/users\/francesco.santambrogio\/Downloads\/Hpps24-fpga2aie\/data_movers\/_x\/setup_joint_aie_hw\/setup_joint_aie\/setup_joint_aie.tcl",
+          "sourceLine": "27",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "setup_joint_aie"
+              }]
+          }
+        }]
+    }]}

@@ -1,6 +1,6 @@
 <ENTRY>
 {
- "thisFile": "/home/users/giacomo.brunetta/Downloads/VersalTESTS/aie/Work/graph.aiecompile_summary",
+ "thisFile": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/graph.aiecompile_summary",
  "connectId": "",
  "serverToken": "",
  "timestamp": "0"
@@ -9,34 +9,38 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "Tue May 28 16:52:44 2024",
- "timestampMillis": "1716907964218",
+ "dateTimestamp": "Fri May 31 12:50:18 2024",
+ "timestampMillis": "1717152618083",
  "buildStep": {
-  "cmdId": "5de250e8-61ba-49e8-87a7-8df1de6f9776",
+  "cmdId": "bb523ff2-e14d-4e62-b907-81817c060b2d",
   "name": "aiecompiler",
-  "logFile": "/home/users/giacomo.brunetta/Downloads/VersalTESTS/aie/AIECompiler.log",
-  "commandLine": "/home/xilinx/software/Vitis/2022.2/aietools/bin/unwrapped/lnx64.o/aiecompiler --target=x86sim --platform=/opt/xilinx/platforms/xilinx_vck5000_gen4x8_qdma_2_202220_1/hw/xilinx_vck5000_gen4x8_qdma_2_202220_1.xsa --include=src --include=../common --workdir=./Work src/graph.cpp ",
+  "logFile": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/AIECompiler.log",
+  "commandLine": "/home/xilinx/software/Vitis/2022.2/aietools/bin/unwrapped/lnx64.o/aiecompiler --target=hw --platform=/opt/xilinx/platforms/xilinx_vck5000_gen4x8_qdma_2_202220_1/hw/xilinx_vck5000_gen4x8_qdma_2_202220_1.xsa --include=src --include=../common --workdir=./Work --heapsize=2048 --stacksize=4096 --xlopt=2 -v src/graph.cpp ",
   "args": [
    "/home/xilinx/software/Vitis/2022.2/aietools/bin/unwrapped/lnx64.o/aiecompiler",
-   "--target=x86sim",
+   "--target=hw",
    "--platform=/opt/xilinx/platforms/xilinx_vck5000_gen4x8_qdma_2_202220_1/hw/xilinx_vck5000_gen4x8_qdma_2_202220_1.xsa",
    "--include=src",
    "--include=../common",
    "--workdir=./Work",
+   "--heapsize=2048",
+   "--stacksize=4096",
+   "--xlopt=2",
+   "-v",
    "src/graph.cpp"
   ],
   "iniFiles": [],
-  "cwd": "/home/users/giacomo.brunetta/Downloads/VersalTESTS/aie"
+  "cwd": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Tue May 28 16:52:44 2024",
- "timestampMillis": "1716907964218",
+ "dateTimestamp": "Fri May 31 12:50:18 2024",
+ "timestampMillis": "1717152618084",
  "status": {
-  "cmdId": "5de250e8-61ba-49e8-87a7-8df1de6f9776",
+  "cmdId": "bb523ff2-e14d-4e62-b907-81817c060b2d",
   "state": "CS_RUNNING"
  }
 }
@@ -44,8 +48,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "Tue May 28 16:52:44 2024",
- "timestampMillis": "1716907964219",
+ "dateTimestamp": "Fri May 31 12:50:18 2024",
+ "timestampMillis": "1717152618084",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -62,10 +66,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue May 28 16:52:44 2024",
- "timestampMillis": "1716907964223",
+ "dateTimestamp": "Fri May 31 12:50:18 2024",
+ "timestampMillis": "1717152618089",
  "report": {
-  "path": "/home/users/giacomo.brunetta/Downloads/VersalTESTS/aie/Work",
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work",
   "name": "",
   "fileType": "DIR",
   "reportType": "AIE_COMPILER_WORKDIR",
@@ -76,10 +80,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue May 28 16:52:44 2024",
- "timestampMillis": "1716907964223",
+ "dateTimestamp": "Fri May 31 12:50:18 2024",
+ "timestampMillis": "1717152618089",
  "report": {
-  "path": "/home/users/giacomo.brunetta/Downloads/VersalTESTS/aie/Work/reports/guidance.html",
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/reports/guidance.html",
   "name": "",
   "fileType": "HTML",
   "reportType": "GLOBAL_RULECHECK_GUIDANCE",
@@ -90,10 +94,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue May 28 16:52:44 2024",
- "timestampMillis": "1716907964224",
+ "dateTimestamp": "Fri May 31 12:50:18 2024",
+ "timestampMillis": "1717152618089",
  "report": {
-  "path": "/home/users/giacomo.brunetta/Downloads/VersalTESTS/aie/Work/reports/guidance.pb3",
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/reports/guidance.pb3",
   "name": "",
   "fileType": "BINARY_PROTOBUF",
   "reportType": "GLOBAL_RULECHECK_GUIDANCE",
@@ -104,13 +108,13 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "Tue May 28 16:52:50 2024",
- "timestampMillis": "1716907970537",
+ "dateTimestamp": "Fri May 31 12:50:25 2024",
+ "timestampMillis": "1717152625224",
  "buildStep": {
-  "cmdId": "8b72bab3-39c4-4014-84dd-757d8c4543f6",
+  "cmdId": "ffa08960-61bf-478b-a25b-b5a48908cbd2",
   "name": "aieir_be",
   "logFile": "",
-  "commandLine": "/home/xilinx/software/Vitis/2022.2/aietools/bin/unwrapped/lnx64.o/aieir_be --time-passes=0 --disable-om-fifo-insertion=false --logcfg-file= --trace-plio-width=64 --aie2ipu-base-addr=1073741824 --pl-freq=0 --use-real-noc=true --enable-light-cdo=false --show-loggers=false --fast-nonlinearfloats=false --broadcast-enable-core=true --high-performance=false --multi-layer-opt=0 --kernel-address-location=false --target=x86sim --swfifo-threshold=40 --single-mm2s-channel=false --workdir=./Work --exit-after=complete --event-trace-config= --test-iterations=-1 --stacksize=1024 --known-tripcount=false --enable-core-processor-bus=false --platform=/opt/xilinx/platforms/xilinx_vck5000_gen4x8_qdma_2_202220_1/hw/xilinx_vck5000_gen4x8_qdma_2_202220_1.xsa --event-trace-custom-config= --disable-dma-cmd-alignment=false --enable-ecc-scrubbing=true --float-accuracy=fast --output-archive=libadf.a --write-partitioned-file=true --print-timer-multi-layer-ctrl=false --schemafile=AIEGraphSchema.json --disable-multirate=false --include=src --include=../common --verify-switchconfig=true --device= --enable-peano-flow=false --disable-multirate-analysis=false --fastmath=false --cpp-std=-std=c++17 --max-layer-ctrl-param-size=256 --enable-mapper-hints-constraints=false --event-trace-advanced-mapping=0 --enable-reconfig=false --compute-heapsize=true --log-level=1 --aiesim-xrt-api=false --evaluate-fifo-depth=false --gen-graph-cleanup=false --use-canonical-net-names=false --event-trace-port=gmio --use-phy-shim=true --print-timer-multi-layer-core=false --xlopt=1 --graph-iterator-event=false --pre-compile-kernels=false --trace-aiesim-option=0 --aiearch=aie --mapped-soln-udm= --optimize-pktids=false --no-init=false --adf-api-log-level=2 --num-trace-streams=16 --aie-heat-map=false --enable-partition=false --phydevice= --fast-floats=true --quiet=false --enable-multi-layer=false --exec-timed=0 --pl-auto-restart=false --routed-soln-udm= --large-kernel-program=false --enable-profiling=false --runtime-opt=false --disable-transform-merge-broadcast=false --verbose=false --use-async-rtp-locks=true --repo-path= --genArchive=false --kernel-compile-replacement= --pl-axi-lite=false --event-trace-bounding-box= --multi-layer-shim-dma-bandwidth=0 --heapsize=1024 --logical-arch= --enable-reconfig-dma-autostart=false --nodot-graph=false --disable-dma-autostart=false --disable-transform-broadcast-split=true --frontend-warning=0 --frontend-critical-warning=0 -json ./Work/temp/graph.json -sdf-graph src/graph.cpp ",
+  "commandLine": "/home/xilinx/software/Vitis/2022.2/aietools/bin/unwrapped/lnx64.o/aieir_be --time-passes=0 --disable-om-fifo-insertion=false --logcfg-file= --trace-plio-width=64 --aie2ipu-base-addr=1073741824 --pl-freq=0 --use-real-noc=true --enable-light-cdo=false --show-loggers=false --fast-nonlinearfloats=false --broadcast-enable-core=true --high-performance=false --multi-layer-opt=0 --kernel-address-location=false --target=hw --swfifo-threshold=40 --single-mm2s-channel=false --workdir=./Work --exit-after=complete --event-trace-config= --test-iterations=-1 --stacksize=4096 --known-tripcount=false --enable-core-processor-bus=false --platform=/opt/xilinx/platforms/xilinx_vck5000_gen4x8_qdma_2_202220_1/hw/xilinx_vck5000_gen4x8_qdma_2_202220_1.xsa --event-trace-custom-config= --disable-dma-cmd-alignment=false --enable-ecc-scrubbing=true --float-accuracy=fast --output-archive=libadf.a --write-partitioned-file=true --print-timer-multi-layer-ctrl=false --schemafile=AIEGraphSchema.json --disable-multirate=false --include=src --include=../common --verify-switchconfig=true --device= --enable-peano-flow=false --disable-multirate-analysis=false --fastmath=false --cpp-std=-std=c++17 --max-layer-ctrl-param-size=256 --enable-mapper-hints-constraints=false --event-trace-advanced-mapping=0 --enable-reconfig=false --compute-heapsize=false --log-level=2 --aiesim-xrt-api=false --evaluate-fifo-depth=false --gen-graph-cleanup=false --use-canonical-net-names=false --event-trace-port=gmio --use-phy-shim=true --print-timer-multi-layer-core=false --xlopt=2 --graph-iterator-event=false --pre-compile-kernels=false --trace-aiesim-option=0 --aiearch=aie --mapped-soln-udm= --optimize-pktids=false --no-init=false --adf-api-log-level=2 --num-trace-streams=16 --aie-heat-map=false --enable-partition=false --phydevice= --fast-floats=true --quiet=false --enable-multi-layer=false --exec-timed=0 --pl-auto-restart=false --routed-soln-udm= --large-kernel-program=false --enable-profiling=false --runtime-opt=false --disable-transform-merge-broadcast=false --verbose=true --use-async-rtp-locks=true --repo-path= --genArchive=false --kernel-compile-replacement= --pl-axi-lite=false --event-trace-bounding-box= --multi-layer-shim-dma-bandwidth=0 --heapsize=2048 --logical-arch= --enable-reconfig-dma-autostart=false --nodot-graph=false --disable-dma-autostart=false --disable-transform-broadcast-split=true --frontend-warning=0 --frontend-critical-warning=0 -json ./Work/temp/graph.json -sdf-graph src/graph.cpp ",
   "args": [
    "/home/xilinx/software/Vitis/2022.2/aietools/bin/unwrapped/lnx64.o/aieir_be",
    "--time-passes=0",
@@ -127,14 +131,14 @@
    "--high-performance=false",
    "--multi-layer-opt=0",
    "--kernel-address-location=false",
-   "--target=x86sim",
+   "--target=hw",
    "--swfifo-threshold=40",
    "--single-mm2s-channel=false",
    "--workdir=./Work",
    "--exit-after=complete",
    "--event-trace-config=",
    "--test-iterations=-1",
-   "--stacksize=1024",
+   "--stacksize=4096",
    "--known-tripcount=false",
    "--enable-core-processor-bus=false",
    "--platform=/opt/xilinx/platforms/xilinx_vck5000_gen4x8_qdma_2_202220_1/hw/xilinx_vck5000_gen4x8_qdma_2_202220_1.xsa",
@@ -159,8 +163,8 @@
    "--enable-mapper-hints-constraints=false",
    "--event-trace-advanced-mapping=0",
    "--enable-reconfig=false",
-   "--compute-heapsize=true",
-   "--log-level=1",
+   "--compute-heapsize=false",
+   "--log-level=2",
    "--aiesim-xrt-api=false",
    "--evaluate-fifo-depth=false",
    "--gen-graph-cleanup=false",
@@ -168,7 +172,7 @@
    "--event-trace-port=gmio",
    "--use-phy-shim=true",
    "--print-timer-multi-layer-core=false",
-   "--xlopt=1",
+   "--xlopt=2",
    "--graph-iterator-event=false",
    "--pre-compile-kernels=false",
    "--trace-aiesim-option=0",
@@ -191,7 +195,7 @@
    "--enable-profiling=false",
    "--runtime-opt=false",
    "--disable-transform-merge-broadcast=false",
-   "--verbose=false",
+   "--verbose=true",
    "--use-async-rtp-locks=true",
    "--repo-path=",
    "--genArchive=false",
@@ -199,7 +203,7 @@
    "--pl-axi-lite=false",
    "--event-trace-bounding-box=",
    "--multi-layer-shim-dma-bandwidth=0",
-   "--heapsize=1024",
+   "--heapsize=2048",
    "--logical-arch=",
    "--enable-reconfig-dma-autostart=false",
    "--nodot-graph=false",
@@ -213,17 +217,17 @@
    "src/graph.cpp"
   ],
   "iniFiles": [],
-  "cwd": "/home/users/giacomo.brunetta/Downloads/VersalTESTS/aie"
+  "cwd": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Tue May 28 16:52:50 2024",
- "timestampMillis": "1716907970538",
+ "dateTimestamp": "Fri May 31 12:50:25 2024",
+ "timestampMillis": "1717152625225",
  "status": {
-  "cmdId": "8b72bab3-39c4-4014-84dd-757d8c4543f6",
+  "cmdId": "ffa08960-61bf-478b-a25b-b5a48908cbd2",
   "state": "CS_RUNNING"
  }
 }
@@ -231,10 +235,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue May 28 16:53:06 2024",
- "timestampMillis": "1716907986296",
+ "dateTimestamp": "Fri May 31 12:50:42 2024",
+ "timestampMillis": "1717152642790",
  "report": {
-  "path": "/home/users/giacomo.brunetta/Downloads/VersalTESTS/aie/Work",
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work",
   "name": "",
   "fileType": "DIR",
   "reportType": "AIE_COMPILER_WORKDIR",
@@ -244,33 +248,47 @@
 </ENTRY>
 <ENTRY>
 {
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:00 2024",
+ "timestampMillis": "1717152660101",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/temp/debug_config.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "AIE_DEBUG_CONFIG",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
  "type": "ET_FlowMetaData",
- "dateTimestamp": "Tue May 28 16:53:06 2024",
- "timestampMillis": "1716907986297",
+ "dateTimestamp": "Fri May 31 12:51:00 2024",
+ "timestampMillis": "1717152660104",
  "buildSummary": {
-  "hardwarePlatform": "",
-  "hardwareDsa": "",
+  "hardwarePlatform": "xcvc1902-vsvd1760-2MP-e-S",
+  "hardwareDsa": "VC1902",
   "platformDirectory": "",
   "runtime": "",
   "systemConfig": "",
   "flow": "BF_COMPILE",
-  "target": "TT_X86SIM",
+  "target": "TT_HW",
   "kernels": [
    {
     "base": {
      "type": "KERNEL",
      "name": "",
-     "file": "/home/users/giacomo.brunetta/Downloads/VersalTESTS/aie/Work/temp/graph.json",
+     "file": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/temp/graph.json",
      "reports": [],
      "uuid": ""
     },
     "sources": [
-     "/home/users/giacomo.brunetta/Downloads/VersalTESTS/aie/src/graph.cpp"
+     "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/src/graph.cpp"
     ],
     "psSources": [],
     "cuNames": [],
     "type": "AIE",
-    "frequency": 0,
+    "frequency": 1250,
     "freqUnits": ""
    }
   ],
@@ -281,10 +299,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue May 28 16:53:06 2024",
- "timestampMillis": "1716907986300",
+ "dateTimestamp": "Fri May 31 12:51:00 2024",
+ "timestampMillis": "1717152660106",
  "report": {
-  "path": "/home/users/giacomo.brunetta/Downloads/VersalTESTS/aie/Work/temp/graph.json",
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/temp/graph.json",
   "name": "",
   "fileType": "JSON",
   "reportType": "AIE_GRAPH",
@@ -295,10 +313,766 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue May 28 16:53:25 2024",
- "timestampMillis": "1716908005691",
+ "dateTimestamp": "Fri May 31 12:51:15 2024",
+ "timestampMillis": "1717152675678",
  "report": {
-  "path": "/home/users/giacomo.brunetta/Downloads/VersalTESTS/aie/Work/ps/c_rts/aie_control_config.json",
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/reports/graph.png",
+  "name": "",
+  "fileType": "PNG",
+  "reportType": "AIE_LOGICAL_VIEW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:15 2024",
+ "timestampMillis": "1717152675715",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/temp/graph_partition.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "AIE_GRAPH_PARTITION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:17 2024",
+ "timestampMillis": "1717152677470",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/temp/graph_aie_constraints_for_placer.aiecst",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "AIE_CONSTRAINTS_PLACER",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:20 2024",
+ "timestampMillis": "1717152680779",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/temp/graph_aie_mapped.aiecst",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "AIE_CONSTRAINTS_MAPPED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:20 2024",
+ "timestampMillis": "1717152680780",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/temp/graph_mapped.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "AIE_GRAPH_MAPPED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:20 2024",
+ "timestampMillis": "1717152680785",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/reports/graph_mapping_analysis_report.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_MAPPING_ANALYSIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:20 2024",
+ "timestampMillis": "1717152680786",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/reports/sync_buffer_address.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "AIE_SYNC_BUFFER_ADDRESS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:20 2024",
+ "timestampMillis": "1717152680789",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/reports/Interposer_analysis_report.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_INTERPOSER_ANALYSIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:20 2024",
+ "timestampMillis": "1717152680789",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/reports/Lock_report.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_DMA_LOCK",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:20 2024",
+ "timestampMillis": "1717152680790",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/reports/Stream_report.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_STREAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:20 2024",
+ "timestampMillis": "1717152680790",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/reports/DMA_report.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_DMA_ANALYSIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:20 2024",
+ "timestampMillis": "1717152680791",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/reports/dma_lock_report.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "AIE_DMA_LOCK",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:27 2024",
+ "timestampMillis": "1717152687050",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/temp/DMA_FIFO_info_report.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "AIE_DMA_FIFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:27 2024",
+ "timestampMillis": "1717152687464",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/temp/router_soln.png",
+  "name": "",
+  "fileType": "PNG",
+  "reportType": "AIE_ROUTER_SOLUTION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:27 2024",
+ "timestampMillis": "1717152687515",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/temp/router_soln.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "AIE_ROUTER_SOLUTION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:27 2024",
+ "timestampMillis": "1717152687671",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/reports/graph_mapped_post.png",
+  "name": "",
+  "fileType": "PNG",
+  "reportType": "AIE_MAPPING_ANALYSIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702707",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/reports/graph.xpe",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "AIE_POWER",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702716",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/22_0/scripts/22_0.prx",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "AIE_CORE_PROJECT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702716",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/22_0/src/22_0.cc",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CORE_PROJECT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702720",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/22_1/scripts/22_1.prx",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "AIE_CORE_PROJECT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702721",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/22_1/src/22_1.cc",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CORE_PROJECT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702723",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/23_0/scripts/23_0.prx",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "AIE_CORE_PROJECT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702724",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/23_0/src/23_0.cc",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CORE_PROJECT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702727",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/23_1/scripts/23_1.prx",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "AIE_CORE_PROJECT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702727",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/23_1/src/23_1.cc",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CORE_PROJECT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702730",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/24_0/scripts/24_0.prx",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "AIE_CORE_PROJECT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702730",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/24_0/src/24_0.cc",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CORE_PROJECT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702733",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/24_1/scripts/24_1.prx",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "AIE_CORE_PROJECT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702734",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/24_1/src/24_1.cc",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CORE_PROJECT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702737",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/25_0/scripts/25_0.prx",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "AIE_CORE_PROJECT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702737",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/25_0/src/25_0.cc",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CORE_PROJECT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702740",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/25_1/scripts/25_1.prx",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "AIE_CORE_PROJECT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702740",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/25_1/src/25_1.cc",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CORE_PROJECT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702743",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/26_0/scripts/26_0.prx",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "AIE_CORE_PROJECT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702744",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/26_0/src/26_0.cc",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CORE_PROJECT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702747",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/26_1/scripts/26_1.prx",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "AIE_CORE_PROJECT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702747",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/26_1/src/26_1.cc",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CORE_PROJECT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702750",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/27_0/scripts/27_0.prx",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "AIE_CORE_PROJECT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702750",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/27_0/src/27_0.cc",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CORE_PROJECT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702753",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/27_1/scripts/27_1.prx",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "AIE_CORE_PROJECT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702754",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/27_1/src/27_1.cc",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CORE_PROJECT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702757",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/22_0/22_0.log",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CORE_COMPILE_LOG",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702758",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/22_1/22_1.log",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CORE_COMPILE_LOG",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702758",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/23_0/23_0.log",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CORE_COMPILE_LOG",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702758",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/23_1/23_1.log",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CORE_COMPILE_LOG",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702759",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/24_0/24_0.log",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CORE_COMPILE_LOG",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702759",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/24_1/24_1.log",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CORE_COMPILE_LOG",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702760",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/25_0/25_0.log",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CORE_COMPILE_LOG",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702760",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/25_1/25_1.log",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CORE_COMPILE_LOG",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702761",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/26_0/26_0.log",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CORE_COMPILE_LOG",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702761",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/26_1/26_1.log",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CORE_COMPILE_LOG",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702762",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/27_0/27_0.log",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CORE_COMPILE_LOG",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:51:42 2024",
+ "timestampMillis": "1717152702762",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/aie/27_1/27_1.log",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CORE_COMPILE_LOG",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:54:36 2024",
+ "timestampMillis": "1717152876185",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/ps/c_rts/aie_control.cpp",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "AIE_CONTROL_SOURCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:54:44 2024",
+ "timestampMillis": "1717152884945",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/ps/c_rts/aie_control_config.json",
   "name": "",
   "fileType": "JSON",
   "reportType": "AIE_CONTROL_CONFIG",
@@ -308,11 +1082,39 @@
 </ENTRY>
 <ENTRY>
 {
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:54:44 2024",
+ "timestampMillis": "1717152884947",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/reports/compiler_report.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "AIE_COMPILER_REPORT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 31 12:54:44 2024",
+ "timestampMillis": "1717152884960",
+ "report": {
+  "path": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/Work/temp/graph_aie_constraints.aiecst",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "AIE_CONSTRAINTS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
  "type": "ET_Status",
- "dateTimestamp": "Tue May 28 16:53:25 2024",
- "timestampMillis": "1716908005844",
+ "dateTimestamp": "Fri May 31 12:54:58 2024",
+ "timestampMillis": "1717152898511",
  "status": {
-  "cmdId": "8b72bab3-39c4-4014-84dd-757d8c4543f6",
+  "cmdId": "ffa08960-61bf-478b-a25b-b5a48908cbd2",
   "state": "CS_PASSED"
  }
 }
@@ -320,10 +1122,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Tue May 28 16:53:25 2024",
- "timestampMillis": "1716908005974",
+ "dateTimestamp": "Fri May 31 12:55:00 2024",
+ "timestampMillis": "1717152900047",
  "status": {
-  "cmdId": "5de250e8-61ba-49e8-87a7-8df1de6f9776",
+  "cmdId": "bb523ff2-e14d-4e62-b907-81817c060b2d",
   "state": "CS_PASSED"
  }
 }

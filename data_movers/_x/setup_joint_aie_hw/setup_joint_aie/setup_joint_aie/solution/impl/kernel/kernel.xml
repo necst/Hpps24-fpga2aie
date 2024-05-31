@@ -1,0 +1,31 @@
+<root versionMajor="1" versionMinor="5">
+    <kernel name="setup_joint_aie" language="c" vlnv="xilinx.com:hls:setup_joint_aie:1.0" attributes="" hash="" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="true" compileOptions="-g" profileType="none" hwControlProtocol="ap_ctrl_chain" interrupt="true" swReset="false" mailbox="none" countedAutoRestart="0" deadlockDetection="local">
+        <ports>
+            <port name="M_AXI_GMEM0" portType="addressable" mode="master" base="0x0" range="0xFFFFFFFF" dataWidth="256"/>
+            <port name="S_0" mode="write_only" dataWidth="32" portType="stream"/>
+            <port name="S_1" mode="write_only" dataWidth="32" portType="stream"/>
+            <port name="S_2" mode="write_only" dataWidth="32" portType="stream"/>
+            <port name="S_3" mode="write_only" dataWidth="32" portType="stream"/>
+            <port name="S_4" mode="write_only" dataWidth="32" portType="stream"/>
+            <port name="S_5" mode="write_only" dataWidth="32" portType="stream"/>
+            <port name="S_6" mode="write_only" dataWidth="32" portType="stream"/>
+            <port name="S_7" mode="write_only" dataWidth="32" portType="stream"/>
+            <port name="S_AXI_CONTROL" portType="addressable" mode="slave" base="0x0" range="0x24" dataWidth="32"/>
+        </ports>
+        <args>
+            <arg id="0" name="image_size" addressQualifier="0" port="S_AXI_CONTROL" hostOffset="0x0" hostSize="0x4" offset="0x10" size="0x4" type="unsigned int"/>
+            <arg id="1" name="histogram_rows" addressQualifier="1" port="M_AXI_GMEM0" hostOffset="0x0" hostSize="0x8" offset="0x18" size="0x8" type="void*"/>
+            <arg id="2" name="s_0" addressQualifier="4" port="S_0" hostOffset="0x0" hostSize="0x8" offset="0x0" size="0x0" type="stream&lt;int, 0&gt;&amp;" origName="s_0" origUse="variable"/>
+            <arg id="3" name="s_1" addressQualifier="4" port="S_1" hostOffset="0x0" hostSize="0x8" offset="0x0" size="0x0" type="stream&lt;int, 0&gt;&amp;" origName="s_1" origUse="variable"/>
+            <arg id="4" name="s_2" addressQualifier="4" port="S_2" hostOffset="0x0" hostSize="0x8" offset="0x0" size="0x0" type="stream&lt;int, 0&gt;&amp;" origName="s_2" origUse="variable"/>
+            <arg id="5" name="s_3" addressQualifier="4" port="S_3" hostOffset="0x0" hostSize="0x8" offset="0x0" size="0x0" type="stream&lt;int, 0&gt;&amp;" origName="s_3" origUse="variable"/>
+            <arg id="6" name="s_4" addressQualifier="4" port="S_4" hostOffset="0x0" hostSize="0x8" offset="0x0" size="0x0" type="stream&lt;int, 0&gt;&amp;" origName="s_4" origUse="variable"/>
+            <arg id="7" name="s_5" addressQualifier="4" port="S_5" hostOffset="0x0" hostSize="0x8" offset="0x0" size="0x0" type="stream&lt;int, 0&gt;&amp;" origName="s_5" origUse="variable"/>
+            <arg id="8" name="s_6" addressQualifier="4" port="S_6" hostOffset="0x0" hostSize="0x8" offset="0x0" size="0x0" type="stream&lt;int, 0&gt;&amp;" origName="s_6" origUse="variable"/>
+            <arg id="9" name="s_7" addressQualifier="4" port="S_7" hostOffset="0x0" hostSize="0x8" offset="0x0" size="0x0" type="stream&lt;int, 0&gt;&amp;" origName="s_7" origUse="variable"/>
+        </args>
+        <compileWorkGroupSize x="1" y="1" z="1"/>
+        <maxWorkGroupSize x="1" y="1" z="1"/>
+    </kernel>
+</root>
+

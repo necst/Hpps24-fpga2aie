@@ -1,0 +1,4307 @@
+{
+    "Version": 0.0,
+    "Non-Netlist Instances": [
+        "sysmem0",
+        "sysmem1",
+        "sysmem2",
+        "sysmem3",
+        "sysmem4",
+        "sysmem5",
+        "sysmem6",
+        "sysmem7",
+        "sysmem8",
+        "sysmem9",
+        "sysmem10",
+        "sysmem11",
+        "PT0",
+        "PT1",
+        "PT2",
+        "PT3",
+        "PT4",
+        "PT5",
+        "PT6",
+        "PT7",
+        "PT8",
+        "PT9",
+        "PT10",
+        "PT11",
+        "net0",
+        "net1",
+        "net2",
+        "net3",
+        "net4",
+        "net5",
+        "net6",
+        "net7",
+        "net8",
+        "net9",
+        "net10",
+        "net11",
+        "net12",
+        "net13",
+        "net14",
+        "net15",
+        "net16",
+        "net17",
+        "net18",
+        "net19",
+        "net20",
+        "unconstraint_fifo0",
+        "unconstraint_fifo1",
+        "unconstraint_fifo2",
+        "unconstraint_fifo3",
+        "unconstraint_fifo4",
+        "unconstraint_fifo5",
+        "unconstraint_fifo6",
+        "unconstraint_fifo7",
+        "unconstraint_fifo8",
+        "unconstraint_fifo9",
+        "unconstraint_fifo10",
+        "unconstraint_fifo11",
+        "unconstraint_fifo12",
+        "unconstraint_fifo13",
+        "unconstraint_fifo14",
+        "unconstraint_fifo15",
+        "unconstraint_fifo16",
+        "unconstraint_fifo17",
+        "unconstraint_fifo18",
+        "unconstraint_fifo19",
+        "unconstraint_fifo20"
+    ],
+    "Non-Netlist Instance Placement": [
+        {
+            "Name": "sysmem0",
+            "Site": "AIE_MEMGRP_X26Y1",
+            "Bel": "BANK1"
+        },
+        {
+            "Name": "sysmem1",
+            "Site": "AIE_MEMGRP_X26Y0",
+            "Bel": "BANK0"
+        },
+        {
+            "Name": "sysmem2",
+            "Site": "AIE_MEMGRP_X22Y0",
+            "Bel": "BANK2"
+        },
+        {
+            "Name": "sysmem3",
+            "Site": "AIE_MEMGRP_X24Y1",
+            "Bel": "BANK3"
+        },
+        {
+            "Name": "sysmem4",
+            "Site": "AIE_MEMGRP_X27Y1",
+            "Bel": "BANK0"
+        },
+        {
+            "Name": "sysmem5",
+            "Site": "AIE_MEMGRP_X24Y1",
+            "Bel": "BANK2"
+        },
+        {
+            "Name": "sysmem6",
+            "Site": "AIE_MEMGRP_X26Y1",
+            "Bel": "BANK2"
+        },
+        {
+            "Name": "sysmem7",
+            "Site": "AIE_MEMGRP_X25Y1",
+            "Bel": "BANK0"
+        },
+        {
+            "Name": "sysmem8",
+            "Site": "AIE_MEMGRP_X23Y2",
+            "Bel": "BANK0"
+        },
+        {
+            "Name": "sysmem9",
+            "Site": "AIE_MEMGRP_X23Y1",
+            "Bel": "BANK0"
+        },
+        {
+            "Name": "sysmem10",
+            "Site": "AIE_MEMGRP_X22Y0",
+            "Bel": "BANK0"
+        },
+        {
+            "Name": "sysmem11",
+            "Site": "AIE_MEMGRP_X27Y0",
+            "Bel": "BANK0"
+        },
+        {
+            "Name": "PT0",
+            "Site": "AIE_CORE_X26Y1",
+            "Bel": "CORE"
+        },
+        {
+            "Name": "PT1",
+            "Site": "AIE_CORE_X26Y0",
+            "Bel": "CORE"
+        },
+        {
+            "Name": "PT2",
+            "Site": "AIE_CORE_X22Y0",
+            "Bel": "CORE"
+        },
+        {
+            "Name": "PT3",
+            "Site": "AIE_CORE_X24Y0",
+            "Bel": "CORE"
+        },
+        {
+            "Name": "PT4",
+            "Site": "AIE_CORE_X27Y0",
+            "Bel": "CORE"
+        },
+        {
+            "Name": "PT5",
+            "Site": "AIE_CORE_X24Y1",
+            "Bel": "CORE"
+        },
+        {
+            "Name": "PT6",
+            "Site": "AIE_CORE_X25Y1",
+            "Bel": "CORE"
+        },
+        {
+            "Name": "PT7",
+            "Site": "AIE_CORE_X25Y0",
+            "Bel": "CORE"
+        },
+        {
+            "Name": "PT8",
+            "Site": "AIE_CORE_X23Y1",
+            "Bel": "CORE"
+        },
+        {
+            "Name": "PT9",
+            "Site": "AIE_CORE_X22Y1",
+            "Bel": "CORE"
+        },
+        {
+            "Name": "PT10",
+            "Site": "AIE_CORE_X23Y0",
+            "Bel": "CORE"
+        },
+        {
+            "Name": "PT11",
+            "Site": "AIE_CORE_X27Y1",
+            "Bel": "CORE"
+        }
+    ],
+    "Instance Placement": [
+        {
+            "Name": "aie_graph.joint_entropy[0]",
+            "Site": "AIE_CORE_X26Y1",
+            "Bel": "CORE"
+        },
+        {
+            "Name": "aie_graph.joint_entropy[1]",
+            "Site": "AIE_CORE_X25Y0",
+            "Bel": "CORE"
+        },
+        {
+            "Name": "aie_graph.joint_entropy[2]",
+            "Site": "AIE_CORE_X22Y1",
+            "Bel": "CORE"
+        },
+        {
+            "Name": "aie_graph.joint_entropy[3]",
+            "Site": "AIE_CORE_X23Y0",
+            "Bel": "CORE"
+        },
+        {
+            "Name": "aie_graph.joint_entropy[4]",
+            "Site": "AIE_CORE_X27Y1",
+            "Bel": "CORE"
+        },
+        {
+            "Name": "aie_graph.joint_entropy[5]",
+            "Site": "AIE_CORE_X26Y0",
+            "Bel": "CORE"
+        },
+        {
+            "Name": "aie_graph.joint_entropy[6]",
+            "Site": "AIE_CORE_X22Y0",
+            "Bel": "CORE"
+        },
+        {
+            "Name": "aie_graph.joint_entropy[7]",
+            "Site": "AIE_CORE_X24Y0",
+            "Bel": "CORE"
+        },
+        {
+            "Name": "aie_graph.marginal_entropy",
+            "Site": "AIE_CORE_X27Y0",
+            "Bel": "CORE"
+        },
+        {
+            "Name": "aie_graph.reduce[0]",
+            "Site": "AIE_CORE_X24Y1",
+            "Bel": "CORE"
+        },
+        {
+            "Name": "aie_graph.reduce[1]",
+            "Site": "AIE_CORE_X25Y1",
+            "Bel": "CORE"
+        },
+        {
+            "Name": "aie_graph.reduce[2]",
+            "Site": "AIE_CORE_X23Y1",
+            "Bel": "CORE"
+        },
+        {
+            "Name": "joint_histo_0",
+            "Site": "AIE_PL_X25Y0",
+            "Bel": "AIE_PL_S_AXIS_5"
+        },
+        {
+            "Name": "joint_histo_1",
+            "Site": "AIE_PL_X24Y0",
+            "Bel": "AIE_PL_S_AXIS_4"
+        },
+        {
+            "Name": "joint_histo_2",
+            "Site": "AIE_PL_X21Y0",
+            "Bel": "AIE_PL_S_AXIS_0"
+        },
+        {
+            "Name": "joint_histo_3",
+            "Site": "AIE_PL_X22Y0",
+            "Bel": "AIE_PL_S_AXIS_0"
+        },
+        {
+            "Name": "joint_histo_4",
+            "Site": "AIE_PL_X26Y0",
+            "Bel": "AIE_PL_S_AXIS_1"
+        },
+        {
+            "Name": "joint_histo_5",
+            "Site": "AIE_PL_X25Y0",
+            "Bel": "AIE_PL_S_AXIS_6"
+        },
+        {
+            "Name": "joint_histo_6",
+            "Site": "AIE_PL_X21Y0",
+            "Bel": "AIE_PL_S_AXIS_6"
+        },
+        {
+            "Name": "joint_histo_7",
+            "Site": "AIE_PL_X23Y0",
+            "Bel": "AIE_PL_S_AXIS_5"
+        },
+        {
+            "Name": "marginal_histo",
+            "Site": "AIE_PL_X26Y0",
+            "Bel": "AIE_PL_S_AXIS_6"
+        },
+        {
+            "Name": "out_plio_1",
+            "Site": "AIE_PL_X23Y0",
+            "Bel": "AIE_PL_M_AXIS_4"
+        }
+    ],
+    "InstTerm Placement": [
+        {
+            "InstName": "aie_graph.joint_entropy[0]",
+            "InstTermName": "pi0",
+            "Site": "AIE_CORE_X26Y1",
+            "Bel": "CORE",
+            "BelPin": "S_CORE_CH0"
+        },
+        {
+            "InstName": "aie_graph.joint_entropy[0]",
+            "InstTermName": "pi1",
+            "Site": "AIE_CORE_X26Y1",
+            "Bel": "CORE",
+            "BelPin": "S_CORE_CH1"
+        },
+        {
+            "InstName": "aie_graph.joint_entropy[0]",
+            "InstTermName": "po0",
+            "Site": "AIE_CORE_X26Y1",
+            "Bel": "CORE",
+            "BelPin": "M_CORE_CH0"
+        },
+        {
+            "InstName": "aie_graph.joint_entropy[1]",
+            "InstTermName": "pi0",
+            "Site": "AIE_CORE_X25Y0",
+            "Bel": "CORE",
+            "BelPin": "S_CORE_CH0"
+        },
+        {
+            "InstName": "aie_graph.joint_entropy[1]",
+            "InstTermName": "pi1",
+            "Site": "AIE_CORE_X25Y0",
+            "Bel": "CORE",
+            "BelPin": "S_CORE_CH1"
+        },
+        {
+            "InstName": "aie_graph.joint_entropy[1]",
+            "InstTermName": "po0",
+            "Site": "AIE_CORE_X25Y0",
+            "Bel": "CORE",
+            "BelPin": "M_CORE_CH0"
+        },
+        {
+            "InstName": "aie_graph.joint_entropy[2]",
+            "InstTermName": "pi0",
+            "Site": "AIE_CORE_X22Y1",
+            "Bel": "CORE",
+            "BelPin": "S_CORE_CH0"
+        },
+        {
+            "InstName": "aie_graph.joint_entropy[2]",
+            "InstTermName": "pi1",
+            "Site": "AIE_CORE_X22Y1",
+            "Bel": "CORE",
+            "BelPin": "S_CORE_CH1"
+        },
+        {
+            "InstName": "aie_graph.joint_entropy[2]",
+            "InstTermName": "po0",
+            "Site": "AIE_CORE_X22Y1",
+            "Bel": "CORE",
+            "BelPin": "M_CORE_CH0"
+        },
+        {
+            "InstName": "aie_graph.joint_entropy[3]",
+            "InstTermName": "pi0",
+            "Site": "AIE_CORE_X23Y0",
+            "Bel": "CORE",
+            "BelPin": "S_CORE_CH0"
+        },
+        {
+            "InstName": "aie_graph.joint_entropy[3]",
+            "InstTermName": "pi1",
+            "Site": "AIE_CORE_X23Y0",
+            "Bel": "CORE",
+            "BelPin": "S_CORE_CH1"
+        },
+        {
+            "InstName": "aie_graph.joint_entropy[3]",
+            "InstTermName": "po0",
+            "Site": "AIE_CORE_X23Y0",
+            "Bel": "CORE",
+            "BelPin": "M_CORE_CH0"
+        },
+        {
+            "InstName": "aie_graph.joint_entropy[4]",
+            "InstTermName": "pi0",
+            "Site": "AIE_CORE_X27Y1",
+            "Bel": "CORE",
+            "BelPin": "S_CORE_CH0"
+        },
+        {
+            "InstName": "aie_graph.joint_entropy[4]",
+            "InstTermName": "pi1",
+            "Site": "AIE_CORE_X27Y1",
+            "Bel": "CORE",
+            "BelPin": "S_CORE_CH1"
+        },
+        {
+            "InstName": "aie_graph.joint_entropy[4]",
+            "InstTermName": "po0",
+            "Site": "AIE_CORE_X27Y1",
+            "Bel": "CORE",
+            "BelPin": "M_CORE_CH0"
+        },
+        {
+            "InstName": "aie_graph.joint_entropy[5]",
+            "InstTermName": "pi0",
+            "Site": "AIE_CORE_X26Y0",
+            "Bel": "CORE",
+            "BelPin": "S_CORE_CH0"
+        },
+        {
+            "InstName": "aie_graph.joint_entropy[5]",
+            "InstTermName": "po0",
+            "Site": "AIE_CORE_X26Y0",
+            "Bel": "CORE",
+            "BelPin": "M_CORE_CH0"
+        },
+        {
+            "InstName": "aie_graph.joint_entropy[6]",
+            "InstTermName": "pi0",
+            "Site": "AIE_CORE_X22Y0",
+            "Bel": "CORE",
+            "BelPin": "S_CORE_CH0"
+        },
+        {
+            "InstName": "aie_graph.joint_entropy[6]",
+            "InstTermName": "po0",
+            "Site": "AIE_CORE_X22Y0",
+            "Bel": "CORE",
+            "BelPin": "M_CORE_CH0"
+        },
+        {
+            "InstName": "aie_graph.joint_entropy[7]",
+            "InstTermName": "pi0",
+            "Site": "AIE_CORE_X24Y0",
+            "Bel": "CORE",
+            "BelPin": "S_CORE_CH0"
+        },
+        {
+            "InstName": "aie_graph.joint_entropy[7]",
+            "InstTermName": "po0",
+            "Site": "AIE_CORE_X24Y0",
+            "Bel": "CORE",
+            "BelPin": "M_CORE_CH0"
+        },
+        {
+            "InstName": "aie_graph.marginal_entropy",
+            "InstTermName": "pi0",
+            "Site": "AIE_CORE_X27Y0",
+            "Bel": "CORE",
+            "BelPin": "S_CORE_CH0"
+        },
+        {
+            "InstName": "aie_graph.marginal_entropy",
+            "InstTermName": "po0",
+            "Site": "AIE_CORE_X27Y0",
+            "Bel": "CORE",
+            "BelPin": "M_CORE_CH0"
+        },
+        {
+            "InstName": "aie_graph.reduce[0]",
+            "InstTermName": "pi0",
+            "Site": "AIE_CORE_X24Y1",
+            "Bel": "CORE",
+            "BelPin": "S_CORE_CH0"
+        },
+        {
+            "InstName": "aie_graph.reduce[0]",
+            "InstTermName": "pi1",
+            "Site": "AIE_CORE_X24Y1",
+            "Bel": "CORE",
+            "BelPin": "S_CORE_CH1"
+        },
+        {
+            "InstName": "aie_graph.reduce[0]",
+            "InstTermName": "po0",
+            "Site": "AIE_CORE_X24Y1",
+            "Bel": "CORE",
+            "BelPin": "M_CORE_CH0"
+        },
+        {
+            "InstName": "aie_graph.reduce[1]",
+            "InstTermName": "pi0",
+            "Site": "AIE_CORE_X25Y1",
+            "Bel": "CORE",
+            "BelPin": "S_CORE_CH0"
+        },
+        {
+            "InstName": "aie_graph.reduce[1]",
+            "InstTermName": "pi1",
+            "Site": "AIE_CORE_X25Y1",
+            "Bel": "CORE",
+            "BelPin": "S_CORE_CH1"
+        },
+        {
+            "InstName": "aie_graph.reduce[1]",
+            "InstTermName": "po0",
+            "Site": "AIE_CORE_X25Y1",
+            "Bel": "CORE",
+            "BelPin": "M_CORE_CH0"
+        },
+        {
+            "InstName": "aie_graph.reduce[2]",
+            "InstTermName": "pi0",
+            "Site": "AIE_CORE_X23Y1",
+            "Bel": "CORE",
+            "BelPin": "S_CORE_CH0"
+        },
+        {
+            "InstName": "aie_graph.reduce[2]",
+            "InstTermName": "pi1",
+            "Site": "AIE_CORE_X23Y1",
+            "Bel": "CORE",
+            "BelPin": "S_CORE_CH1"
+        },
+        {
+            "InstName": "aie_graph.reduce[2]",
+            "InstTermName": "po0",
+            "Site": "AIE_CORE_X23Y1",
+            "Bel": "CORE",
+            "BelPin": "M_CORE_CH0"
+        },
+        {
+            "InstName": "joint_histo_0",
+            "InstTermName": "po0",
+            "Site": "AIE_PL_X25Y0",
+            "Bel": "AIE_PL_S_AXIS_5",
+            "BelPin": "TO_AIE"
+        },
+        {
+            "InstName": "joint_histo_1",
+            "InstTermName": "po0",
+            "Site": "AIE_PL_X24Y0",
+            "Bel": "AIE_PL_S_AXIS_4",
+            "BelPin": "TO_AIE"
+        },
+        {
+            "InstName": "joint_histo_2",
+            "InstTermName": "po0",
+            "Site": "AIE_PL_X21Y0",
+            "Bel": "AIE_PL_S_AXIS_0",
+            "BelPin": "TO_AIE"
+        },
+        {
+            "InstName": "joint_histo_3",
+            "InstTermName": "po0",
+            "Site": "AIE_PL_X22Y0",
+            "Bel": "AIE_PL_S_AXIS_0",
+            "BelPin": "TO_AIE"
+        },
+        {
+            "InstName": "joint_histo_4",
+            "InstTermName": "po0",
+            "Site": "AIE_PL_X26Y0",
+            "Bel": "AIE_PL_S_AXIS_1",
+            "BelPin": "TO_AIE"
+        },
+        {
+            "InstName": "joint_histo_5",
+            "InstTermName": "po0",
+            "Site": "AIE_PL_X25Y0",
+            "Bel": "AIE_PL_S_AXIS_6",
+            "BelPin": "TO_AIE"
+        },
+        {
+            "InstName": "joint_histo_6",
+            "InstTermName": "po0",
+            "Site": "AIE_PL_X21Y0",
+            "Bel": "AIE_PL_S_AXIS_6",
+            "BelPin": "TO_AIE"
+        },
+        {
+            "InstName": "joint_histo_7",
+            "InstTermName": "po0",
+            "Site": "AIE_PL_X23Y0",
+            "Bel": "AIE_PL_S_AXIS_5",
+            "BelPin": "TO_AIE"
+        },
+        {
+            "InstName": "marginal_histo",
+            "InstTermName": "po0",
+            "Site": "AIE_PL_X26Y0",
+            "Bel": "AIE_PL_S_AXIS_6",
+            "BelPin": "TO_AIE"
+        },
+        {
+            "InstName": "out_plio_1",
+            "InstTermName": "pi0",
+            "Site": "AIE_PL_X23Y0",
+            "Bel": "AIE_PL_M_AXIS_4",
+            "BelPin": "FROM_AIE"
+        }
+    ],
+    "DMAFIFOs Placement": [],
+    "Non-Netlist Instance Links": [
+        {
+            "PT0": [
+                "aie_graph.joint_entropy[0]"
+            ]
+        },
+        {
+            "PT1": [
+                "aie_graph.joint_entropy[5]"
+            ]
+        },
+        {
+            "PT2": [
+                "aie_graph.joint_entropy[6]"
+            ]
+        },
+        {
+            "PT3": [
+                "aie_graph.joint_entropy[7]"
+            ]
+        },
+        {
+            "PT4": [
+                "aie_graph.marginal_entropy"
+            ]
+        },
+        {
+            "PT5": [
+                "aie_graph.reduce[0]"
+            ]
+        },
+        {
+            "PT6": [
+                "aie_graph.reduce[1]"
+            ]
+        },
+        {
+            "PT7": [
+                "aie_graph.joint_entropy[1]"
+            ]
+        },
+        {
+            "PT8": [
+                "aie_graph.reduce[2]"
+            ]
+        },
+        {
+            "PT9": [
+                "aie_graph.joint_entropy[2]"
+            ]
+        },
+        {
+            "PT10": [
+                "aie_graph.joint_entropy[3]"
+            ]
+        },
+        {
+            "PT11": [
+                "aie_graph.joint_entropy[4]"
+            ]
+        },
+        {
+            "unconstraint_fifo0": [
+                "aie_graph.joint_entropy[0]/pi0"
+            ]
+        },
+        {
+            "unconstraint_fifo1": [
+                "aie_graph.joint_entropy[1]/pi0"
+            ]
+        },
+        {
+            "unconstraint_fifo2": [
+                "aie_graph.joint_entropy[2]/pi0"
+            ]
+        },
+        {
+            "unconstraint_fifo3": [
+                "aie_graph.joint_entropy[3]/pi0"
+            ]
+        },
+        {
+            "unconstraint_fifo4": [
+                "aie_graph.joint_entropy[4]/pi0"
+            ]
+        },
+        {
+            "unconstraint_fifo5": [
+                "aie_graph.joint_entropy[5]/pi0"
+            ]
+        },
+        {
+            "unconstraint_fifo6": [
+                "aie_graph.joint_entropy[6]/pi0"
+            ]
+        },
+        {
+            "unconstraint_fifo7": [
+                "aie_graph.joint_entropy[7]/pi0"
+            ]
+        },
+        {
+            "unconstraint_fifo8": [
+                "aie_graph.marginal_entropy/pi0"
+            ]
+        },
+        {
+            "unconstraint_fifo9": [
+                "aie_graph.joint_entropy[4]/pi1"
+            ]
+        },
+        {
+            "unconstraint_fifo10": [
+                "aie_graph.joint_entropy[0]/pi1"
+            ]
+        },
+        {
+            "unconstraint_fifo11": [
+                "aie_graph.joint_entropy[1]/pi1"
+            ]
+        },
+        {
+            "unconstraint_fifo12": [
+                "aie_graph.joint_entropy[2]/pi1"
+            ]
+        },
+        {
+            "unconstraint_fifo13": [
+                "aie_graph.joint_entropy[3]/pi1"
+            ]
+        },
+        {
+            "unconstraint_fifo14": [
+                "aie_graph.reduce[1]/pi0"
+            ]
+        },
+        {
+            "unconstraint_fifo15": [
+                "aie_graph.reduce[1]/pi1"
+            ]
+        },
+        {
+            "unconstraint_fifo16": [
+                "aie_graph.reduce[2]/pi0"
+            ]
+        },
+        {
+            "unconstraint_fifo17": [
+                "aie_graph.reduce[2]/pi1"
+            ]
+        },
+        {
+            "unconstraint_fifo18": [
+                "aie_graph.reduce[0]/pi0"
+            ]
+        },
+        {
+            "unconstraint_fifo19": [
+                "aie_graph.reduce[0]/pi1"
+            ]
+        },
+        {
+            "unconstraint_fifo20": [
+                "out_plio_1/pi0"
+            ]
+        }
+    ],
+    "Non-Netlist Instance Attrs": [
+        {
+            "Name": "sysmem0",
+            "attrs": [
+                {
+                    "Key": "is_memory_buffer",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "is_partition_reserved_memory",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "stackSize",
+                    "Val": "INT 4096"
+                },
+                {
+                    "Key": "heapSize",
+                    "Val": "INT 2048"
+                },
+                {
+                    "Key": "name",
+                    "Val": "STRING sysmem0"
+                },
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "fullSize",
+                    "Val": "INT 6176"
+                },
+                {
+                    "Key": "size",
+                    "Val": "INT 6176"
+                },
+                {
+                    "Key": "offset",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "row",
+                    "Val": "INT 1"
+                },
+                {
+                    "Key": "column",
+                    "Val": "INT 26"
+                },
+                {
+                    "Key": "accessRow",
+                    "Val": "INT 1"
+                },
+                {
+                    "Key": "accessCol",
+                    "Val": "INT 26"
+                }
+            ]
+        },
+        {
+            "Name": "sysmem1",
+            "attrs": [
+                {
+                    "Key": "is_memory_buffer",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "is_partition_reserved_memory",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "stackSize",
+                    "Val": "INT 4096"
+                },
+                {
+                    "Key": "heapSize",
+                    "Val": "INT 2048"
+                },
+                {
+                    "Key": "name",
+                    "Val": "STRING sysmem1"
+                },
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "fullSize",
+                    "Val": "INT 6176"
+                },
+                {
+                    "Key": "size",
+                    "Val": "INT 6176"
+                },
+                {
+                    "Key": "offset",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "row",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "column",
+                    "Val": "INT 26"
+                },
+                {
+                    "Key": "accessRow",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "accessCol",
+                    "Val": "INT 26"
+                }
+            ]
+        },
+        {
+            "Name": "sysmem2",
+            "attrs": [
+                {
+                    "Key": "is_memory_buffer",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "is_partition_reserved_memory",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "stackSize",
+                    "Val": "INT 4096"
+                },
+                {
+                    "Key": "heapSize",
+                    "Val": "INT 2048"
+                },
+                {
+                    "Key": "name",
+                    "Val": "STRING sysmem2"
+                },
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "fullSize",
+                    "Val": "INT 6176"
+                },
+                {
+                    "Key": "size",
+                    "Val": "INT 6176"
+                },
+                {
+                    "Key": "offset",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "row",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "column",
+                    "Val": "INT 22"
+                },
+                {
+                    "Key": "accessRow",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "accessCol",
+                    "Val": "INT 22"
+                }
+            ]
+        },
+        {
+            "Name": "sysmem3",
+            "attrs": [
+                {
+                    "Key": "is_memory_buffer",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "is_partition_reserved_memory",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "stackSize",
+                    "Val": "INT 4096"
+                },
+                {
+                    "Key": "heapSize",
+                    "Val": "INT 2048"
+                },
+                {
+                    "Key": "name",
+                    "Val": "STRING sysmem3"
+                },
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "fullSize",
+                    "Val": "INT 6176"
+                },
+                {
+                    "Key": "size",
+                    "Val": "INT 6176"
+                },
+                {
+                    "Key": "offset",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "row",
+                    "Val": "INT 1"
+                },
+                {
+                    "Key": "column",
+                    "Val": "INT 24"
+                },
+                {
+                    "Key": "accessRow",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "accessCol",
+                    "Val": "INT 24"
+                }
+            ]
+        },
+        {
+            "Name": "sysmem4",
+            "attrs": [
+                {
+                    "Key": "is_memory_buffer",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "is_partition_reserved_memory",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "stackSize",
+                    "Val": "INT 4096"
+                },
+                {
+                    "Key": "heapSize",
+                    "Val": "INT 2048"
+                },
+                {
+                    "Key": "name",
+                    "Val": "STRING sysmem4"
+                },
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "fullSize",
+                    "Val": "INT 6176"
+                },
+                {
+                    "Key": "size",
+                    "Val": "INT 6176"
+                },
+                {
+                    "Key": "offset",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "row",
+                    "Val": "INT 1"
+                },
+                {
+                    "Key": "column",
+                    "Val": "INT 27"
+                },
+                {
+                    "Key": "accessRow",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "accessCol",
+                    "Val": "INT 27"
+                }
+            ]
+        },
+        {
+            "Name": "sysmem5",
+            "attrs": [
+                {
+                    "Key": "is_memory_buffer",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "is_partition_reserved_memory",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "stackSize",
+                    "Val": "INT 4096"
+                },
+                {
+                    "Key": "heapSize",
+                    "Val": "INT 2048"
+                },
+                {
+                    "Key": "name",
+                    "Val": "STRING sysmem5"
+                },
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "fullSize",
+                    "Val": "INT 6176"
+                },
+                {
+                    "Key": "size",
+                    "Val": "INT 6176"
+                },
+                {
+                    "Key": "offset",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "row",
+                    "Val": "INT 1"
+                },
+                {
+                    "Key": "column",
+                    "Val": "INT 24"
+                },
+                {
+                    "Key": "accessRow",
+                    "Val": "INT 1"
+                },
+                {
+                    "Key": "accessCol",
+                    "Val": "INT 24"
+                }
+            ]
+        },
+        {
+            "Name": "sysmem6",
+            "attrs": [
+                {
+                    "Key": "is_memory_buffer",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "is_partition_reserved_memory",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "stackSize",
+                    "Val": "INT 4096"
+                },
+                {
+                    "Key": "heapSize",
+                    "Val": "INT 2048"
+                },
+                {
+                    "Key": "name",
+                    "Val": "STRING sysmem6"
+                },
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "fullSize",
+                    "Val": "INT 6176"
+                },
+                {
+                    "Key": "size",
+                    "Val": "INT 6176"
+                },
+                {
+                    "Key": "offset",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "row",
+                    "Val": "INT 1"
+                },
+                {
+                    "Key": "column",
+                    "Val": "INT 26"
+                },
+                {
+                    "Key": "accessRow",
+                    "Val": "INT 1"
+                },
+                {
+                    "Key": "accessCol",
+                    "Val": "INT 25"
+                }
+            ]
+        },
+        {
+            "Name": "sysmem7",
+            "attrs": [
+                {
+                    "Key": "is_memory_buffer",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "is_partition_reserved_memory",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "stackSize",
+                    "Val": "INT 4096"
+                },
+                {
+                    "Key": "heapSize",
+                    "Val": "INT 2048"
+                },
+                {
+                    "Key": "name",
+                    "Val": "STRING sysmem7"
+                },
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "fullSize",
+                    "Val": "INT 6176"
+                },
+                {
+                    "Key": "size",
+                    "Val": "INT 6176"
+                },
+                {
+                    "Key": "offset",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "row",
+                    "Val": "INT 1"
+                },
+                {
+                    "Key": "column",
+                    "Val": "INT 25"
+                },
+                {
+                    "Key": "accessRow",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "accessCol",
+                    "Val": "INT 25"
+                }
+            ]
+        },
+        {
+            "Name": "sysmem8",
+            "attrs": [
+                {
+                    "Key": "is_memory_buffer",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "is_partition_reserved_memory",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "stackSize",
+                    "Val": "INT 4096"
+                },
+                {
+                    "Key": "heapSize",
+                    "Val": "INT 2048"
+                },
+                {
+                    "Key": "name",
+                    "Val": "STRING sysmem8"
+                },
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "fullSize",
+                    "Val": "INT 6176"
+                },
+                {
+                    "Key": "size",
+                    "Val": "INT 6176"
+                },
+                {
+                    "Key": "offset",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "row",
+                    "Val": "INT 2"
+                },
+                {
+                    "Key": "column",
+                    "Val": "INT 23"
+                },
+                {
+                    "Key": "accessRow",
+                    "Val": "INT 1"
+                },
+                {
+                    "Key": "accessCol",
+                    "Val": "INT 23"
+                }
+            ]
+        },
+        {
+            "Name": "sysmem9",
+            "attrs": [
+                {
+                    "Key": "is_memory_buffer",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "is_partition_reserved_memory",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "stackSize",
+                    "Val": "INT 4096"
+                },
+                {
+                    "Key": "heapSize",
+                    "Val": "INT 2048"
+                },
+                {
+                    "Key": "name",
+                    "Val": "STRING sysmem9"
+                },
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "fullSize",
+                    "Val": "INT 6176"
+                },
+                {
+                    "Key": "size",
+                    "Val": "INT 6176"
+                },
+                {
+                    "Key": "offset",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "row",
+                    "Val": "INT 1"
+                },
+                {
+                    "Key": "column",
+                    "Val": "INT 23"
+                },
+                {
+                    "Key": "accessRow",
+                    "Val": "INT 1"
+                },
+                {
+                    "Key": "accessCol",
+                    "Val": "INT 22"
+                }
+            ]
+        },
+        {
+            "Name": "sysmem10",
+            "attrs": [
+                {
+                    "Key": "is_memory_buffer",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "is_partition_reserved_memory",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "stackSize",
+                    "Val": "INT 4096"
+                },
+                {
+                    "Key": "heapSize",
+                    "Val": "INT 2048"
+                },
+                {
+                    "Key": "name",
+                    "Val": "STRING sysmem10"
+                },
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "fullSize",
+                    "Val": "INT 6176"
+                },
+                {
+                    "Key": "size",
+                    "Val": "INT 6176"
+                },
+                {
+                    "Key": "offset",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "row",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "column",
+                    "Val": "INT 22"
+                },
+                {
+                    "Key": "accessRow",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "accessCol",
+                    "Val": "INT 23"
+                }
+            ]
+        },
+        {
+            "Name": "sysmem11",
+            "attrs": [
+                {
+                    "Key": "is_memory_buffer",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "is_partition_reserved_memory",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "stackSize",
+                    "Val": "INT 4096"
+                },
+                {
+                    "Key": "heapSize",
+                    "Val": "INT 2048"
+                },
+                {
+                    "Key": "name",
+                    "Val": "STRING sysmem11"
+                },
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "fullSize",
+                    "Val": "INT 6176"
+                },
+                {
+                    "Key": "size",
+                    "Val": "INT 6176"
+                },
+                {
+                    "Key": "offset",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "row",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "column",
+                    "Val": "INT 27"
+                },
+                {
+                    "Key": "accessRow",
+                    "Val": "INT 1"
+                },
+                {
+                    "Key": "accessCol",
+                    "Val": "INT 27"
+                }
+            ]
+        },
+        {
+            "Name": "PT0",
+            "attrs": [
+                {
+                    "Key": "is_partition",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "color",
+                    "Val": "STRING aquamarine"
+                },
+                {
+                    "Key": "weight",
+                    "Val": "DOUBLE 0.899900"
+                },
+                {
+                    "Key": "reservedMem",
+                    "Val": "STRING sysmem0"
+                }
+            ]
+        },
+        {
+            "Name": "PT1",
+            "attrs": [
+                {
+                    "Key": "is_partition",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "color",
+                    "Val": "STRING coral"
+                },
+                {
+                    "Key": "weight",
+                    "Val": "DOUBLE 0.899900"
+                },
+                {
+                    "Key": "reservedMem",
+                    "Val": "STRING sysmem1"
+                }
+            ]
+        },
+        {
+            "Name": "PT2",
+            "attrs": [
+                {
+                    "Key": "is_partition",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "color",
+                    "Val": "STRING cadetblue1"
+                },
+                {
+                    "Key": "weight",
+                    "Val": "DOUBLE 0.899900"
+                },
+                {
+                    "Key": "reservedMem",
+                    "Val": "STRING sysmem2"
+                }
+            ]
+        },
+        {
+            "Name": "PT3",
+            "attrs": [
+                {
+                    "Key": "is_partition",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "color",
+                    "Val": "STRING antiquewhite"
+                },
+                {
+                    "Key": "weight",
+                    "Val": "DOUBLE 0.899900"
+                },
+                {
+                    "Key": "reservedMem",
+                    "Val": "STRING sysmem3"
+                }
+            ]
+        },
+        {
+            "Name": "PT4",
+            "attrs": [
+                {
+                    "Key": "is_partition",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "color",
+                    "Val": "STRING chartreuse"
+                },
+                {
+                    "Key": "weight",
+                    "Val": "DOUBLE 0.899900"
+                },
+                {
+                    "Key": "reservedMem",
+                    "Val": "STRING sysmem4"
+                }
+            ]
+        },
+        {
+            "Name": "PT5",
+            "attrs": [
+                {
+                    "Key": "is_partition",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "color",
+                    "Val": "STRING darkseagreen"
+                },
+                {
+                    "Key": "weight",
+                    "Val": "DOUBLE 0.899900"
+                },
+                {
+                    "Key": "reservedMem",
+                    "Val": "STRING sysmem5"
+                }
+            ]
+        },
+        {
+            "Name": "PT6",
+            "attrs": [
+                {
+                    "Key": "is_partition",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "color",
+                    "Val": "STRING goldenrod"
+                },
+                {
+                    "Key": "weight",
+                    "Val": "DOUBLE 0.899900"
+                },
+                {
+                    "Key": "reservedMem",
+                    "Val": "STRING sysmem6"
+                }
+            ]
+        },
+        {
+            "Name": "PT7",
+            "attrs": [
+                {
+                    "Key": "is_partition",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "color",
+                    "Val": "STRING burlywood"
+                },
+                {
+                    "Key": "weight",
+                    "Val": "DOUBLE 0.899900"
+                },
+                {
+                    "Key": "reservedMem",
+                    "Val": "STRING sysmem7"
+                }
+            ]
+        },
+        {
+            "Name": "PT8",
+            "attrs": [
+                {
+                    "Key": "is_partition",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "color",
+                    "Val": "STRING cyan3"
+                },
+                {
+                    "Key": "weight",
+                    "Val": "DOUBLE 0.899900"
+                },
+                {
+                    "Key": "reservedMem",
+                    "Val": "STRING sysmem8"
+                }
+            ]
+        },
+        {
+            "Name": "PT9",
+            "attrs": [
+                {
+                    "Key": "is_partition",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "color",
+                    "Val": "STRING dodgerblue"
+                },
+                {
+                    "Key": "weight",
+                    "Val": "DOUBLE 0.899900"
+                },
+                {
+                    "Key": "reservedMem",
+                    "Val": "STRING sysmem9"
+                }
+            ]
+        },
+        {
+            "Name": "PT10",
+            "attrs": [
+                {
+                    "Key": "is_partition",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "color",
+                    "Val": "STRING cornsilk3"
+                },
+                {
+                    "Key": "weight",
+                    "Val": "DOUBLE 0.899900"
+                },
+                {
+                    "Key": "reservedMem",
+                    "Val": "STRING sysmem10"
+                }
+            ]
+        },
+        {
+            "Name": "PT11",
+            "attrs": [
+                {
+                    "Key": "is_partition",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "color",
+                    "Val": "STRING darkorange"
+                },
+                {
+                    "Key": "weight",
+                    "Val": "DOUBLE 0.899900"
+                },
+                {
+                    "Key": "reservedMem",
+                    "Val": "STRING sysmem11"
+                }
+            ]
+        },
+        {
+            "Name": "net0",
+            "attrs": [
+                {
+                    "Key": "is_edge",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "srcInstance",
+                    "Val": "STRING joint_histo_0"
+                },
+                {
+                    "Key": "srcPort",
+                    "Val": "STRING po0"
+                },
+                {
+                    "Key": "dstInstance",
+                    "Val": "STRING aie_graph.joint_entropy[0]"
+                },
+                {
+                    "Key": "dstPort",
+                    "Val": "STRING pi0"
+                },
+                {
+                    "Key": "numLocks",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "edgeType",
+                    "Val": "STRING stream"
+                },
+                {
+                    "Key": "ephemeral",
+                    "Val": "BOOL 0"
+                }
+            ]
+        },
+        {
+            "Name": "net1",
+            "attrs": [
+                {
+                    "Key": "is_edge",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "srcInstance",
+                    "Val": "STRING joint_histo_1"
+                },
+                {
+                    "Key": "srcPort",
+                    "Val": "STRING po0"
+                },
+                {
+                    "Key": "dstInstance",
+                    "Val": "STRING aie_graph.joint_entropy[1]"
+                },
+                {
+                    "Key": "dstPort",
+                    "Val": "STRING pi0"
+                },
+                {
+                    "Key": "numLocks",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "edgeType",
+                    "Val": "STRING stream"
+                },
+                {
+                    "Key": "ephemeral",
+                    "Val": "BOOL 0"
+                }
+            ]
+        },
+        {
+            "Name": "net2",
+            "attrs": [
+                {
+                    "Key": "is_edge",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "srcInstance",
+                    "Val": "STRING joint_histo_2"
+                },
+                {
+                    "Key": "srcPort",
+                    "Val": "STRING po0"
+                },
+                {
+                    "Key": "dstInstance",
+                    "Val": "STRING aie_graph.joint_entropy[2]"
+                },
+                {
+                    "Key": "dstPort",
+                    "Val": "STRING pi0"
+                },
+                {
+                    "Key": "numLocks",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "edgeType",
+                    "Val": "STRING stream"
+                },
+                {
+                    "Key": "ephemeral",
+                    "Val": "BOOL 0"
+                }
+            ]
+        },
+        {
+            "Name": "net3",
+            "attrs": [
+                {
+                    "Key": "is_edge",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "srcInstance",
+                    "Val": "STRING joint_histo_3"
+                },
+                {
+                    "Key": "srcPort",
+                    "Val": "STRING po0"
+                },
+                {
+                    "Key": "dstInstance",
+                    "Val": "STRING aie_graph.joint_entropy[3]"
+                },
+                {
+                    "Key": "dstPort",
+                    "Val": "STRING pi0"
+                },
+                {
+                    "Key": "numLocks",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "edgeType",
+                    "Val": "STRING stream"
+                },
+                {
+                    "Key": "ephemeral",
+                    "Val": "BOOL 0"
+                }
+            ]
+        },
+        {
+            "Name": "net4",
+            "attrs": [
+                {
+                    "Key": "is_edge",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "srcInstance",
+                    "Val": "STRING joint_histo_4"
+                },
+                {
+                    "Key": "srcPort",
+                    "Val": "STRING po0"
+                },
+                {
+                    "Key": "dstInstance",
+                    "Val": "STRING aie_graph.joint_entropy[4]"
+                },
+                {
+                    "Key": "dstPort",
+                    "Val": "STRING pi0"
+                },
+                {
+                    "Key": "numLocks",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "edgeType",
+                    "Val": "STRING stream"
+                },
+                {
+                    "Key": "ephemeral",
+                    "Val": "BOOL 0"
+                }
+            ]
+        },
+        {
+            "Name": "net5",
+            "attrs": [
+                {
+                    "Key": "is_edge",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "srcInstance",
+                    "Val": "STRING joint_histo_5"
+                },
+                {
+                    "Key": "srcPort",
+                    "Val": "STRING po0"
+                },
+                {
+                    "Key": "dstInstance",
+                    "Val": "STRING aie_graph.joint_entropy[5]"
+                },
+                {
+                    "Key": "dstPort",
+                    "Val": "STRING pi0"
+                },
+                {
+                    "Key": "numLocks",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "edgeType",
+                    "Val": "STRING stream"
+                },
+                {
+                    "Key": "ephemeral",
+                    "Val": "BOOL 0"
+                }
+            ]
+        },
+        {
+            "Name": "net6",
+            "attrs": [
+                {
+                    "Key": "is_edge",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "srcInstance",
+                    "Val": "STRING joint_histo_6"
+                },
+                {
+                    "Key": "srcPort",
+                    "Val": "STRING po0"
+                },
+                {
+                    "Key": "dstInstance",
+                    "Val": "STRING aie_graph.joint_entropy[6]"
+                },
+                {
+                    "Key": "dstPort",
+                    "Val": "STRING pi0"
+                },
+                {
+                    "Key": "numLocks",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "edgeType",
+                    "Val": "STRING stream"
+                },
+                {
+                    "Key": "ephemeral",
+                    "Val": "BOOL 0"
+                }
+            ]
+        },
+        {
+            "Name": "net7",
+            "attrs": [
+                {
+                    "Key": "is_edge",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "srcInstance",
+                    "Val": "STRING joint_histo_7"
+                },
+                {
+                    "Key": "srcPort",
+                    "Val": "STRING po0"
+                },
+                {
+                    "Key": "dstInstance",
+                    "Val": "STRING aie_graph.joint_entropy[7]"
+                },
+                {
+                    "Key": "dstPort",
+                    "Val": "STRING pi0"
+                },
+                {
+                    "Key": "numLocks",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "edgeType",
+                    "Val": "STRING stream"
+                },
+                {
+                    "Key": "ephemeral",
+                    "Val": "BOOL 0"
+                }
+            ]
+        },
+        {
+            "Name": "net8",
+            "attrs": [
+                {
+                    "Key": "is_edge",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "srcInstance",
+                    "Val": "STRING marginal_histo"
+                },
+                {
+                    "Key": "srcPort",
+                    "Val": "STRING po0"
+                },
+                {
+                    "Key": "dstInstance",
+                    "Val": "STRING aie_graph.marginal_entropy"
+                },
+                {
+                    "Key": "dstPort",
+                    "Val": "STRING pi0"
+                },
+                {
+                    "Key": "numLocks",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "edgeType",
+                    "Val": "STRING stream"
+                },
+                {
+                    "Key": "ephemeral",
+                    "Val": "BOOL 0"
+                }
+            ]
+        },
+        {
+            "Name": "net9",
+            "attrs": [
+                {
+                    "Key": "is_edge",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "srcInstance",
+                    "Val": "STRING aie_graph.marginal_entropy"
+                },
+                {
+                    "Key": "srcPort",
+                    "Val": "STRING po0"
+                },
+                {
+                    "Key": "dstInstance",
+                    "Val": "STRING aie_graph.joint_entropy[4]"
+                },
+                {
+                    "Key": "dstPort",
+                    "Val": "STRING pi1"
+                },
+                {
+                    "Key": "numLocks",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "edgeType",
+                    "Val": "STRING stream"
+                },
+                {
+                    "Key": "ephemeral",
+                    "Val": "BOOL 0"
+                }
+            ]
+        },
+        {
+            "Name": "net10",
+            "attrs": [
+                {
+                    "Key": "is_edge",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "srcInstance",
+                    "Val": "STRING aie_graph.joint_entropy[4]"
+                },
+                {
+                    "Key": "srcPort",
+                    "Val": "STRING po0"
+                },
+                {
+                    "Key": "dstInstance",
+                    "Val": "STRING aie_graph.joint_entropy[0]"
+                },
+                {
+                    "Key": "dstPort",
+                    "Val": "STRING pi1"
+                },
+                {
+                    "Key": "numLocks",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "edgeType",
+                    "Val": "STRING stream"
+                },
+                {
+                    "Key": "ephemeral",
+                    "Val": "BOOL 0"
+                }
+            ]
+        },
+        {
+            "Name": "net11",
+            "attrs": [
+                {
+                    "Key": "is_edge",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "srcInstance",
+                    "Val": "STRING aie_graph.joint_entropy[5]"
+                },
+                {
+                    "Key": "srcPort",
+                    "Val": "STRING po0"
+                },
+                {
+                    "Key": "dstInstance",
+                    "Val": "STRING aie_graph.joint_entropy[1]"
+                },
+                {
+                    "Key": "dstPort",
+                    "Val": "STRING pi1"
+                },
+                {
+                    "Key": "numLocks",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "edgeType",
+                    "Val": "STRING stream"
+                },
+                {
+                    "Key": "ephemeral",
+                    "Val": "BOOL 0"
+                }
+            ]
+        },
+        {
+            "Name": "net12",
+            "attrs": [
+                {
+                    "Key": "is_edge",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "srcInstance",
+                    "Val": "STRING aie_graph.joint_entropy[6]"
+                },
+                {
+                    "Key": "srcPort",
+                    "Val": "STRING po0"
+                },
+                {
+                    "Key": "dstInstance",
+                    "Val": "STRING aie_graph.joint_entropy[2]"
+                },
+                {
+                    "Key": "dstPort",
+                    "Val": "STRING pi1"
+                },
+                {
+                    "Key": "numLocks",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "edgeType",
+                    "Val": "STRING stream"
+                },
+                {
+                    "Key": "ephemeral",
+                    "Val": "BOOL 0"
+                }
+            ]
+        },
+        {
+            "Name": "net13",
+            "attrs": [
+                {
+                    "Key": "is_edge",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "srcInstance",
+                    "Val": "STRING aie_graph.joint_entropy[7]"
+                },
+                {
+                    "Key": "srcPort",
+                    "Val": "STRING po0"
+                },
+                {
+                    "Key": "dstInstance",
+                    "Val": "STRING aie_graph.joint_entropy[3]"
+                },
+                {
+                    "Key": "dstPort",
+                    "Val": "STRING pi1"
+                },
+                {
+                    "Key": "numLocks",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "edgeType",
+                    "Val": "STRING stream"
+                },
+                {
+                    "Key": "ephemeral",
+                    "Val": "BOOL 0"
+                }
+            ]
+        },
+        {
+            "Name": "net14",
+            "attrs": [
+                {
+                    "Key": "is_edge",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "srcInstance",
+                    "Val": "STRING aie_graph.joint_entropy[0]"
+                },
+                {
+                    "Key": "srcPort",
+                    "Val": "STRING po0"
+                },
+                {
+                    "Key": "dstInstance",
+                    "Val": "STRING aie_graph.reduce[1]"
+                },
+                {
+                    "Key": "dstPort",
+                    "Val": "STRING pi0"
+                },
+                {
+                    "Key": "numLocks",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "edgeType",
+                    "Val": "STRING stream"
+                },
+                {
+                    "Key": "ephemeral",
+                    "Val": "BOOL 0"
+                }
+            ]
+        },
+        {
+            "Name": "net15",
+            "attrs": [
+                {
+                    "Key": "is_edge",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "srcInstance",
+                    "Val": "STRING aie_graph.joint_entropy[1]"
+                },
+                {
+                    "Key": "srcPort",
+                    "Val": "STRING po0"
+                },
+                {
+                    "Key": "dstInstance",
+                    "Val": "STRING aie_graph.reduce[1]"
+                },
+                {
+                    "Key": "dstPort",
+                    "Val": "STRING pi1"
+                },
+                {
+                    "Key": "numLocks",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "edgeType",
+                    "Val": "STRING stream"
+                },
+                {
+                    "Key": "ephemeral",
+                    "Val": "BOOL 0"
+                }
+            ]
+        },
+        {
+            "Name": "net16",
+            "attrs": [
+                {
+                    "Key": "is_edge",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "srcInstance",
+                    "Val": "STRING aie_graph.joint_entropy[2]"
+                },
+                {
+                    "Key": "srcPort",
+                    "Val": "STRING po0"
+                },
+                {
+                    "Key": "dstInstance",
+                    "Val": "STRING aie_graph.reduce[2]"
+                },
+                {
+                    "Key": "dstPort",
+                    "Val": "STRING pi0"
+                },
+                {
+                    "Key": "numLocks",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "edgeType",
+                    "Val": "STRING stream"
+                },
+                {
+                    "Key": "ephemeral",
+                    "Val": "BOOL 0"
+                }
+            ]
+        },
+        {
+            "Name": "net17",
+            "attrs": [
+                {
+                    "Key": "is_edge",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "srcInstance",
+                    "Val": "STRING aie_graph.joint_entropy[3]"
+                },
+                {
+                    "Key": "srcPort",
+                    "Val": "STRING po0"
+                },
+                {
+                    "Key": "dstInstance",
+                    "Val": "STRING aie_graph.reduce[2]"
+                },
+                {
+                    "Key": "dstPort",
+                    "Val": "STRING pi1"
+                },
+                {
+                    "Key": "numLocks",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "edgeType",
+                    "Val": "STRING stream"
+                },
+                {
+                    "Key": "ephemeral",
+                    "Val": "BOOL 0"
+                }
+            ]
+        },
+        {
+            "Name": "net18",
+            "attrs": [
+                {
+                    "Key": "is_edge",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "srcInstance",
+                    "Val": "STRING aie_graph.reduce[2]"
+                },
+                {
+                    "Key": "srcPort",
+                    "Val": "STRING po0"
+                },
+                {
+                    "Key": "dstInstance",
+                    "Val": "STRING aie_graph.reduce[0]"
+                },
+                {
+                    "Key": "dstPort",
+                    "Val": "STRING pi0"
+                },
+                {
+                    "Key": "numLocks",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "edgeType",
+                    "Val": "STRING stream"
+                },
+                {
+                    "Key": "ephemeral",
+                    "Val": "BOOL 0"
+                }
+            ]
+        },
+        {
+            "Name": "net19",
+            "attrs": [
+                {
+                    "Key": "is_edge",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "srcInstance",
+                    "Val": "STRING aie_graph.reduce[1]"
+                },
+                {
+                    "Key": "srcPort",
+                    "Val": "STRING po0"
+                },
+                {
+                    "Key": "dstInstance",
+                    "Val": "STRING aie_graph.reduce[0]"
+                },
+                {
+                    "Key": "dstPort",
+                    "Val": "STRING pi1"
+                },
+                {
+                    "Key": "numLocks",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "edgeType",
+                    "Val": "STRING stream"
+                },
+                {
+                    "Key": "ephemeral",
+                    "Val": "BOOL 0"
+                }
+            ]
+        },
+        {
+            "Name": "net20",
+            "attrs": [
+                {
+                    "Key": "is_edge",
+                    "Val": "BOOL 1"
+                },
+                {
+                    "Key": "srcInstance",
+                    "Val": "STRING aie_graph.reduce[0]"
+                },
+                {
+                    "Key": "srcPort",
+                    "Val": "STRING po0"
+                },
+                {
+                    "Key": "dstInstance",
+                    "Val": "STRING out_plio_1"
+                },
+                {
+                    "Key": "dstPort",
+                    "Val": "STRING pi0"
+                },
+                {
+                    "Key": "numLocks",
+                    "Val": "INT 0"
+                },
+                {
+                    "Key": "edgeType",
+                    "Val": "STRING stream"
+                },
+                {
+                    "Key": "ephemeral",
+                    "Val": "BOOL 0"
+                }
+            ]
+        },
+        {
+            "Name": "unconstraint_fifo0",
+            "attrs": [
+                {
+                    "Key": "size",
+                    "Val": "INT -1"
+                },
+                {
+                    "Key": "record_type",
+                    "Val": "STRING unspecified_fifo"
+                }
+            ]
+        },
+        {
+            "Name": "unconstraint_fifo1",
+            "attrs": [
+                {
+                    "Key": "size",
+                    "Val": "INT -1"
+                },
+                {
+                    "Key": "record_type",
+                    "Val": "STRING unspecified_fifo"
+                }
+            ]
+        },
+        {
+            "Name": "unconstraint_fifo2",
+            "attrs": [
+                {
+                    "Key": "size",
+                    "Val": "INT -1"
+                },
+                {
+                    "Key": "record_type",
+                    "Val": "STRING unspecified_fifo"
+                }
+            ]
+        },
+        {
+            "Name": "unconstraint_fifo3",
+            "attrs": [
+                {
+                    "Key": "size",
+                    "Val": "INT -1"
+                },
+                {
+                    "Key": "record_type",
+                    "Val": "STRING unspecified_fifo"
+                }
+            ]
+        },
+        {
+            "Name": "unconstraint_fifo4",
+            "attrs": [
+                {
+                    "Key": "size",
+                    "Val": "INT -1"
+                },
+                {
+                    "Key": "record_type",
+                    "Val": "STRING unspecified_fifo"
+                }
+            ]
+        },
+        {
+            "Name": "unconstraint_fifo5",
+            "attrs": [
+                {
+                    "Key": "size",
+                    "Val": "INT -1"
+                },
+                {
+                    "Key": "record_type",
+                    "Val": "STRING unspecified_fifo"
+                }
+            ]
+        },
+        {
+            "Name": "unconstraint_fifo6",
+            "attrs": [
+                {
+                    "Key": "size",
+                    "Val": "INT -1"
+                },
+                {
+                    "Key": "record_type",
+                    "Val": "STRING unspecified_fifo"
+                }
+            ]
+        },
+        {
+            "Name": "unconstraint_fifo7",
+            "attrs": [
+                {
+                    "Key": "size",
+                    "Val": "INT -1"
+                },
+                {
+                    "Key": "record_type",
+                    "Val": "STRING unspecified_fifo"
+                }
+            ]
+        },
+        {
+            "Name": "unconstraint_fifo8",
+            "attrs": [
+                {
+                    "Key": "size",
+                    "Val": "INT -1"
+                },
+                {
+                    "Key": "record_type",
+                    "Val": "STRING unspecified_fifo"
+                }
+            ]
+        },
+        {
+            "Name": "unconstraint_fifo9",
+            "attrs": [
+                {
+                    "Key": "size",
+                    "Val": "INT -1"
+                },
+                {
+                    "Key": "record_type",
+                    "Val": "STRING unspecified_fifo"
+                }
+            ]
+        },
+        {
+            "Name": "unconstraint_fifo10",
+            "attrs": [
+                {
+                    "Key": "size",
+                    "Val": "INT -1"
+                },
+                {
+                    "Key": "record_type",
+                    "Val": "STRING unspecified_fifo"
+                }
+            ]
+        },
+        {
+            "Name": "unconstraint_fifo11",
+            "attrs": [
+                {
+                    "Key": "size",
+                    "Val": "INT -1"
+                },
+                {
+                    "Key": "record_type",
+                    "Val": "STRING unspecified_fifo"
+                }
+            ]
+        },
+        {
+            "Name": "unconstraint_fifo12",
+            "attrs": [
+                {
+                    "Key": "size",
+                    "Val": "INT -1"
+                },
+                {
+                    "Key": "record_type",
+                    "Val": "STRING unspecified_fifo"
+                }
+            ]
+        },
+        {
+            "Name": "unconstraint_fifo13",
+            "attrs": [
+                {
+                    "Key": "size",
+                    "Val": "INT -1"
+                },
+                {
+                    "Key": "record_type",
+                    "Val": "STRING unspecified_fifo"
+                }
+            ]
+        },
+        {
+            "Name": "unconstraint_fifo14",
+            "attrs": [
+                {
+                    "Key": "size",
+                    "Val": "INT -1"
+                },
+                {
+                    "Key": "record_type",
+                    "Val": "STRING unspecified_fifo"
+                }
+            ]
+        },
+        {
+            "Name": "unconstraint_fifo15",
+            "attrs": [
+                {
+                    "Key": "size",
+                    "Val": "INT -1"
+                },
+                {
+                    "Key": "record_type",
+                    "Val": "STRING unspecified_fifo"
+                }
+            ]
+        },
+        {
+            "Name": "unconstraint_fifo16",
+            "attrs": [
+                {
+                    "Key": "size",
+                    "Val": "INT -1"
+                },
+                {
+                    "Key": "record_type",
+                    "Val": "STRING unspecified_fifo"
+                }
+            ]
+        },
+        {
+            "Name": "unconstraint_fifo17",
+            "attrs": [
+                {
+                    "Key": "size",
+                    "Val": "INT -1"
+                },
+                {
+                    "Key": "record_type",
+                    "Val": "STRING unspecified_fifo"
+                }
+            ]
+        },
+        {
+            "Name": "unconstraint_fifo18",
+            "attrs": [
+                {
+                    "Key": "size",
+                    "Val": "INT -1"
+                },
+                {
+                    "Key": "record_type",
+                    "Val": "STRING unspecified_fifo"
+                }
+            ]
+        },
+        {
+            "Name": "unconstraint_fifo19",
+            "attrs": [
+                {
+                    "Key": "size",
+                    "Val": "INT -1"
+                },
+                {
+                    "Key": "record_type",
+                    "Val": "STRING unspecified_fifo"
+                }
+            ]
+        },
+        {
+            "Name": "unconstraint_fifo20",
+            "attrs": [
+                {
+                    "Key": "size",
+                    "Val": "INT -1"
+                },
+                {
+                    "Key": "record_type",
+                    "Val": "STRING unspecified_fifo"
+                }
+            ]
+        }
+    ],
+    "Netlist Element Attrs": [
+        {
+            "Name": "aie_graph.joint_entropy[0]",
+            "attrs": [
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "schedule",
+                    "Val": "INT 0"
+                }
+            ]
+        },
+        {
+            "Name": "joint_histo_0",
+            "attrs": [
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "ioshimType",
+                    "Val": "STRING plioshim"
+                }
+            ]
+        },
+        {
+            "Name": "aie_graph.joint_entropy[5]",
+            "attrs": [
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "schedule",
+                    "Val": "INT 0"
+                }
+            ]
+        },
+        {
+            "Name": "joint_histo_5",
+            "attrs": [
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "ioshimType",
+                    "Val": "STRING plioshim"
+                }
+            ]
+        },
+        {
+            "Name": "aie_graph.joint_entropy[6]",
+            "attrs": [
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "schedule",
+                    "Val": "INT 0"
+                }
+            ]
+        },
+        {
+            "Name": "joint_histo_6",
+            "attrs": [
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "ioshimType",
+                    "Val": "STRING plioshim"
+                }
+            ]
+        },
+        {
+            "Name": "aie_graph.joint_entropy[7]",
+            "attrs": [
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "schedule",
+                    "Val": "INT 0"
+                }
+            ]
+        },
+        {
+            "Name": "joint_histo_7",
+            "attrs": [
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "ioshimType",
+                    "Val": "STRING plioshim"
+                }
+            ]
+        },
+        {
+            "Name": "aie_graph.marginal_entropy",
+            "attrs": [
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "schedule",
+                    "Val": "INT 0"
+                }
+            ]
+        },
+        {
+            "Name": "marginal_histo",
+            "attrs": [
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "ioshimType",
+                    "Val": "STRING plioshim"
+                }
+            ]
+        },
+        {
+            "Name": "aie_graph.reduce[0]",
+            "attrs": [
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "schedule",
+                    "Val": "INT 0"
+                }
+            ]
+        },
+        {
+            "Name": "aie_graph.reduce[1]",
+            "attrs": [
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "schedule",
+                    "Val": "INT 0"
+                }
+            ]
+        },
+        {
+            "Name": "aie_graph.joint_entropy[1]",
+            "attrs": [
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "schedule",
+                    "Val": "INT 0"
+                }
+            ]
+        },
+        {
+            "Name": "aie_graph.reduce[2]",
+            "attrs": [
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "schedule",
+                    "Val": "INT 0"
+                }
+            ]
+        },
+        {
+            "Name": "out_plio_1",
+            "attrs": [
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "ioshimType",
+                    "Val": "STRING plioshim"
+                }
+            ]
+        },
+        {
+            "Name": "joint_histo_1",
+            "attrs": [
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "ioshimType",
+                    "Val": "STRING plioshim"
+                }
+            ]
+        },
+        {
+            "Name": "aie_graph.joint_entropy[2]",
+            "attrs": [
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "schedule",
+                    "Val": "INT 0"
+                }
+            ]
+        },
+        {
+            "Name": "joint_histo_2",
+            "attrs": [
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "ioshimType",
+                    "Val": "STRING plioshim"
+                }
+            ]
+        },
+        {
+            "Name": "aie_graph.joint_entropy[3]",
+            "attrs": [
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "schedule",
+                    "Val": "INT 0"
+                }
+            ]
+        },
+        {
+            "Name": "joint_histo_3",
+            "attrs": [
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "ioshimType",
+                    "Val": "STRING plioshim"
+                }
+            ]
+        },
+        {
+            "Name": "aie_graph.joint_entropy[4]",
+            "attrs": [
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "schedule",
+                    "Val": "INT 0"
+                }
+            ]
+        },
+        {
+            "Name": "joint_histo_4",
+            "attrs": [
+                {
+                    "Key": "fabric",
+                    "Val": "STRING me"
+                },
+                {
+                    "Key": "ioshimType",
+                    "Val": "STRING plioshim"
+                }
+            ]
+        }
+    ],
+    "Net Routing": [
+        {
+            "Name": "net0",
+            "Route ArcNodes": [
+                {
+                    "Tile": "__BEGIN_ROOT__",
+                    "Arc": "NULL",
+                    "Wire": "NULL"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X26Y0",
+                    "Arc": "NULL",
+                    "Wire": "AIE_PL_TO_AIE_5_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X26Y0",
+                    "Arc": "AIE_INTF_B1_CORE.AIE_PL_TO_AIE_5_PIN->>AIE_PL_TO_AIE_5",
+                    "Wire": "AIE_PL_TO_AIE_5"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X26Y0",
+                    "Arc": "AIE_INTF_B1_CORE.AIE_PL_TO_AIE_5->>AIE_SWITCH_S_SOUTH_CH5_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH5_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X26Y0",
+                    "Arc": "AIE_INTF_B1_CORE.AIE_SWITCH_S_SOUTH_CH5_PIN->>AIE_SWITCH_M_NORTH_CH4_PIN",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH4_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X26Y0",
+                    "Arc": "AIE_INTF_B1_CORE.AIE_SWITCH_M_NORTH_CH4_PIN->>AIE_SWITCH_M_NORTH_CH4",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH4"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_SOUTH_CH4->>AIE_SWITCH_S_SOUTH_CH4_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH4_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_SOUTH_CH4_PIN->>AIE_SWITCH_M_NORTH_CH5_PIN",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH5_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_NORTH_CH5_PIN->>AIE_SWITCH_M_NORTH_CH5",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH5"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_SOUTH_CH5->>AIE_SWITCH_S_SOUTH_CH5_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH5_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_SOUTH_CH5_PIN->>AIE_SWITCH_M_CORE_IN_CH0_PIN",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_CORE_IN_CH0_PIN->>AIE_SWITCH_M_CORE_IN_CH0",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH0"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_CORE_IN_CH0->>AIE_CORE_S_CORE_CH0_PIN",
+                    "Wire": "AIE_CORE_S_CORE_CH0_PIN"
+                }
+            ]
+        },
+        {
+            "Name": "net1",
+            "Route ArcNodes": [
+                {
+                    "Tile": "__BEGIN_ROOT__",
+                    "Arc": "NULL",
+                    "Wire": "NULL"
+                },
+                {
+                    "Tile": "AIE_INTF_B0_CORE_X25Y0",
+                    "Arc": "NULL",
+                    "Wire": "AIE_PL_TO_AIE_4_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B0_CORE_X25Y0",
+                    "Arc": "AIE_INTF_B0_CORE.AIE_PL_TO_AIE_4_PIN->>AIE_PL_TO_AIE_4",
+                    "Wire": "AIE_PL_TO_AIE_4"
+                },
+                {
+                    "Tile": "AIE_INTF_B0_CORE_X25Y0",
+                    "Arc": "AIE_INTF_B0_CORE.AIE_PL_TO_AIE_4->>AIE_SWITCH_S_SOUTH_CH4_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH4_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B0_CORE_X25Y0",
+                    "Arc": "AIE_INTF_B0_CORE.AIE_SWITCH_S_SOUTH_CH4_PIN->>AIE_SWITCH_M_NORTH_CH5_PIN",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH5_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B0_CORE_X25Y0",
+                    "Arc": "AIE_INTF_B0_CORE.AIE_SWITCH_M_NORTH_CH5_PIN->>AIE_SWITCH_M_NORTH_CH5",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH5"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_SOUTH_CH5->>AIE_SWITCH_S_SOUTH_CH5_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH5_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_SOUTH_CH5_PIN->>AIE_SWITCH_M_CORE_IN_CH0_PIN",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_CORE_IN_CH0_PIN->>AIE_SWITCH_M_CORE_IN_CH0",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH0"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_CORE_IN_CH0->>AIE_CORE_S_CORE_CH0_PIN",
+                    "Wire": "AIE_CORE_S_CORE_CH0_PIN"
+                }
+            ]
+        },
+        {
+            "Name": "net10",
+            "Route ArcNodes": [
+                {
+                    "Tile": "__BEGIN_ROOT__",
+                    "Arc": "NULL",
+                    "Wire": "NULL"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y2",
+                    "Arc": "NULL",
+                    "Wire": "AIE_CORE_M_CORE_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y2",
+                    "Arc": "AIE_TILE_MY.AIE_CORE_M_CORE_CH0_PIN->>AIE_CORE_M_CORE_CH0",
+                    "Wire": "AIE_CORE_M_CORE_CH0"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y2",
+                    "Arc": "AIE_TILE_MY.AIE_CORE_M_CORE_CH0->>AIE_SWITCH_S_CORE_OUT_CH0_PIN",
+                    "Wire": "AIE_SWITCH_S_CORE_OUT_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_CORE_OUT_CH0_PIN->>AIE_SWITCH_M_NEXT_CH3_PIN",
+                    "Wire": "AIE_SWITCH_M_NEXT_CH3_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_NEXT_CH3_PIN->>AIE_SWITCH_M_NEXT_CH3",
+                    "Wire": "AIE_SWITCH_M_NEXT_CH3"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_PREV_CH3->>AIE_SWITCH_S_PREV_CH3_PIN",
+                    "Wire": "AIE_SWITCH_S_PREV_CH3_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_PREV_CH3_PIN->>AIE_SWITCH_M_CORE_IN_CH1_PIN",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH1_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_CORE_IN_CH1_PIN->>AIE_SWITCH_M_CORE_IN_CH1",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH1"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_CORE_IN_CH1->>AIE_CORE_S_CORE_CH1_PIN",
+                    "Wire": "AIE_CORE_S_CORE_CH1_PIN"
+                }
+            ]
+        },
+        {
+            "Name": "net11",
+            "Route ArcNodes": [
+                {
+                    "Tile": "__BEGIN_ROOT__",
+                    "Arc": "NULL",
+                    "Wire": "NULL"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y1",
+                    "Arc": "NULL",
+                    "Wire": "AIE_CORE_M_CORE_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y1",
+                    "Arc": "AIE_TILE.AIE_CORE_M_CORE_CH0_PIN->>AIE_CORE_M_CORE_CH0",
+                    "Wire": "AIE_CORE_M_CORE_CH0"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y1",
+                    "Arc": "AIE_TILE.AIE_CORE_M_CORE_CH0->>AIE_SWITCH_S_CORE_OUT_CH0_PIN",
+                    "Wire": "AIE_SWITCH_S_CORE_OUT_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_CORE_OUT_CH0_PIN->>AIE_SWITCH_M_PREV_CH3_PIN",
+                    "Wire": "AIE_SWITCH_M_PREV_CH3_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_PREV_CH3_PIN->>AIE_SWITCH_M_PREV_CH3",
+                    "Wire": "AIE_SWITCH_M_PREV_CH3"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_NEXT_CH3->>AIE_SWITCH_S_NEXT_CH3_PIN",
+                    "Wire": "AIE_SWITCH_S_NEXT_CH3_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_NEXT_CH3_PIN->>AIE_SWITCH_M_CORE_IN_CH1_PIN",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH1_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_CORE_IN_CH1_PIN->>AIE_SWITCH_M_CORE_IN_CH1",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH1"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_CORE_IN_CH1->>AIE_CORE_S_CORE_CH1_PIN",
+                    "Wire": "AIE_CORE_S_CORE_CH1_PIN"
+                }
+            ]
+        },
+        {
+            "Name": "net12",
+            "Route ArcNodes": [
+                {
+                    "Tile": "__BEGIN_ROOT__",
+                    "Arc": "NULL",
+                    "Wire": "NULL"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y1",
+                    "Arc": "NULL",
+                    "Wire": "AIE_CORE_M_CORE_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y1",
+                    "Arc": "AIE_TILE.AIE_CORE_M_CORE_CH0_PIN->>AIE_CORE_M_CORE_CH0",
+                    "Wire": "AIE_CORE_M_CORE_CH0"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y1",
+                    "Arc": "AIE_TILE.AIE_CORE_M_CORE_CH0->>AIE_SWITCH_S_CORE_OUT_CH0_PIN",
+                    "Wire": "AIE_SWITCH_S_CORE_OUT_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_CORE_OUT_CH0_PIN->>AIE_SWITCH_M_NORTH_CH4_PIN",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH4_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_NORTH_CH4_PIN->>AIE_SWITCH_M_NORTH_CH4",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH4"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_SOUTH_CH4->>AIE_SWITCH_S_SOUTH_CH4_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH4_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_SOUTH_CH4_PIN->>AIE_SWITCH_M_CORE_IN_CH1_PIN",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH1_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_CORE_IN_CH1_PIN->>AIE_SWITCH_M_CORE_IN_CH1",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH1"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_CORE_IN_CH1->>AIE_CORE_S_CORE_CH1_PIN",
+                    "Wire": "AIE_CORE_S_CORE_CH1_PIN"
+                }
+            ]
+        },
+        {
+            "Name": "net13",
+            "Route ArcNodes": [
+                {
+                    "Tile": "__BEGIN_ROOT__",
+                    "Arc": "NULL",
+                    "Wire": "NULL"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y1",
+                    "Arc": "NULL",
+                    "Wire": "AIE_CORE_M_CORE_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y1",
+                    "Arc": "AIE_TILE.AIE_CORE_M_CORE_CH0_PIN->>AIE_CORE_M_CORE_CH0",
+                    "Wire": "AIE_CORE_M_CORE_CH0"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y1",
+                    "Arc": "AIE_TILE.AIE_CORE_M_CORE_CH0->>AIE_SWITCH_S_CORE_OUT_CH0_PIN",
+                    "Wire": "AIE_SWITCH_S_CORE_OUT_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_CORE_OUT_CH0_PIN->>AIE_SWITCH_M_PREV_CH3_PIN",
+                    "Wire": "AIE_SWITCH_M_PREV_CH3_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_PREV_CH3_PIN->>AIE_SWITCH_M_PREV_CH3",
+                    "Wire": "AIE_SWITCH_M_PREV_CH3"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_NEXT_CH3->>AIE_SWITCH_S_NEXT_CH3_PIN",
+                    "Wire": "AIE_SWITCH_S_NEXT_CH3_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_NEXT_CH3_PIN->>AIE_SWITCH_M_CORE_IN_CH1_PIN",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH1_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_CORE_IN_CH1_PIN->>AIE_SWITCH_M_CORE_IN_CH1",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH1"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_CORE_IN_CH1->>AIE_CORE_S_CORE_CH1_PIN",
+                    "Wire": "AIE_CORE_S_CORE_CH1_PIN"
+                }
+            ]
+        },
+        {
+            "Name": "net14",
+            "Route ArcNodes": [
+                {
+                    "Tile": "__BEGIN_ROOT__",
+                    "Arc": "NULL",
+                    "Wire": "NULL"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y2",
+                    "Arc": "NULL",
+                    "Wire": "AIE_CORE_M_CORE_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y2",
+                    "Arc": "AIE_TILE_MY.AIE_CORE_M_CORE_CH0_PIN->>AIE_CORE_M_CORE_CH0",
+                    "Wire": "AIE_CORE_M_CORE_CH0"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y2",
+                    "Arc": "AIE_TILE_MY.AIE_CORE_M_CORE_CH0->>AIE_SWITCH_S_CORE_OUT_CH0_PIN",
+                    "Wire": "AIE_SWITCH_S_CORE_OUT_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_CORE_OUT_CH0_PIN->>AIE_SWITCH_M_NEXT_CH3_PIN",
+                    "Wire": "AIE_SWITCH_M_NEXT_CH3_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_NEXT_CH3_PIN->>AIE_SWITCH_M_NEXT_CH3",
+                    "Wire": "AIE_SWITCH_M_NEXT_CH3"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_PREV_CH3->>AIE_SWITCH_S_PREV_CH3_PIN",
+                    "Wire": "AIE_SWITCH_S_PREV_CH3_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_PREV_CH3_PIN->>AIE_SWITCH_M_CORE_IN_CH0_PIN",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_CORE_IN_CH0_PIN->>AIE_SWITCH_M_CORE_IN_CH0",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH0"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_CORE_IN_CH0->>AIE_CORE_S_CORE_CH0_PIN",
+                    "Wire": "AIE_CORE_S_CORE_CH0_PIN"
+                }
+            ]
+        },
+        {
+            "Name": "net15",
+            "Route ArcNodes": [
+                {
+                    "Tile": "__BEGIN_ROOT__",
+                    "Arc": "NULL",
+                    "Wire": "NULL"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y1",
+                    "Arc": "NULL",
+                    "Wire": "AIE_CORE_M_CORE_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y1",
+                    "Arc": "AIE_TILE.AIE_CORE_M_CORE_CH0_PIN->>AIE_CORE_M_CORE_CH0",
+                    "Wire": "AIE_CORE_M_CORE_CH0"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y1",
+                    "Arc": "AIE_TILE.AIE_CORE_M_CORE_CH0->>AIE_SWITCH_S_CORE_OUT_CH0_PIN",
+                    "Wire": "AIE_SWITCH_S_CORE_OUT_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_CORE_OUT_CH0_PIN->>AIE_SWITCH_M_NORTH_CH5_PIN",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH5_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_NORTH_CH5_PIN->>AIE_SWITCH_M_NORTH_CH5",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH5"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_SOUTH_CH5->>AIE_SWITCH_S_SOUTH_CH5_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH5_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_SOUTH_CH5_PIN->>AIE_SWITCH_M_CORE_IN_CH1_PIN",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH1_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_CORE_IN_CH1_PIN->>AIE_SWITCH_M_CORE_IN_CH1",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH1"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_CORE_IN_CH1->>AIE_CORE_S_CORE_CH1_PIN",
+                    "Wire": "AIE_CORE_S_CORE_CH1_PIN"
+                }
+            ]
+        },
+        {
+            "Name": "net16",
+            "Route ArcNodes": [
+                {
+                    "Tile": "__BEGIN_ROOT__",
+                    "Arc": "NULL",
+                    "Wire": "NULL"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y2",
+                    "Arc": "NULL",
+                    "Wire": "AIE_CORE_M_CORE_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y2",
+                    "Arc": "AIE_TILE_MY.AIE_CORE_M_CORE_CH0_PIN->>AIE_CORE_M_CORE_CH0",
+                    "Wire": "AIE_CORE_M_CORE_CH0"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y2",
+                    "Arc": "AIE_TILE_MY.AIE_CORE_M_CORE_CH0->>AIE_SWITCH_S_CORE_OUT_CH0_PIN",
+                    "Wire": "AIE_SWITCH_S_CORE_OUT_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_CORE_OUT_CH0_PIN->>AIE_SWITCH_M_PREV_CH3_PIN",
+                    "Wire": "AIE_SWITCH_M_PREV_CH3_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_PREV_CH3_PIN->>AIE_SWITCH_M_PREV_CH3",
+                    "Wire": "AIE_SWITCH_M_PREV_CH3"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_NEXT_CH3->>AIE_SWITCH_S_NEXT_CH3_PIN",
+                    "Wire": "AIE_SWITCH_S_NEXT_CH3_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_NEXT_CH3_PIN->>AIE_SWITCH_M_CORE_IN_CH0_PIN",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_CORE_IN_CH0_PIN->>AIE_SWITCH_M_CORE_IN_CH0",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH0"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_CORE_IN_CH0->>AIE_CORE_S_CORE_CH0_PIN",
+                    "Wire": "AIE_CORE_S_CORE_CH0_PIN"
+                }
+            ]
+        },
+        {
+            "Name": "net17",
+            "Route ArcNodes": [
+                {
+                    "Tile": "__BEGIN_ROOT__",
+                    "Arc": "NULL",
+                    "Wire": "NULL"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y1",
+                    "Arc": "NULL",
+                    "Wire": "AIE_CORE_M_CORE_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y1",
+                    "Arc": "AIE_TILE.AIE_CORE_M_CORE_CH0_PIN->>AIE_CORE_M_CORE_CH0",
+                    "Wire": "AIE_CORE_M_CORE_CH0"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y1",
+                    "Arc": "AIE_TILE.AIE_CORE_M_CORE_CH0->>AIE_SWITCH_S_CORE_OUT_CH0_PIN",
+                    "Wire": "AIE_SWITCH_S_CORE_OUT_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_CORE_OUT_CH0_PIN->>AIE_SWITCH_M_NORTH_CH5_PIN",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH5_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_NORTH_CH5_PIN->>AIE_SWITCH_M_NORTH_CH5",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH5"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_SOUTH_CH5->>AIE_SWITCH_S_SOUTH_CH5_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH5_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_SOUTH_CH5_PIN->>AIE_SWITCH_M_CORE_IN_CH1_PIN",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH1_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_CORE_IN_CH1_PIN->>AIE_SWITCH_M_CORE_IN_CH1",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH1"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_CORE_IN_CH1->>AIE_CORE_S_CORE_CH1_PIN",
+                    "Wire": "AIE_CORE_S_CORE_CH1_PIN"
+                }
+            ]
+        },
+        {
+            "Name": "net18",
+            "Route ArcNodes": [
+                {
+                    "Tile": "__BEGIN_ROOT__",
+                    "Arc": "NULL",
+                    "Wire": "NULL"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y2",
+                    "Arc": "NULL",
+                    "Wire": "AIE_CORE_M_CORE_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y2",
+                    "Arc": "AIE_TILE_MY.AIE_CORE_M_CORE_CH0_PIN->>AIE_CORE_M_CORE_CH0",
+                    "Wire": "AIE_CORE_M_CORE_CH0"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y2",
+                    "Arc": "AIE_TILE_MY.AIE_CORE_M_CORE_CH0->>AIE_SWITCH_S_CORE_OUT_CH0_PIN",
+                    "Wire": "AIE_SWITCH_S_CORE_OUT_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_CORE_OUT_CH0_PIN->>AIE_SWITCH_M_PREV_CH3_PIN",
+                    "Wire": "AIE_SWITCH_M_PREV_CH3_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_PREV_CH3_PIN->>AIE_SWITCH_M_PREV_CH3",
+                    "Wire": "AIE_SWITCH_M_PREV_CH3"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_NEXT_CH3->>AIE_SWITCH_S_NEXT_CH3_PIN",
+                    "Wire": "AIE_SWITCH_S_NEXT_CH3_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_NEXT_CH3_PIN->>AIE_SWITCH_M_CORE_IN_CH0_PIN",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_CORE_IN_CH0_PIN->>AIE_SWITCH_M_CORE_IN_CH0",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH0"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_CORE_IN_CH0->>AIE_CORE_S_CORE_CH0_PIN",
+                    "Wire": "AIE_CORE_S_CORE_CH0_PIN"
+                }
+            ]
+        },
+        {
+            "Name": "net19",
+            "Route ArcNodes": [
+                {
+                    "Tile": "__BEGIN_ROOT__",
+                    "Arc": "NULL",
+                    "Wire": "NULL"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y2",
+                    "Arc": "NULL",
+                    "Wire": "AIE_CORE_M_CORE_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y2",
+                    "Arc": "AIE_TILE_MY.AIE_CORE_M_CORE_CH0_PIN->>AIE_CORE_M_CORE_CH0",
+                    "Wire": "AIE_CORE_M_CORE_CH0"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y2",
+                    "Arc": "AIE_TILE_MY.AIE_CORE_M_CORE_CH0->>AIE_SWITCH_S_CORE_OUT_CH0_PIN",
+                    "Wire": "AIE_SWITCH_S_CORE_OUT_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_CORE_OUT_CH0_PIN->>AIE_SWITCH_M_NEXT_CH3_PIN",
+                    "Wire": "AIE_SWITCH_M_NEXT_CH3_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X25Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_NEXT_CH3_PIN->>AIE_SWITCH_M_NEXT_CH3",
+                    "Wire": "AIE_SWITCH_M_NEXT_CH3"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_PREV_CH3->>AIE_SWITCH_S_PREV_CH3_PIN",
+                    "Wire": "AIE_SWITCH_S_PREV_CH3_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_PREV_CH3_PIN->>AIE_SWITCH_M_CORE_IN_CH1_PIN",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH1_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_CORE_IN_CH1_PIN->>AIE_SWITCH_M_CORE_IN_CH1",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH1"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_CORE_IN_CH1->>AIE_CORE_S_CORE_CH1_PIN",
+                    "Wire": "AIE_CORE_S_CORE_CH1_PIN"
+                }
+            ]
+        },
+        {
+            "Name": "net2",
+            "Route ArcNodes": [
+                {
+                    "Tile": "__BEGIN_ROOT__",
+                    "Arc": "NULL",
+                    "Wire": "NULL"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X22Y0",
+                    "Arc": "NULL",
+                    "Wire": "AIE_PL_TO_AIE_0_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X22Y0",
+                    "Arc": "AIE_INTF_B1_CORE.AIE_PL_TO_AIE_0_PIN->>AIE_PL_TO_AIE_0",
+                    "Wire": "AIE_PL_TO_AIE_0"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X22Y0",
+                    "Arc": "AIE_INTF_B1_CORE.AIE_PL_TO_AIE_0->>AIE_SWITCH_S_SOUTH_CH0_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X22Y0",
+                    "Arc": "AIE_INTF_B1_CORE.AIE_SWITCH_S_SOUTH_CH0_PIN->>AIE_SWITCH_M_NORTH_CH4_PIN",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH4_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X22Y0",
+                    "Arc": "AIE_INTF_B1_CORE.AIE_SWITCH_M_NORTH_CH4_PIN->>AIE_SWITCH_M_NORTH_CH4",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH4"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_SOUTH_CH4->>AIE_SWITCH_S_SOUTH_CH4_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH4_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_SOUTH_CH4_PIN->>AIE_SWITCH_M_NORTH_CH5_PIN",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH5_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_NORTH_CH5_PIN->>AIE_SWITCH_M_NORTH_CH5",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH5"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_SOUTH_CH5->>AIE_SWITCH_S_SOUTH_CH5_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH5_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_SOUTH_CH5_PIN->>AIE_SWITCH_M_CORE_IN_CH0_PIN",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_CORE_IN_CH0_PIN->>AIE_SWITCH_M_CORE_IN_CH0",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH0"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_CORE_IN_CH0->>AIE_CORE_S_CORE_CH0_PIN",
+                    "Wire": "AIE_CORE_S_CORE_CH0_PIN"
+                }
+            ]
+        },
+        {
+            "Name": "net20",
+            "Route ArcNodes": [
+                {
+                    "Tile": "__BEGIN_ROOT__",
+                    "Arc": "NULL",
+                    "Wire": "NULL"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y2",
+                    "Arc": "NULL",
+                    "Wire": "AIE_CORE_M_CORE_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y2",
+                    "Arc": "AIE_TILE_MY.AIE_CORE_M_CORE_CH0_PIN->>AIE_CORE_M_CORE_CH0",
+                    "Wire": "AIE_CORE_M_CORE_CH0"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y2",
+                    "Arc": "AIE_TILE_MY.AIE_CORE_M_CORE_CH0->>AIE_SWITCH_S_CORE_OUT_CH0_PIN",
+                    "Wire": "AIE_SWITCH_S_CORE_OUT_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_CORE_OUT_CH0_PIN->>AIE_SWITCH_M_SOUTH_CH3_PIN",
+                    "Wire": "AIE_SWITCH_M_SOUTH_CH3_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_SOUTH_CH3_PIN->>AIE_SWITCH_M_SOUTH_CH3",
+                    "Wire": "AIE_SWITCH_M_SOUTH_CH3"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_NORTH_CH3->>AIE_SWITCH_S_NORTH_CH3_PIN",
+                    "Wire": "AIE_SWITCH_S_NORTH_CH3_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_NORTH_CH3_PIN->>AIE_SWITCH_M_SOUTH_CH3_PIN",
+                    "Wire": "AIE_SWITCH_M_SOUTH_CH3_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_SOUTH_CH3_PIN->>AIE_SWITCH_M_SOUTH_CH3",
+                    "Wire": "AIE_SWITCH_M_SOUTH_CH3"
+                },
+                {
+                    "Tile": "AIE_INTF_B3_CORE_X24Y0",
+                    "Arc": "AIE_INTF_B3_CORE.AIE_SWITCH_S_NORTH_CH3->>AIE_SWITCH_S_NORTH_CH3_PIN",
+                    "Wire": "AIE_SWITCH_S_NORTH_CH3_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B3_CORE_X24Y0",
+                    "Arc": "AIE_INTF_B3_CORE.AIE_SWITCH_S_NORTH_CH3_PIN->>AIE_SWITCH_M_SOUTH_CH4_PIN",
+                    "Wire": "AIE_SWITCH_M_SOUTH_CH4_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B3_CORE_X24Y0",
+                    "Arc": "AIE_INTF_B3_CORE.AIE_SWITCH_M_SOUTH_CH4_PIN->>AIE_SWITCH_M_SOUTH_CH4",
+                    "Wire": "AIE_SWITCH_M_SOUTH_CH4"
+                },
+                {
+                    "Tile": "AIE_INTF_B3_CORE_X24Y0",
+                    "Arc": "AIE_INTF_B3_CORE.AIE_SWITCH_M_SOUTH_CH4->>AIE_PL_FROM_AIE_4_PIN",
+                    "Wire": "AIE_PL_FROM_AIE_4_PIN"
+                }
+            ]
+        },
+        {
+            "Name": "net3",
+            "Route ArcNodes": [
+                {
+                    "Tile": "__BEGIN_ROOT__",
+                    "Arc": "NULL",
+                    "Wire": "NULL"
+                },
+                {
+                    "Tile": "AIE_INTF_B2_CORE_X23Y0",
+                    "Arc": "NULL",
+                    "Wire": "AIE_PL_TO_AIE_0_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B2_CORE_X23Y0",
+                    "Arc": "AIE_INTF_B2_CORE.AIE_PL_TO_AIE_0_PIN->>AIE_PL_TO_AIE_0",
+                    "Wire": "AIE_PL_TO_AIE_0"
+                },
+                {
+                    "Tile": "AIE_INTF_B2_CORE_X23Y0",
+                    "Arc": "AIE_INTF_B2_CORE.AIE_PL_TO_AIE_0->>AIE_SWITCH_S_SOUTH_CH0_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B2_CORE_X23Y0",
+                    "Arc": "AIE_INTF_B2_CORE.AIE_SWITCH_S_SOUTH_CH0_PIN->>AIE_SWITCH_M_NORTH_CH5_PIN",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH5_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B2_CORE_X23Y0",
+                    "Arc": "AIE_INTF_B2_CORE.AIE_SWITCH_M_NORTH_CH5_PIN->>AIE_SWITCH_M_NORTH_CH5",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH5"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_SOUTH_CH5->>AIE_SWITCH_S_SOUTH_CH5_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH5_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_SOUTH_CH5_PIN->>AIE_SWITCH_M_CORE_IN_CH0_PIN",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_CORE_IN_CH0_PIN->>AIE_SWITCH_M_CORE_IN_CH0",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH0"
+                },
+                {
+                    "Tile": "AIE_TILE_X23Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_CORE_IN_CH0->>AIE_CORE_S_CORE_CH0_PIN",
+                    "Wire": "AIE_CORE_S_CORE_CH0_PIN"
+                }
+            ]
+        },
+        {
+            "Name": "net4",
+            "Route ArcNodes": [
+                {
+                    "Tile": "__BEGIN_ROOT__",
+                    "Arc": "NULL",
+                    "Wire": "NULL"
+                },
+                {
+                    "Tile": "AIE_INTF_B2_CORE_X27Y0",
+                    "Arc": "NULL",
+                    "Wire": "AIE_PL_TO_AIE_1_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B2_CORE_X27Y0",
+                    "Arc": "AIE_INTF_B2_CORE.AIE_PL_TO_AIE_1_PIN->>AIE_PL_TO_AIE_1",
+                    "Wire": "AIE_PL_TO_AIE_1"
+                },
+                {
+                    "Tile": "AIE_INTF_B2_CORE_X27Y0",
+                    "Arc": "AIE_INTF_B2_CORE.AIE_PL_TO_AIE_1->>AIE_SWITCH_S_SOUTH_CH1_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH1_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B2_CORE_X27Y0",
+                    "Arc": "AIE_INTF_B2_CORE.AIE_SWITCH_S_SOUTH_CH1_PIN->>AIE_SWITCH_M_NORTH_CH4_PIN",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH4_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B2_CORE_X27Y0",
+                    "Arc": "AIE_INTF_B2_CORE.AIE_SWITCH_M_NORTH_CH4_PIN->>AIE_SWITCH_M_NORTH_CH4",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH4"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_SOUTH_CH4->>AIE_SWITCH_S_SOUTH_CH4_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH4_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_SOUTH_CH4_PIN->>AIE_SWITCH_M_NORTH_CH4_PIN",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH4_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_NORTH_CH4_PIN->>AIE_SWITCH_M_NORTH_CH4",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH4"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_SOUTH_CH4->>AIE_SWITCH_S_SOUTH_CH4_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH4_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_SOUTH_CH4_PIN->>AIE_SWITCH_M_CORE_IN_CH0_PIN",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_CORE_IN_CH0_PIN->>AIE_SWITCH_M_CORE_IN_CH0",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH0"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_CORE_IN_CH0->>AIE_CORE_S_CORE_CH0_PIN",
+                    "Wire": "AIE_CORE_S_CORE_CH0_PIN"
+                }
+            ]
+        },
+        {
+            "Name": "net5",
+            "Route ArcNodes": [
+                {
+                    "Tile": "__BEGIN_ROOT__",
+                    "Arc": "NULL",
+                    "Wire": "NULL"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X26Y0",
+                    "Arc": "NULL",
+                    "Wire": "AIE_PL_TO_AIE_6_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X26Y0",
+                    "Arc": "AIE_INTF_B1_CORE.AIE_PL_TO_AIE_6_PIN->>AIE_PL_TO_AIE_6",
+                    "Wire": "AIE_PL_TO_AIE_6"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X26Y0",
+                    "Arc": "AIE_INTF_B1_CORE.AIE_PL_TO_AIE_6->>AIE_NOC_FROM_PL_6_PIN",
+                    "Wire": "AIE_NOC_FROM_PL_6_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X26Y0",
+                    "Arc": "AIE_INTF_B1_CORE.AIE_NOC_FROM_PL_6_PIN->>AIE_NOC_TO_AIE_6_PIN",
+                    "Wire": "AIE_NOC_TO_AIE_6_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X26Y0",
+                    "Arc": "AIE_INTF_B1_CORE.AIE_NOC_TO_AIE_6_PIN->>AIE_NOC_TO_AIE_6",
+                    "Wire": "AIE_NOC_TO_AIE_6"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X26Y0",
+                    "Arc": "AIE_INTF_B1_CORE.AIE_NOC_TO_AIE_6->>AIE_SWITCH_S_SOUTH_CH6_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH6_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X26Y0",
+                    "Arc": "AIE_INTF_B1_CORE.AIE_SWITCH_S_SOUTH_CH6_PIN->>AIE_SWITCH_M_NORTH_CH5_PIN",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH5_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X26Y0",
+                    "Arc": "AIE_INTF_B1_CORE.AIE_SWITCH_M_NORTH_CH5_PIN->>AIE_SWITCH_M_NORTH_CH5",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH5"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_SOUTH_CH5->>AIE_SWITCH_S_SOUTH_CH5_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH5_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_SOUTH_CH5_PIN->>AIE_SWITCH_M_CORE_IN_CH0_PIN",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_CORE_IN_CH0_PIN->>AIE_SWITCH_M_CORE_IN_CH0",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH0"
+                },
+                {
+                    "Tile": "AIE_TILE_X26Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_CORE_IN_CH0->>AIE_CORE_S_CORE_CH0_PIN",
+                    "Wire": "AIE_CORE_S_CORE_CH0_PIN"
+                }
+            ]
+        },
+        {
+            "Name": "net6",
+            "Route ArcNodes": [
+                {
+                    "Tile": "__BEGIN_ROOT__",
+                    "Arc": "NULL",
+                    "Wire": "NULL"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X22Y0",
+                    "Arc": "NULL",
+                    "Wire": "AIE_PL_TO_AIE_6_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X22Y0",
+                    "Arc": "AIE_INTF_B1_CORE.AIE_PL_TO_AIE_6_PIN->>AIE_PL_TO_AIE_6",
+                    "Wire": "AIE_PL_TO_AIE_6"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X22Y0",
+                    "Arc": "AIE_INTF_B1_CORE.AIE_PL_TO_AIE_6->>AIE_NOC_FROM_PL_6_PIN",
+                    "Wire": "AIE_NOC_FROM_PL_6_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X22Y0",
+                    "Arc": "AIE_INTF_B1_CORE.AIE_NOC_FROM_PL_6_PIN->>AIE_NOC_TO_AIE_6_PIN",
+                    "Wire": "AIE_NOC_TO_AIE_6_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X22Y0",
+                    "Arc": "AIE_INTF_B1_CORE.AIE_NOC_TO_AIE_6_PIN->>AIE_NOC_TO_AIE_6",
+                    "Wire": "AIE_NOC_TO_AIE_6"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X22Y0",
+                    "Arc": "AIE_INTF_B1_CORE.AIE_NOC_TO_AIE_6->>AIE_SWITCH_S_SOUTH_CH6_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH6_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X22Y0",
+                    "Arc": "AIE_INTF_B1_CORE.AIE_SWITCH_S_SOUTH_CH6_PIN->>AIE_SWITCH_M_NORTH_CH5_PIN",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH5_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B1_CORE_X22Y0",
+                    "Arc": "AIE_INTF_B1_CORE.AIE_SWITCH_M_NORTH_CH5_PIN->>AIE_SWITCH_M_NORTH_CH5",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH5"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_SOUTH_CH5->>AIE_SWITCH_S_SOUTH_CH5_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH5_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_SOUTH_CH5_PIN->>AIE_SWITCH_M_CORE_IN_CH0_PIN",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_CORE_IN_CH0_PIN->>AIE_SWITCH_M_CORE_IN_CH0",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH0"
+                },
+                {
+                    "Tile": "AIE_TILE_X22Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_CORE_IN_CH0->>AIE_CORE_S_CORE_CH0_PIN",
+                    "Wire": "AIE_CORE_S_CORE_CH0_PIN"
+                }
+            ]
+        },
+        {
+            "Name": "net7",
+            "Route ArcNodes": [
+                {
+                    "Tile": "__BEGIN_ROOT__",
+                    "Arc": "NULL",
+                    "Wire": "NULL"
+                },
+                {
+                    "Tile": "AIE_INTF_B3_CORE_X24Y0",
+                    "Arc": "NULL",
+                    "Wire": "AIE_PL_TO_AIE_5_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B3_CORE_X24Y0",
+                    "Arc": "AIE_INTF_B3_CORE.AIE_PL_TO_AIE_5_PIN->>AIE_PL_TO_AIE_5",
+                    "Wire": "AIE_PL_TO_AIE_5"
+                },
+                {
+                    "Tile": "AIE_INTF_B3_CORE_X24Y0",
+                    "Arc": "AIE_INTF_B3_CORE.AIE_PL_TO_AIE_5->>AIE_SWITCH_S_SOUTH_CH5_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH5_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B3_CORE_X24Y0",
+                    "Arc": "AIE_INTF_B3_CORE.AIE_SWITCH_S_SOUTH_CH5_PIN->>AIE_SWITCH_M_NORTH_CH5_PIN",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH5_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B3_CORE_X24Y0",
+                    "Arc": "AIE_INTF_B3_CORE.AIE_SWITCH_M_NORTH_CH5_PIN->>AIE_SWITCH_M_NORTH_CH5",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH5"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_SOUTH_CH5->>AIE_SWITCH_S_SOUTH_CH5_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH5_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_SOUTH_CH5_PIN->>AIE_SWITCH_M_CORE_IN_CH0_PIN",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_CORE_IN_CH0_PIN->>AIE_SWITCH_M_CORE_IN_CH0",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH0"
+                },
+                {
+                    "Tile": "AIE_TILE_X24Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_CORE_IN_CH0->>AIE_CORE_S_CORE_CH0_PIN",
+                    "Wire": "AIE_CORE_S_CORE_CH0_PIN"
+                }
+            ]
+        },
+        {
+            "Name": "net8",
+            "Route ArcNodes": [
+                {
+                    "Tile": "__BEGIN_ROOT__",
+                    "Arc": "NULL",
+                    "Wire": "NULL"
+                },
+                {
+                    "Tile": "AIE_INTF_B2_CORE_X27Y0",
+                    "Arc": "NULL",
+                    "Wire": "AIE_PL_TO_AIE_6_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B2_CORE_X27Y0",
+                    "Arc": "AIE_INTF_B2_CORE.AIE_PL_TO_AIE_6_PIN->>AIE_PL_TO_AIE_6",
+                    "Wire": "AIE_PL_TO_AIE_6"
+                },
+                {
+                    "Tile": "AIE_INTF_B2_CORE_X27Y0",
+                    "Arc": "AIE_INTF_B2_CORE.AIE_PL_TO_AIE_6->>AIE_NOC_FROM_PL_6_PIN",
+                    "Wire": "AIE_NOC_FROM_PL_6_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B2_CORE_X27Y0",
+                    "Arc": "AIE_INTF_B2_CORE.AIE_NOC_FROM_PL_6_PIN->>AIE_NOC_TO_AIE_6_PIN",
+                    "Wire": "AIE_NOC_TO_AIE_6_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B2_CORE_X27Y0",
+                    "Arc": "AIE_INTF_B2_CORE.AIE_NOC_TO_AIE_6_PIN->>AIE_NOC_TO_AIE_6",
+                    "Wire": "AIE_NOC_TO_AIE_6"
+                },
+                {
+                    "Tile": "AIE_INTF_B2_CORE_X27Y0",
+                    "Arc": "AIE_INTF_B2_CORE.AIE_NOC_TO_AIE_6->>AIE_SWITCH_S_SOUTH_CH6_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH6_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B2_CORE_X27Y0",
+                    "Arc": "AIE_INTF_B2_CORE.AIE_SWITCH_S_SOUTH_CH6_PIN->>AIE_SWITCH_M_NORTH_CH5_PIN",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH5_PIN"
+                },
+                {
+                    "Tile": "AIE_INTF_B2_CORE_X27Y0",
+                    "Arc": "AIE_INTF_B2_CORE.AIE_SWITCH_M_NORTH_CH5_PIN->>AIE_SWITCH_M_NORTH_CH5",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH5"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_SOUTH_CH5->>AIE_SWITCH_S_SOUTH_CH5_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH5_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_SOUTH_CH5_PIN->>AIE_SWITCH_M_CORE_IN_CH0_PIN",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_CORE_IN_CH0_PIN->>AIE_SWITCH_M_CORE_IN_CH0",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH0"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_CORE_IN_CH0->>AIE_CORE_S_CORE_CH0_PIN",
+                    "Wire": "AIE_CORE_S_CORE_CH0_PIN"
+                }
+            ]
+        },
+        {
+            "Name": "net9",
+            "Route ArcNodes": [
+                {
+                    "Tile": "__BEGIN_ROOT__",
+                    "Arc": "NULL",
+                    "Wire": "NULL"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y1",
+                    "Arc": "NULL",
+                    "Wire": "AIE_CORE_M_CORE_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y1",
+                    "Arc": "AIE_TILE.AIE_CORE_M_CORE_CH0_PIN->>AIE_CORE_M_CORE_CH0",
+                    "Wire": "AIE_CORE_M_CORE_CH0"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y1",
+                    "Arc": "AIE_TILE.AIE_CORE_M_CORE_CH0->>AIE_SWITCH_S_CORE_OUT_CH0_PIN",
+                    "Wire": "AIE_SWITCH_S_CORE_OUT_CH0_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_S_CORE_OUT_CH0_PIN->>AIE_SWITCH_M_NORTH_CH5_PIN",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH5_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y1",
+                    "Arc": "AIE_TILE.AIE_SWITCH_M_NORTH_CH5_PIN->>AIE_SWITCH_M_NORTH_CH5",
+                    "Wire": "AIE_SWITCH_M_NORTH_CH5"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_SOUTH_CH5->>AIE_SWITCH_S_SOUTH_CH5_PIN",
+                    "Wire": "AIE_SWITCH_S_SOUTH_CH5_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_S_SOUTH_CH5_PIN->>AIE_SWITCH_M_CORE_IN_CH1_PIN",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH1_PIN"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_CORE_IN_CH1_PIN->>AIE_SWITCH_M_CORE_IN_CH1",
+                    "Wire": "AIE_SWITCH_M_CORE_IN_CH1"
+                },
+                {
+                    "Tile": "AIE_TILE_X27Y2",
+                    "Arc": "AIE_TILE_MY.AIE_SWITCH_M_CORE_IN_CH1->>AIE_CORE_S_CORE_CH1_PIN",
+                    "Wire": "AIE_CORE_S_CORE_CH1_PIN"
+                }
+            ]
+        }
+    ]
+}

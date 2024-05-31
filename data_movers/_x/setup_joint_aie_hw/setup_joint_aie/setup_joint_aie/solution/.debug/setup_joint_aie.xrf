@@ -1,0 +1,13 @@
+Begin Function 'setup_joint_aie'
+
+RTL state condition: (1'b1 == ap_CS_fsm_state2)
+# ST_2
+local histogram_rows_read <> <integer> <> 'read' <>
+reg: histogram_rows_read_reg_191[63:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state4)
+# ST_4
+
+End Function 'setup_joint_aie'
+

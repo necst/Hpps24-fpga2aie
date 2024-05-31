@@ -14,15 +14,15 @@
   <cf:comp  cf:name="ai_engine_0" xd:componentRef="ai_engine" >  
   </cf:comp>
   <cf:instance  cf:blockName="aieip" cf:compName="ai_engine_0" cf:name="ai_engine_0" >
-    <cf:portMap cf:blockPort="joint_histo_5" cf:paddedWidth="32" xd:isRegistered="false" >    </cf:portMap>
-    <cf:portMap cf:blockPort="joint_histo_6" cf:paddedWidth="32" xd:isRegistered="false" >    </cf:portMap>
-    <cf:portMap cf:blockPort="joint_histo_7" cf:paddedWidth="32" xd:isRegistered="false" >    </cf:portMap>
-    <cf:portMap cf:blockPort="marginal_histo" cf:paddedWidth="32" xd:isRegistered="false" >    </cf:portMap>
-    <cf:portMap cf:blockPort="joint_histo_0" cf:paddedWidth="32" xd:isRegistered="false" >    </cf:portMap>
-    <cf:portMap cf:blockPort="out_plio_1" cf:paddedWidth="32" xd:isRegistered="false" >    </cf:portMap>
-    <cf:portMap cf:blockPort="joint_histo_1" cf:paddedWidth="32" xd:isRegistered="false" >    </cf:portMap>
-    <cf:portMap cf:blockPort="joint_histo_2" cf:paddedWidth="32" xd:isRegistered="false" >    </cf:portMap>
-    <cf:portMap cf:blockPort="joint_histo_3" cf:paddedWidth="32" xd:isRegistered="false" >    </cf:portMap>
-    <cf:portMap cf:blockPort="joint_histo_4" cf:paddedWidth="32" xd:isRegistered="false" >    </cf:portMap>  
+    <cf:portMap cf:blockPort="joint_histo_5" cf:compPort="S05_AXIS" cf:paddedWidth="32" xd:isRegistered="true" >    </cf:portMap>
+    <cf:portMap cf:blockPort="joint_histo_6" cf:compPort="S06_AXIS" cf:paddedWidth="32" xd:isRegistered="true" >    </cf:portMap>
+    <cf:portMap cf:blockPort="joint_histo_7" cf:compPort="S07_AXIS" cf:paddedWidth="32" xd:isRegistered="true" >    </cf:portMap>
+    <cf:portMap cf:blockPort="marginal_histo" cf:compPort="S08_AXIS" cf:paddedWidth="32" xd:isRegistered="true" >    </cf:portMap>
+    <cf:portMap cf:blockPort="joint_histo_0" cf:compPort="S00_AXIS" cf:paddedWidth="32" xd:isRegistered="true" >    </cf:portMap>
+    <cf:portMap cf:blockPort="out_plio_1" cf:compPort="M00_AXIS" cf:paddedWidth="32" xd:isRegistered="true" >    </cf:portMap>
+    <cf:portMap cf:blockPort="joint_histo_1" cf:compPort="S01_AXIS" cf:paddedWidth="32" xd:isRegistered="true" >    </cf:portMap>
+    <cf:portMap cf:blockPort="joint_histo_2" cf:compPort="S02_AXIS" cf:paddedWidth="32" xd:isRegistered="true" >    </cf:portMap>
+    <cf:portMap cf:blockPort="joint_histo_3" cf:compPort="S03_AXIS" cf:paddedWidth="32" xd:isRegistered="true" >    </cf:portMap>
+    <cf:portMap cf:blockPort="joint_histo_4" cf:compPort="S04_AXIS" cf:paddedWidth="32" xd:isRegistered="true" >    </cf:portMap>  
   </cf:instance>
 </cf:model>

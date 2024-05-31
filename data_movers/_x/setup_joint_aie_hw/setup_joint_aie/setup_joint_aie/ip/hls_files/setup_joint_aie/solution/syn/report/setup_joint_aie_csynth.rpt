@@ -1,0 +1,276 @@
+
+
+================================================================
+== Vitis HLS Report for 'setup_joint_aie'
+================================================================
+* Date:           Fri May 31 12:46:13 2024
+
+* Version:        2022.2.2 (Build 3779808 on Feb 17 2023)
+* Project:        setup_joint_aie
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: versal
+* Target device:  xcvc1902-vsvd1760-2MP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.433 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     8275|     8275|  27.581 us|  27.581 us|  8276|  8276|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------------------------------+------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |                                                     |                                          |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+        |                       Instance                      |                  Module                  |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+        +-----------------------------------------------------+------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |grp_setup_joint_aie_Pipeline_VITIS_LOOP_68_1_fu_156  |setup_joint_aie_Pipeline_VITIS_LOOP_68_1  |     8271|     8271|  27.567 us|  27.567 us|  8271|  8271|       no|
+        +-----------------------------------------------------+------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+---------+--------+-----+
+|       Name      | BRAM_18K|  DSP |    FF   |   LUT  | URAM|
++-----------------+---------+------+---------+--------+-----+
+|DSP              |        -|     -|        -|       -|    -|
+|Expression       |        -|     -|        0|      30|    -|
+|FIFO             |        -|     -|        -|       -|    -|
+|Instance         |        0|     -|     5848|    6841|    0|
+|Memory           |        -|     -|        -|       -|    -|
+|Multiplexer      |        -|     -|        -|     300|    -|
+|Register         |        -|     -|       77|       -|    -|
++-----------------+---------+------+---------+--------+-----+
+|Total            |        0|     0|     5925|    7171|    0|
++-----------------+---------+------+---------+--------+-----+
+|Available        |     1934|  1968|  1799680|  899840|  463|
++-----------------+---------+------+---------+--------+-----+
+|Utilization (%)  |        0|     0|       ~0|      ~0|    0|
++-----------------+---------+------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------------------------+------------------------------------------+---------+----+------+------+-----+
+    |                       Instance                      |                  Module                  | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +-----------------------------------------------------+------------------------------------------+---------+----+------+------+-----+
+    |control_s_axi_U                                      |control_s_axi                             |        0|   0|   144|   232|    0|
+    |gmem0_m_axi_U                                        |gmem0_m_axi                               |        0|   0|  2473|  4360|    0|
+    |grp_setup_joint_aie_Pipeline_VITIS_LOOP_68_1_fu_156  |setup_joint_aie_Pipeline_VITIS_LOOP_68_1  |        0|   0|  3231|  2249|    0|
+    +-----------------------------------------------------+------------------------------------------+---------+----+------+------+-----+
+    |Total                                                |                                          |        0|   0|  5848|  6841|    0|
+    +-----------------------------------------------------+------------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                          Variable Name                         | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |ap_ext_blocking_n                                               |       and|   0|  0|   2|           1|           2|
+    |ap_int_blocking_n                                               |       and|   0|  0|   2|           1|           2|
+    |ap_str_blocking_cur_n                                           |       and|   0|  0|   2|           1|           1|
+    |ap_str_blocking_n                                               |       and|   0|  0|   2|           1|           1|
+    |grp_setup_joint_aie_Pipeline_VITIS_LOOP_68_1_fu_156_s_0_TREADY  |       and|   0|  0|   2|           1|           1|
+    |grp_setup_joint_aie_Pipeline_VITIS_LOOP_68_1_fu_156_s_1_TREADY  |       and|   0|  0|   2|           1|           1|
+    |grp_setup_joint_aie_Pipeline_VITIS_LOOP_68_1_fu_156_s_2_TREADY  |       and|   0|  0|   2|           1|           1|
+    |grp_setup_joint_aie_Pipeline_VITIS_LOOP_68_1_fu_156_s_3_TREADY  |       and|   0|  0|   2|           1|           1|
+    |grp_setup_joint_aie_Pipeline_VITIS_LOOP_68_1_fu_156_s_4_TREADY  |       and|   0|  0|   2|           1|           1|
+    |grp_setup_joint_aie_Pipeline_VITIS_LOOP_68_1_fu_156_s_5_TREADY  |       and|   0|  0|   2|           1|           1|
+    |grp_setup_joint_aie_Pipeline_VITIS_LOOP_68_1_fu_156_s_6_TREADY  |       and|   0|  0|   2|           1|           1|
+    |grp_setup_joint_aie_Pipeline_VITIS_LOOP_68_1_fu_156_s_7_TREADY  |       and|   0|  0|   2|           1|           1|
+    |ap_block_state1                                                 |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_io                                              |        or|   0|  0|   2|           1|           1|
+    |ap_block_state5                                                 |        or|   0|  0|   2|           1|           1|
+    +----------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                           |          |   0|  0|  30|          15|          17|
+    +----------------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                |   6|          6|    1|          6|
+    |ap_done                  |   2|          2|    1|          2|
+    |gmem0_ARVALID            |   2|          2|    1|          2|
+    |gmem0_RREADY             |   2|          2|    1|          2|
+    |s_0_TDATA_blk_n          |   2|          2|    1|          2|
+    |s_0_TDATA_int_regslice   |  32|          3|   32|         96|
+    |s_0_TVALID_int_regslice  |   2|          3|    1|          3|
+    |s_1_TDATA_blk_n          |   2|          2|    1|          2|
+    |s_1_TDATA_int_regslice   |  32|          3|   32|         96|
+    |s_1_TVALID_int_regslice  |   2|          3|    1|          3|
+    |s_2_TDATA_blk_n          |   2|          2|    1|          2|
+    |s_2_TDATA_int_regslice   |  32|          3|   32|         96|
+    |s_2_TVALID_int_regslice  |   2|          3|    1|          3|
+    |s_3_TDATA_blk_n          |   2|          2|    1|          2|
+    |s_3_TDATA_int_regslice   |  32|          3|   32|         96|
+    |s_3_TVALID_int_regslice  |   2|          3|    1|          3|
+    |s_4_TDATA_blk_n          |   2|          2|    1|          2|
+    |s_4_TDATA_int_regslice   |  32|          3|   32|         96|
+    |s_4_TVALID_int_regslice  |   2|          3|    1|          3|
+    |s_5_TDATA_blk_n          |   2|          2|    1|          2|
+    |s_5_TDATA_int_regslice   |  32|          3|   32|         96|
+    |s_5_TVALID_int_regslice  |   2|          3|    1|          3|
+    |s_6_TDATA_blk_n          |   2|          2|    1|          2|
+    |s_6_TDATA_int_regslice   |  32|          3|   32|         96|
+    |s_6_TVALID_int_regslice  |   2|          3|    1|          3|
+    |s_7_TDATA_blk_n          |   2|          2|    1|          2|
+    |s_7_TDATA_int_regslice   |  32|          3|   32|         96|
+    |s_7_TVALID_int_regslice  |   2|          3|    1|          3|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    | 300|         76|  276|        820|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------------------------+----+----+-----+-----------+
+    |                               Name                               | FF | LUT| Bits| Const Bits|
+    +------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                         |   5|   0|    5|          0|
+    |ap_done_reg                                                       |   1|   0|    1|          0|
+    |ap_ext_blocking_n_reg                                             |   1|   0|    1|          0|
+    |ap_int_blocking_n_reg                                             |   1|   0|    1|          0|
+    |ap_rst_n_inv                                                      |   1|   0|    1|          0|
+    |ap_rst_reg_1                                                      |   1|   0|    1|          0|
+    |ap_rst_reg_2                                                      |   1|   0|    1|          0|
+    |ap_str_blocking_n_reg                                             |   1|   0|    1|          0|
+    |grp_setup_joint_aie_Pipeline_VITIS_LOOP_68_1_fu_156_ap_start_reg  |   1|   0|    1|          0|
+    |histogram_rows_read_reg_191                                       |  64|   0|   64|          0|
+    +------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                             |  77|   0|   77|          0|
+    +------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+---------------+-----------------+--------------+
+|       RTL Ports       | Dir | Bits|    Protocol   |  Source Object  |    C Type    |
++-----------------------+-----+-----+---------------+-----------------+--------------+
+|s_axi_control_AWVALID  |   in|    1|          s_axi|          control|        scalar|
+|s_axi_control_AWREADY  |  out|    1|          s_axi|          control|        scalar|
+|s_axi_control_AWADDR   |   in|    6|          s_axi|          control|        scalar|
+|s_axi_control_WVALID   |   in|    1|          s_axi|          control|        scalar|
+|s_axi_control_WREADY   |  out|    1|          s_axi|          control|        scalar|
+|s_axi_control_WDATA    |   in|   32|          s_axi|          control|        scalar|
+|s_axi_control_WSTRB    |   in|    4|          s_axi|          control|        scalar|
+|s_axi_control_ARVALID  |   in|    1|          s_axi|          control|        scalar|
+|s_axi_control_ARREADY  |  out|    1|          s_axi|          control|        scalar|
+|s_axi_control_ARADDR   |   in|    6|          s_axi|          control|        scalar|
+|s_axi_control_RVALID   |  out|    1|          s_axi|          control|        scalar|
+|s_axi_control_RREADY   |   in|    1|          s_axi|          control|        scalar|
+|s_axi_control_RDATA    |  out|   32|          s_axi|          control|        scalar|
+|s_axi_control_RRESP    |  out|    2|          s_axi|          control|        scalar|
+|s_axi_control_BVALID   |  out|    1|          s_axi|          control|        scalar|
+|s_axi_control_BREADY   |   in|    1|          s_axi|          control|        scalar|
+|s_axi_control_BRESP    |  out|    2|          s_axi|          control|        scalar|
+|ap_clk                 |   in|    1|  ap_ctrl_chain|  setup_joint_aie|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_chain|  setup_joint_aie|  return value|
+|event_done             |  out|    1|  ap_ctrl_chain|  setup_joint_aie|  return value|
+|interrupt              |  out|    1|  ap_ctrl_chain|  setup_joint_aie|  return value|
+|event_start            |  out|    1|  ap_ctrl_chain|  setup_joint_aie|  return value|
+|stall_start_ext        |  out|    1|  ap_ctrl_chain|  setup_joint_aie|  return value|
+|stall_done_ext         |  out|    1|  ap_ctrl_chain|  setup_joint_aie|  return value|
+|stall_start_str        |  out|    1|  ap_ctrl_chain|  setup_joint_aie|  return value|
+|stall_done_str         |  out|    1|  ap_ctrl_chain|  setup_joint_aie|  return value|
+|stall_start_int        |  out|    1|  ap_ctrl_chain|  setup_joint_aie|  return value|
+|stall_done_int         |  out|    1|  ap_ctrl_chain|  setup_joint_aie|  return value|
+|m_axi_gmem0_AWVALID    |  out|    1|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_AWREADY    |   in|    1|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_AWADDR     |  out|   64|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_AWID       |  out|    1|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_AWLEN      |  out|    8|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_AWSIZE     |  out|    3|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_AWBURST    |  out|    2|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_AWLOCK     |  out|    2|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_AWCACHE    |  out|    4|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_AWPROT     |  out|    3|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_AWQOS      |  out|    4|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_AWREGION   |  out|    4|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_AWUSER     |  out|    1|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_WVALID     |  out|    1|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_WREADY     |   in|    1|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_WDATA      |  out|  256|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_WSTRB      |  out|   32|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_WLAST      |  out|    1|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_WID        |  out|    1|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_WUSER      |  out|    1|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_ARVALID    |  out|    1|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_ARREADY    |   in|    1|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_ARADDR     |  out|   64|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_ARID       |  out|    1|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_ARLEN      |  out|    8|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_ARSIZE     |  out|    3|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_ARBURST    |  out|    2|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_ARLOCK     |  out|    2|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_ARCACHE    |  out|    4|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_ARPROT     |  out|    3|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_ARQOS      |  out|    4|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_ARREGION   |  out|    4|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_ARUSER     |  out|    1|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_RVALID     |   in|    1|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_RREADY     |  out|    1|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_RDATA      |   in|  256|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_RLAST      |   in|    1|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_RID        |   in|    1|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_RUSER      |   in|    1|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_RRESP      |   in|    2|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_BVALID     |   in|    1|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_BREADY     |  out|    1|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_BRESP      |   in|    2|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_BID        |   in|    1|          m_axi|            gmem0|       pointer|
+|m_axi_gmem0_BUSER      |   in|    1|          m_axi|            gmem0|       pointer|
+|s_0_TDATA              |  out|   32|           axis|              s_0|       pointer|
+|s_0_TVALID             |  out|    1|           axis|              s_0|       pointer|
+|s_0_TREADY             |   in|    1|           axis|              s_0|       pointer|
+|s_1_TDATA              |  out|   32|           axis|              s_1|       pointer|
+|s_1_TVALID             |  out|    1|           axis|              s_1|       pointer|
+|s_1_TREADY             |   in|    1|           axis|              s_1|       pointer|
+|s_2_TDATA              |  out|   32|           axis|              s_2|       pointer|
+|s_2_TVALID             |  out|    1|           axis|              s_2|       pointer|
+|s_2_TREADY             |   in|    1|           axis|              s_2|       pointer|
+|s_3_TDATA              |  out|   32|           axis|              s_3|       pointer|
+|s_3_TVALID             |  out|    1|           axis|              s_3|       pointer|
+|s_3_TREADY             |   in|    1|           axis|              s_3|       pointer|
+|s_4_TDATA              |  out|   32|           axis|              s_4|       pointer|
+|s_4_TVALID             |  out|    1|           axis|              s_4|       pointer|
+|s_4_TREADY             |   in|    1|           axis|              s_4|       pointer|
+|s_5_TDATA              |  out|   32|           axis|              s_5|       pointer|
+|s_5_TVALID             |  out|    1|           axis|              s_5|       pointer|
+|s_5_TREADY             |   in|    1|           axis|              s_5|       pointer|
+|s_6_TDATA              |  out|   32|           axis|              s_6|       pointer|
+|s_6_TVALID             |  out|    1|           axis|              s_6|       pointer|
+|s_6_TREADY             |   in|    1|           axis|              s_6|       pointer|
+|s_7_TDATA              |  out|   32|           axis|              s_7|       pointer|
+|s_7_TVALID             |  out|    1|           axis|              s_7|       pointer|
+|s_7_TREADY             |   in|    1|           axis|              s_7|       pointer|
++-----------------------+-----+-----+---------------+-----------------+--------------+
+

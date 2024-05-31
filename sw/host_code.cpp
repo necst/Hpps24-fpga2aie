@@ -133,7 +133,7 @@ int main(int argc, char *argv[]) {
     run_setup_marginal_aie.start();
 
     // wait for the kernel to finish
-    run_setup_joint_aie.wait();+
+    run_setup_joint_aie.wait();
     run_setup_marginal_aie.wait();
     run_sink_from_aie.wait();
 

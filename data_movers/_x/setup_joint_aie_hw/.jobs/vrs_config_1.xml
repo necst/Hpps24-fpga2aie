@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="setup_joint_aie" LaunchDir="/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/data_movers/_x/setup_joint_aie_hw/setup_joint_aie" FlowId="Build_IP" FromStepId="vitis_hls" ToStepId="vitis_hls"/>
+</Runs>
+

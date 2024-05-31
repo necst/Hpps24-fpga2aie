@@ -1,0 +1,168 @@
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: /home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/data_movers/setup_marginal_aie.cpp, 
+                   Line: 43, Column: 19 }
+Function:        setup_marginal_aie
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '512'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc.load.20
+  - String:          ', '
+  - String:          for.inc.load.24
+  - String:          ', '
+  - String:          for.inc.load.28
+  - String:          ', '
+  - String:          for.inc.load.32
+  - String:          ', '
+  - String:          for.inc.load.36
+  - String:          ', '
+  - String:          for.inc.load.40
+  - String:          ', '
+  - String:          for.inc.load.44
+  - String:          ', '
+  - String:          for.inc.load.48
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        histogram_rowsseq
+  - String:          ' '
+  - ArrayName:       histogram_rows
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_43_1
+  - String:          ' '
+  - LoopLoc:         '/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/data_movers/setup_marginal_aie.cpp:43:19'
+  - String:          ' '
+  - Function:        setup_marginal_aie
+    DebugLoc:        { File: /home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/data_movers/setup_marginal_aie.cpp, 
+                       Line: 34, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-widen
+Name:            BurstWidened
+DebugLoc:        { File: /home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/data_movers/setup_marginal_aie.cpp, 
+                   Line: 43, Column: 19 }
+Function:        setup_marginal_aie
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - OldLength:       '512'
+  - String:          ' x '
+  - OldWords:        '32'
+  - String:          'bit words has been widened by '
+  - Factor:          '8'
+  - String:          ': '
+  - Length:          '64'
+  - String:          ' x '
+  - Words:           '256'
+  - String:          bit words
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          histogram_rowsseq
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        wseq
+  - String:          ' '
+  - ArrayName:       histogram_rows
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_43_1
+  - String:          ' '
+  - LoopLoc:         '/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/data_movers/setup_marginal_aie.cpp:43:19'
+  - String:          ' '
+  - Function:        setup_marginal_aie
+    DebugLoc:        { File: /home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/data_movers/setup_marginal_aie.cpp, 
+                       Line: 34, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-widen
+Name:            BurstWidened
+DebugLoc:        { File: /home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/data_movers/setup_marginal_aie.cpp, 
+                   Line: 43, Column: 19 }
+Function:        setup_marginal_aie
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - OldLength:       '64'
+  - String:          ' x '
+  - OldWords:        '256'
+  - String:          'bit words has been widened by '
+  - Factor:          '2'
+  - String:          ': '
+  - Length:          '32'
+  - String:          ' x '
+  - Words:           '512'
+  - String:          bit words
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          wseq
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        wseq18
+  - String:          ' '
+  - ArrayName:       histogram_rows
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_43_1
+  - String:          ' '
+  - LoopLoc:         '/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/data_movers/setup_marginal_aie.cpp:43:19'
+  - String:          ' '
+  - Function:        setup_marginal_aie
+    DebugLoc:        { File: /home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/data_movers/setup_marginal_aie.cpp, 
+                       Line: 34, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: /home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/data_movers/setup_marginal_aie.cpp, 
+                   Line: 43, Column: 19 }
+Function:        setup_marginal_aie
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '32'
+  - String:          ' and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        setup_marginal_aie
+    DebugLoc:        { File: /home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/data_movers/setup_marginal_aie.cpp, 
+                       Line: 34, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: /home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/data_movers/setup_marginal_aie.cpp, 
+                   Line: 43, Column: 19 }
+Function:        setup_marginal_aie
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '32'
+  - String:          ' and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

@@ -1,0 +1,18 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "setup_marginal_aie",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/users\/francesco.santambrogio\/Downloads\/Hpps24-fpga2aie\/data_movers\/_x\/setup_marginal_aie_hw\/setup_marginal_aie\/setup_marginal_aie.tcl",
+          "sourceLine": "27",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "setup_marginal_aie"
+              }]
+          }
+        }]
+    }]}

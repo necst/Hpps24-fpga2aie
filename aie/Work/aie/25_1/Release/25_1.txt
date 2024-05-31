@@ -1,0 +1,215 @@
+Contents of the .debug_line section:
+
+CU: 25_1/src/25_1.cc:
+File name                            Line number    Starting address    View    Stmt
+
+/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/src/reduce.cpp:
+reduce.cpp                                     9               0x110        
+
+/home/xilinx/software/Vitis/2022.2/aietools/include/adf/stream/me/stream_utils.h:
+stream_utils.h                               180               0x110       1
+stream_utils.h                               180               0x110       2
+stream_utils.h                               180               0x110       3
+stream_utils.h                               213               0x110       4
+stream_utils.h                               213               0x110       5
+
+/home/xilinx/software/Vitis/2022.2/aietools/include/aie_api/detail/aie1/vector.hpp:
+vector.hpp                                   908               0x110       6
+vector.hpp                                   908               0x110       7
+vector.hpp                                  1043               0x110       8
+vector.hpp                                  1043               0x110       9
+
+25_1/src/25_1.cc:
+25_1.cc                                       26               0x110      10       x
+25_1.cc                                       27               0x110      11
+25_1.cc                                       27               0x110      12
+25_1.cc                                       46               0x110      13
+25_1.cc                                       50               0x110      14
+
+/home/xilinx/software/Vitis/2022.2/aietools/include/adf/stream/me/stream_utils.h:
+stream_utils.h                               180               0x11c        
+stream_utils.h                               180               0x11c       1
+stream_utils.h                               180               0x11c       2
+
+/home/xilinx/software/Vitis/2022.2/aietools/include/aie_api/detail/aie1/vector.hpp:
+vector.hpp                                   908               0x11c       3
+vector.hpp                                   908               0x11c       4
+
+25_1/src/25_1.cc:
+25_1.cc                                       27               0x11c       5       x
+
+/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/src/reduce.cpp:
+reduce.cpp                                     9               0x130        
+
+/home/xilinx/software/Vitis/2022.2/aietools/include/adf/stream/me/stream_utils.h:
+stream_utils.h                               180               0x138        
+stream_utils.h                               180               0x138       1
+stream_utils.h                               180               0x138       2
+
+/home/xilinx/software/Vitis/2022.2/aietools/include/aie_api/detail/aie1/vector.hpp:
+vector.hpp                                   908               0x138       3
+vector.hpp                                   908               0x138       4
+
+/home/xilinx/software/Vitis/2022.2/aietools/include/adf/stream/me/stream_utils.h:
+stream_utils.h                               213               0x13c        
+stream_utils.h                               213               0x13c       1
+
+/home/xilinx/software/Vitis/2022.2/aietools/include/aie_api/detail/aie1/vector.hpp:
+vector.hpp                                  1043               0x13c       2
+vector.hpp                                  1043               0x13c       3
+
+/home/xilinx/software/Vitis/2022.2/aietools/include/adf/stream/me/stream_utils.h:
+stream_utils.h                               180               0x140        
+stream_utils.h                               180               0x140       1
+stream_utils.h                               180               0x140       2
+
+/home/xilinx/software/Vitis/2022.2/aietools/include/aie_api/detail/aie1/vector.hpp:
+vector.hpp                                   908               0x140       3
+vector.hpp                                   908               0x140       4
+
+25_1/src/25_1.cc:
+25_1.cc                                       35               0x160               x
+25_1.cc                                       37               0x176               x
+25_1.cc                                       37               0x176       1       x
+
+/home/xilinx/software/Vitis/2022.2/aietools/include/adf/stream/me/stream_utils.h:
+stream_utils.h                               180               0x190               x
+stream_utils.h                               180               0x190       1       x
+stream_utils.h                               180               0x190       2       x
+stream_utils.h                               180               0x190       3       x
+
+/home/xilinx/software/Vitis/2022.2/aietools/include/aie_api/detail/aie1/vector.hpp:
+vector.hpp                                   908               0x190       4       x
+vector.hpp                                   908               0x190       5       x
+
+25_1/src/25_1.cc:
+25_1.cc                                       46               0x190       6       x
+25_1.cc                                       46               0x198        
+
+/home/xilinx/software/Vitis/2022.2/aietools/include/adf/stream/me/stream_utils.h:
+stream_utils.h                               180               0x1a0        
+stream_utils.h                               180               0x1a0       1
+
+/home/xilinx/software/Vitis/2022.2/aietools/include/aie_api/detail/aie1/vector.hpp:
+vector.hpp                                   908               0x1a0       2
+vector.hpp                                   908               0x1a0       3
+
+/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/src/reduce.cpp:
+reduce.cpp                                     9               0x1aa               x
+
+25_1/src/25_1.cc:
+25_1.cc                                       37               0x1ba               x
+25_1.cc                                       37               0x1ba       1       x
+
+/home/xilinx/software/Vitis/2022.2/aietools/include/adf/stream/me/stream_utils.h:
+stream_utils.h                               213               0x1c2               x
+
+/home/xilinx/software/Vitis/2022.2/aietools/include/aie_api/detail/aie1/vector.hpp:
+vector.hpp                                  1043               0x1c2       1       x
+
+/home/xilinx/software/Vitis/2022.2/aietools/include/adf/stream/me/stream_utils.h:
+stream_utils.h                               213               0x1d0        
+
+/home/xilinx/software/Vitis/2022.2/aietools/include/aie_api/detail/aie1/vector.hpp:
+vector.hpp                                  1043               0x1d0       1
+
+25_1/src/25_1.cc:
+25_1.cc                                       49               0x1f0               x
+25_1.cc                                       50               0x1fe               x
+25_1.cc                                       50               0x214        
+25_1.cc                                       53               0x22a        
+25_1.cc                                       53               0x23c               x
+25_1.cc                                        -               0x23d
+
+
+CU: 25_1/src/25_1.cc:
+File name                            Line number    Starting address    View    Stmt
+25_1.cc                                        -                 0x1
+
+
+CU: No directory table
+CU: Empty file name table
+<unknown>                                      -                 0x1
+
+
+CU: No directory table
+CU: Empty file name table
+<unknown>                                      -                 0x1
+
+
+CU: ./me_basic.c:
+File name                            Line number    Starting address    View    Stmt
+
+./me_basic.c:[++]
+me_basic.c                                    73               0x250               x
+me_basic.c                                    73               0x250       1
+me_basic.c                                    73               0x258        
+me_basic.c                                    75               0x270        
+me_basic.c                                    76               0x278        
+me_basic.c                                    75               0x280        
+me_basic.c                                    76               0x290               x
+me_basic.c                                    76               0x2a6        
+me_basic.c                                    75               0x2a8        
+me_basic.c                                    75               0x2c0               x
+me_basic.c                                    75               0x2c4        
+me_basic.c                                    77               0x2d6        
+me_basic.c                                    77               0x2fa               x
+me_basic.c                                    77               0x300        
+me_basic.c                                    77               0x304        
+me_basic.c                                    87                   0               x
+me_basic.c                                    94                   0       1       x
+me_basic.c                                    88                 0x4               x
+me_basic.c                                    89                 0x8               x
+me_basic.c                                    90                 0xa               x
+me_basic.c                                    69                0x1c        
+me_basic.c                                   104                0x24        
+me_basic.c                                    96                0x26        
+me_basic.c                                    97                0x26       1
+me_basic.c                                   104                0x26       2
+me_basic.c                                    96                0x2e               x
+me_basic.c                                    97                0x30               x
+me_basic.c                                    70                0x40               x
+me_basic.c                                    70                0x56        
+me_basic.c                                    69                0x7a        
+me_basic.c                                    69                0x7c               x
+me_basic.c                                    69                0x80        
+me_basic.c                                   104                0x94               x
+me_basic.c                                   104                0x9c        
+me_basic.c                                   104                0x9e        
+
+runtime/include/stdlib.h:
+stdlib.h                                      76                0xb0               x
+stdlib.h                                      76                0xb8        
+stdlib.h                                      61                0xe0               x
+stdlib.h                                      62                0xee               x
+stdlib.h                                      63                0xf0               x
+stdlib.h                                       -                0xf1
+
+
+CU: src/atexit.c:
+File name                            Line number    Starting address    View    Stmt
+
+src/atexit.c:
+atexit.c                                      47               0x310               x
+atexit.c                                      52               0x310       1
+atexit.c                                      53               0x310       2
+atexit.c                                      53               0x310       3
+atexit.c                                      55               0x310       4
+atexit.c                                      52               0x31c               x
+atexit.c                                      56               0x31c       1
+atexit.c                                      53               0x328               x
+atexit.c                                      68               0x328       1
+atexit.c                                      54               0x33c               x
+atexit.c                                      55               0x340               x
+atexit.c                                      56               0x340       1
+atexit.c                                      56               0x348               x
+atexit.c                                      65               0x350               x
+atexit.c                                      65               0x358        
+atexit.c                                      65               0x36c        
+atexit.c                                      62               0x380        
+atexit.c                                      62               0x388               x
+atexit.c                                      68               0x396        
+atexit.c                                      68               0x398               x
+atexit.c                                       -               0x399
+
+

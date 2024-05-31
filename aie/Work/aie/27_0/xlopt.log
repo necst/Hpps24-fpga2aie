@@ -1,0 +1,544 @@
+Add module pass cdno::xlopt::PrintFilteredPass
+Add module pass {anonymous}::GuidancePass
+Add module pass {anonymous}::ChessOptionsPass
+Add module pass {anonymous}::InlineAPIPass
+Add module pass {anonymous}::XLModuleAdaptor<llvm::PromotePass>
+Add module pass {anonymous}::IpConstPropPass
+Add module pass {anonymous}::XLModuleAdaptor<llvm::SimplifyCFGPass>
+Add module pass {anonymous}::XLModuleAdaptor<llvm::LoopSimplifyPass>
+Add module pass {anonymous}::XLModuleAdaptor<llvm::FunctionToLoopPassAdaptor>
+Add module pass {anonymous}::XLModuleAdaptor<{anonymous}::AIELoopInfoPass>
+Add module pass {anonymous}::FunctionInliner
+Add module pass cdno::xlopt::AIEAnnotatePragmaPass
+Add module pass {anonymous}::XLModuleAdaptor<llvm::FunctionToLoopPassAdaptor>
+Add module pass {anonymous}::XLModuleAdaptor<{anonymous}::AIELoopPeelPass>
+Add module pass {anonymous}::AIEAliasAnalysisPass
+
+
+--------------- FUNCTION FILTERING LOG ---------------
+
+Filtered function llvm.lifetime.start.p0i8
+Filtered function llvm.dbg.declare
+Filtered function llvm.chess_memory_fence
+Filtered function _Z4donev
+Filtered function llvm.lifetime.end.p0i8
+Filtered function _ZL25chess_separator_scheduleri
+Filtered function _ZN12me_primitive5eventE7uint2_t
+Filtered function _ZN7uint2_tC2Ei
+Filtered function __regcall3__chessintr_void_event_uint2_t
+Filtered function __regcall3__chessintr_uint2_t_uint2_t___sint
+Filtered function llvm.chess_manifest
+Filtered function llvm.chess_error
+Filtered function llvm.is.constant.i32
+Filtered function _Z5ext_w8v16floati
+Filtered function _Z8shuffle88v8cint32ij
+Filtered function _Z5ext_w8v8cint32i
+Filtered function _Z10as_v8float8v4cint32
+Filtered function _ZN7v8floatC2E17chessllvmInternal7v32int8
+Filtered function __regcall3__chessintr_v4cint32_ext_w_v8cint32___sint
+Filtered function __regcall3__chessintr_v8cint32_shuffle8_v8cint32___sint___uint
+Filtered function _Z11as_v8cint328v16float
+Filtered function _ZN8v8cint32C2E17chessllvmInternal7v64int8
+Filtered function _Z14undef_v8cint32v
+Filtered function __regcall3__chessintr_v8cint32_undef_v8cint32
+Filtered function __regcall3__chessintr_v8float_ext_w_v16float___sint
+Filtered function _Z11fpshuffle168v16floatijj
+Filtered function __regcall3__chessintr_v16float_fpshuffle16_v16float___sint___uint___uint
+Filtered function _Z9shft_elem8v16floatf
+Filtered function __regcall3__chessintr_v16float_shft_elem_v16float___ffloat
+Filtered function _Z14undef_v16floatv
+Filtered function __regcall3__chessintr_v16float_undef_v16float
+Filtered function _Z13undef_v8floatv
+Filtered function __regcall3__chessintr_v8float_undef_v8float
+Filtered function _Z10as_v8int167v4float
+Filtered function _Z7put_wmsi7v8int16i
+Filtered function _Z10as_v4int327v8int16
+Filtered function _Z7put_wmsi7v4int32i
+Filtered function _ZN7uint1_tC2Ei
+Filtered function _ZN12me_primitive15stream_write128EPU4AS23U16__protect_accessi7v4int327uint1_tS3_
+Filtered function _ZN12me_primitive15stream_write128EPU4AS24U16__protect_accessi7v4int327uint1_tS3_
+Filtered function _ZN12me_primitive15stream_write128EPU4AS12U16__protect_accessi7v4int327uint1_tS3_
+Filtered function __regcall3__chessintr_void_stream_write128___PWMSMEM__sint_v4int32_uint1_t_uint1_t
+Filtered function __regcall3__chessintr_void_stream_write128___PWMS_rsrc2__sint_v4int32_uint1_t_uint1_t
+Filtered function __regcall3__chessintr_void_stream_write128___PWMS_rsrc1__sint_v4int32_uint1_t_uint1_t
+Filtered function __regcall3__chessintr_uint1_t_uint1_t___sint
+Filtered function llvm.chess.init.customint.s_struct.ipd.custom_type.uint1_t.uint1_ts.i32.p1f_s_struct.ipd.custom_type.uint1_t.uint1_tsi32f
+Filtered function _ZN7v4int32C2E17chessllvmInternal7v16int8
+Filtered function _ZN7v8int16C2E17chessllvmInternal7v16int8
+Filtered function _Z5ext_v7v8floati
+Filtered function _Z5ext_v8v8cint32i
+Filtered function _Z10as_v4float8v2cint32
+Filtered function _ZN7v4floatC2E17chessllvmInternal7v16int8
+Filtered function __regcall3__chessintr_v2cint32_ext_v_v8cint32___sint
+Filtered function _Z6xset_wi8v4cint32
+Filtered function __regcall3__chessintr_v8cint32_xset_w___sint_v4cint32
+Filtered function _Z11as_v4cint327v8float
+Filtered function _ZN8v4cint32C2E17chessllvmInternal7v32int8
+Filtered function _Z14undef_v4cint32v
+Filtered function __regcall3__chessintr_v4cint32_undef_v4cint32
+Filtered function __regcall3__chessintr_v4float_ext_v_v8float___sint
+Filtered function _Z13undef_v4floatv
+Filtered function __regcall3__chessintr_v4float_undef_v4float
+Filtered function _Z10as_v8int327v8float
+Filtered function _Z10as_v8float7v8int32
+Filtered function _Z5fpmac7v8floatS_S_
+Filtered function _Z5fpadd7v8floatS_
+Filtered function __regcall3__chessintr_v8float_fpadd_v8float_v8float
+Filtered function __regcall3__chessintr_v8float_fpmac_v8float_v8float_v8float
+Filtered function _Z8upd_elem7v8int32ji
+Filtered function __regcall3__chessintr_v8int32_upd_elem_v8int32___uint___sint
+Filtered function _Z8ext_elem7v8int32j
+Filtered function __regcall3__chessintr___sint_ext_elem_v8int32___uint
+Filtered function _Z13undef_v8int32v
+Filtered function __regcall3__chessintr_v8int32_undef_v8int32
+Filtered function _Z9fix2float7v8int32i
+Filtered function __regcall3__chessintr_v8float_fix2float_v8int32___sint
+Filtered function _Z5ext_w8v16int32i
+Filtered function _Z10as_v8int328v4cint32
+Filtered function _ZN7v8int32C2E17chessllvmInternal7v32int8
+Filtered function _Z11as_v8cint328v16int32
+Filtered function __regcall3__chessintr_v8int32_ext_w_v16int32___sint
+Filtered function _Z5sub168v16int32ijjS_ijj
+Filtered function __regcall3__chessintr_v16int32_sub16_v16int32___sint___uint___uint_v16int32___sint___uint___uint
+Filtered function _Z5sub168v16int32ijjijj
+Filtered function __regcall3__chessintr_v16int32_sub16_v16int32___sint___uint___uint___sint___uint___uint
+Filtered function _Z6xset_wi7v8int32
+Filtered function __regcall3__chessintr_v16int32_xset_w___sint_v8int32
+Filtered function _Z14undef_v16int32v
+Filtered function __regcall3__chessintr_v16int32_undef_v16int32
+Filtered function _Z9shft_elem8v16int32i
+Filtered function __regcall3__chessintr_v16int32_shft_elem_v16int32___sint
+Filtered function _Z4lsrs7v8acc48i
+Filtered function _ZN12me_primitive8shft_nrmEi
+Filtered function _Z12get_sat_implv
+Filtered function _Z16get_sym_sat_implv
+Filtered function _Z12get_rnd_implv
+Filtered function _ZN12me_primitive4lsrsI7uint1_tEEN13chessEnableIfIXsr17chessIsCompatibleIN15chessRemoveQualIT_E4typeES1_EE5valueE7v8int32E4typeE7v8acc48hS1_S1_S1_7uint3_tRS4_
+Filtered function _Z16set_srs_sat_impl7uint1_t
+Filtered function llvm.write_register.s_struct.ipd.custom_type.uint1_t.uint1_ts
+Filtered function _Z20chess_dont_warn_deadI7uint1_tERKT_S3_
+Filtered function __regcall3__chessintr_v8int32_lsrs_v8acc48___uchar_uint1_t_uint1_t_uint1_t_uint3_t_uint1_t
+Filtered function __regcall3__chessintr___uchar_shft_nrm___sint
+Filtered function _Z3ups7v8int32i
+Filtered function _ZN12me_primitive10ups_w2a_swI7uint1_tEEN13chessEnableIfIXsr17chessIsCompatibleIN15chessRemoveQualIT_E4typeES1_EE5valueE7v8acc48E4typeE7v8int32hS1_7uint2_tS1_RS4_
+Filtered function _Z16set_ups_sat_impl7uint1_t
+Filtered function __regcall3__chessintr_v8acc48_ups_w2a_sw_v8int32___uchar_uint1_t_uint2_t_uint1_t_uint1_t
+Filtered function _Z5upd_v7v8floati7v4float
+Filtered function _Z7select8j8v8cint32ijS_ij
+Filtered function __regcall3__chessintr_v8cint32_select8___uint_v8cint32___sint___uint_v8cint32___sint___uint
+Filtered function _Z6xset_wi7v8float
+Filtered function __regcall3__chessintr_v16float_xset_w___sint_v8float
+Filtered function _Z6xset_vi7v4float
+Filtered function __regcall3__chessintr_v16float_xset_v___sint_v4float
+Filtered function __regcall3__chessintr_v8float_upd_v_v8float___sint_v4float
+Filtered function _Z10as_v4float7v8int16
+Filtered function _Z7get_wssi
+Filtered function _Z8getl_wssi
+Filtered function _Z10as_v8int167v4int32
+Filtered function _ZN12me_primitive14stream_read128IiEEN13chessEnableIfIXsr17chessIsCompatibleIN15chessRemoveQualIT_E4typeEiEE5valueE7v4int32E4typeEPU4AS19U16__protect_accessi7uint1_tRS3_
+Filtered function _ZN12me_primitive14stream_read128IiEEN13chessEnableIfIXsr17chessIsCompatibleIN15chessRemoveQualIT_E4typeEiEE5valueE7v4int32E4typeEPU4AS20U16__protect_accessi7uint1_tRS3_
+Filtered function _ZN12me_primitive14stream_read128IiEEN13chessEnableIfIXsr17chessIsCompatibleIN15chessRemoveQualIT_E4typeEiEE5valueE7v4int32E4typeEPU4AS11U16__protect_accessi7uint1_tRS3_
+Filtered function __regcall3__chessintr_v4int32_stream_read128___PWSSMEM__sint_uint1_t___sint
+Filtered function __regcall3__chessintr_v4int32_stream_read128___PWSS_rsrc2__sint_uint1_t___sint
+Filtered function __regcall3__chessintr_v4int32_stream_read128___PWSS_rsrc1__sint_uint1_t___sint
+Filtered function _Z5fpmul7v8floatS_
+Filtered function __regcall3__chessintr_v8float_fpmul_v8float_v8float
+Filtered function _Z5upd_v7v8int32i7v4int32
+Filtered function _Z6xset_vi7v4int32
+Filtered function __regcall3__chessintr_v16int32_xset_v___sint_v4int32
+Filtered function __regcall3__chessintr_v8int32_upd_v_v8int32___sint_v4int32
+Filtered function _Z13undef_v4int32v
+Filtered function __regcall3__chessintr_v4int32_undef_v4int32
+Filtered function _Z6get_ssi
+Filtered function _ZN12me_primitive11stream_readIiEEN13chessEnableIfIXsr17chessIsCompatibleIN15chessRemoveQualIT_E4typeEiEE5valueEiE4typeEPU4AS17U16__protect_accessi7uint1_tRS3_
+Filtered function _ZN12me_primitive11stream_readIiEEN13chessEnableIfIXsr17chessIsCompatibleIN15chessRemoveQualIT_E4typeEiEE5valueEiE4typeEPU4AS18U16__protect_accessi7uint1_tRS3_
+Filtered function _ZN12me_primitive11stream_readIiEEN13chessEnableIfIXsr17chessIsCompatibleIN15chessRemoveQualIT_E4typeEiEE5valueEiE4typeEPU3AS9U16__protect_accessi7uint1_tRS3_
+Filtered function __regcall3__chessintr___sint_stream_read___PSSMEM__sint_uint1_t___sint
+Filtered function __regcall3__chessintr___sint_stream_read___PSS_rsrc2__sint_uint1_t___sint
+Filtered function __regcall3__chessintr___sint_stream_read___PSS_rsrc1__sint_uint1_t___sint
+Filtered function _Z5fpneg7v8float
+Filtered function __regcall3__chessintr_v8float_fpneg_v8float
+
+------------------------------------------------------
+
+
+
+--------------- STREAM APIs INLINING LOG ---------------
+
+Cloning function _Z19log_kernel_functionP12input_streamIfEP13output_streamIfE
+Cloning function _Z10readincr_vILj8EL22aie_stream_resource_in0EfEN3aie6detail6vectorIT1_XT_EEEP12input_streamIS4_E
+Cloning function _Z9writeincrIL23aie_stream_resource_out0EfLj8EEvP13output_streamIT0_ERKN3aie6detail6vectorIS2_XT1_EEE
+Cloning function _ZN3aie6detail3adf17stream_out_helperILj8EfL23aie_stream_resource_out0EE9writeincrEP13output_streamIfENS0_6vectorIfLj8EEE
+Cloning function _ZL9writeincrIL23aie_stream_resource_out0EEvP13output_streamIfE7v4floatb
+Cloning function _ZL9writeincrIL23aie_stream_resource_out0EEvP13output_streamIsE7v8int16b
+Cloning function _ZN12stream_utilsL18aie_stream_put_wmsIsEEvP13output_streamIsE7v8int16Rb
+Cloning function _ZN3aie6detail3adf16stream_in_helperILj8EfL22aie_stream_resource_in0EE8readincrEP12input_streamIfE
+Cloning function _ZL11readincr_v8IL22aie_stream_resource_in0EE7v8int16P12input_streamIsE
+Cloning function _ZN12stream_utilsL18aie_stream_get_wssIsEE7v8int16P12input_streamIsE
+Cloning function _Z27entropy_vec_kernel_functionP12input_streamIiEP13output_streamIfE
+Cloning function _ZL8readincrIL22aie_stream_resource_in0EiET0_P12input_streamIS1_E
+Cloning function _Z10readincr_vILj8EL22aie_stream_resource_in0EiEN3aie6detail6vectorIT1_XT_EEEP12input_streamIS4_E
+Cloning function _ZN3aie6detail3adf16stream_in_helperILj8EiL22aie_stream_resource_in0EE8readincrEP12input_streamIiE
+Cloning function _ZN12stream_utilsL17aie_stream_get_ssIiiEEiP12input_streamIT0_E
+Cloning function _Z32entropy_vec_pass_kernel_functionP12input_streamIiEPS_IfEP13output_streamIfE
+Cloning function _Z32marginal_entropy_kernel_functionP12input_streamIiEP13output_streamIfE
+
+--------------------------------------------------------
+
+
+
+--------------- LOOP STATISTICS : main ---------------
+
+Total loops = 2
+Loops with prepare for pipelining pragma = 0
+Loops with unroll pragma = 0
+Loops with flatten pragma = 0
+Loops with min range pragma = 0
+Loops with max range pragma = 0
+Loops with known trip count = 0
+
+------------------------------------------------------
+
+
+
+--------------- LOOP STATISTICS : _Z5log2vN3aie6detail6vectorIfLj8EEE ---------------
+
+Total loops = 1
+Loops with prepare for pipelining pragma = 0
+Loops with unroll pragma = 0
+Loops with flatten pragma = 0
+Loops with min range pragma = 0
+Loops with max range pragma = 0
+Loops with known trip count = 1
+
+-------------------------------------------------------------------------------------
+
+
+
+--------------- LOOP STATISTICS : _ZN3aie6detail13bit_bits_implILj32EiLj8ELNS0_5BitOpE2EE3runEiRKNS0_6vectorIiLj8EEE ---------------
+
+Total loops = 1
+Loops with prepare for pipelining pragma = 0
+Loops with unroll pragma = 0
+Loops with flatten pragma = 0
+Loops with min range pragma = 0
+Loops with max range pragma = 0
+Loops with known trip count = 1
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+--------------- LOOP STATISTICS : _ZN3aie6detail13bit_bits_implILj32EiLj8ELNS0_5BitOpE0EE3runEiRKNS0_6vectorIiLj8EEE ---------------
+
+Total loops = 1
+Loops with prepare for pipelining pragma = 0
+Loops with unroll pragma = 0
+Loops with flatten pragma = 0
+Loops with min range pragma = 0
+Loops with max range pragma = 0
+Loops with known trip count = 1
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+--------------- LOOP STATISTICS : _ZN3aie6detail27elementary_vector_bits_implILNS0_12ElementaryOpE7ELj32EfiLj8EE3runERKNS0_6vectorIiLj8EEEi ---------------
+
+Total loops = 1
+Loops with prepare for pipelining pragma = 0
+Loops with unroll pragma = 0
+Loops with flatten pragma = 0
+Loops with min range pragma = 0
+Loops with max range pragma = 0
+Loops with known trip count = 1
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+--------------- LOOP STATISTICS : _Z19log_kernel_functionP12input_streamIfEP13output_streamIfE ---------------
+
+Total loops = 1
+Loops with prepare for pipelining pragma = 0
+Loops with unroll pragma = 0
+Loops with flatten pragma = 0
+Loops with min range pragma = 0
+Loops with max range pragma = 0
+Loops with known trip count = 1
+
+--------------------------------------------------------------------------------------------------------------
+
+
+
+--------------- LOOP STATISTICS : _ZN3aie6detail3adf17stream_out_helperILj8EfL23aie_stream_resource_out0EE9writeincrEP13output_streamIfENS0_6vectorIfLj8EEE ---------------
+
+Total loops = 1
+Loops with prepare for pipelining pragma = 0
+Loops with unroll pragma = 0
+Loops with flatten pragma = 0
+Loops with min range pragma = 0
+Loops with max range pragma = 0
+Loops with known trip count = 1
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+--------------- LOOP STATISTICS : _ZN3aie6detail3adf16stream_in_helperILj8EfL22aie_stream_resource_in0EE8readincrEP12input_streamIfE ---------------
+
+Total loops = 1
+Loops with prepare for pipelining pragma = 0
+Loops with unroll pragma = 0
+Loops with flatten pragma = 0
+Loops with min range pragma = 0
+Loops with max range pragma = 0
+Loops with known trip count = 1
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+--------------- LOOP STATISTICS : _Z27entropy_vec_kernel_functionP12input_streamIiEP13output_streamIfE ---------------
+
+Total loops = 1
+Loops with prepare for pipelining pragma = 0
+Loops with unroll pragma = 0
+Loops with flatten pragma = 0
+Loops with min range pragma = 0
+Loops with max range pragma = 0
+Loops with known trip count = 1
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+
+--------------- LOOP STATISTICS : _ZN3aie6detail3adf16stream_in_helperILj8EiL22aie_stream_resource_in0EE8readincrEP12input_streamIiE ---------------
+
+Total loops = 1
+Loops with prepare for pipelining pragma = 0
+Loops with unroll pragma = 0
+Loops with flatten pragma = 0
+Loops with min range pragma = 0
+Loops with max range pragma = 0
+Loops with known trip count = 1
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+--------------- LOOP STATISTICS : _Z32entropy_vec_pass_kernel_functionP12input_streamIiEPS_IfEP13output_streamIfE ---------------
+
+Total loops = 1
+Loops with prepare for pipelining pragma = 0
+Loops with unroll pragma = 0
+Loops with flatten pragma = 0
+Loops with min range pragma = 0
+Loops with max range pragma = 0
+Loops with known trip count = 1
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+
+--------------- LOOP STATISTICS : _Z32marginal_entropy_kernel_functionP12input_streamIiEP13output_streamIfE ---------------
+
+Total loops = 1
+Loops with prepare for pipelining pragma = 0
+Loops with unroll pragma = 0
+Loops with flatten pragma = 0
+Loops with min range pragma = 0
+Loops with max range pragma = 0
+Loops with known trip count = 1
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+
+--------------- FUNCTION INLINING LOG (threshold = 5000) ---------------
+
+Inlining statistics for functions :
+	_ZNK3aie6detail5utils14unroll_contextIjLj0ELj1ELj0EE7currentEv : inscount = 1, 1 callers
+	_ZN3aie6detail5utils14is_same_objectINS0_6vectorIiLj16EEENS3_IiLj8EEEEEbRKT_RKT0_ : inscount = 1, 1 callers
+	_ZNSt3__27forwardIZN3aie6detail15shift_bits_implIiLj32ELj8EE3runERKNS2_6vectorIiLj8EEEjjEUlT_E_EEOS9_RNS_16remove_referenceIS9_E4typeE : inscount = 1, 3 callers
+	_GLOBAL__sub_I_entropy_vect.cpp : inscount = 2, 0 callers
+	_ZNK3aie6detail5utils14unroll_contextIjLj0ELj1ELj0EEcvjEv : inscount = 2, 1 callers
+	_Z9writeincrIL23aie_stream_resource_out0EfLj8EEvP13output_streamIT0_ERKN3aie6detail6vectorIS2_XT1_EEE : inscount = 3, 4 callers
+	_ZN12input_streamIiEC2Ej : inscount = 4, 0 callers
+	_ZN13output_streamIfEC2Ej : inscount = 4, 0 callers
+	_ZN3aie6detail21vector_elem_const_refIiLj16EEC2ERKNS0_6vectorIiLj16EEEj : inscount = 5, 1 callers
+	_ZN3aie6detailanIiNS0_21vector_elem_const_refIiLj8EEEEEDaT_T0_ : inscount = 5, 1 callers
+	_ZN3aie6detail21vector_elem_const_refIfLj16EEC2ERKNS0_6vectorIfLj16EEEj : inscount = 5, 1 callers
+	_ZN3aie6detailorIiNS0_21vector_elem_const_refIiLj8EEEEEDaT_T0_ : inscount = 5, 1 callers
+	_ZN3aie6detail21vector_elem_const_refIiLj8EEC2ERKNS0_6vectorIiLj8EEEj : inscount = 5, 1 callers
+	_ZN3aie6detail15vector_elem_refIiLj8EEC2ERNS0_6vectorIiLj8EEEj : inscount = 5, 1 callers
+	_ZN3aie6detail14broadcast_bitsILj32EfLj8EE3runERKf : inscount = 7, 1 callers
+	_ZN3aie6detail12add_sub_bitsILj32EiLj8ELNS0_15AddSubOperationE1EE3runERKNS0_6vectorIiLj8EEERKi : inscount = 7, 1 callers
+	_ZN3aie6detail22elementary_vector_bitsILNS0_12ElementaryOpE7ELj32EfiLj8EE3runERKNS0_6vectorIiLj8EEEi : inscount = 7, 1 callers
+	_Z10readincr_vILj8EL22aie_stream_resource_in0EfEN3aie6detail6vectorIT1_XT_EEEP12input_streamIS4_E : inscount = 7, 2 callers
+	_Z10readincr_vILj8EL22aie_stream_resource_in0EiEN3aie6detail6vectorIT1_XT_EEEP12input_streamIS4_E : inscount = 7, 3 callers
+	_ZN3aie6detail8bit_bitsILj32EiLj8ELNS0_5BitOpE0EE3runERKiRKNS0_6vectorIiLj8EEE : inscount = 8, 1 callers
+	_ZN3aie6detail8bit_bitsILj32EiLj8ELNS0_5BitOpE2EE3runERKiRKNS0_6vectorIiLj8EEE : inscount = 8, 1 callers
+	_ZN7v8floatC2E17chessllvmInternal7v32int8 : inscount = 11, 2 callers
+	_ZN8v4cint32C2E17chessllvmInternal7v32int8 : inscount = 11, 1 callers
+	_ZN7v8int32C2E17chessllvmInternal7v32int8 : inscount = 11, 2 callers
+	_ZN7v4floatC2E17chessllvmInternal7v16int8 : inscount = 11, 2 callers
+	_ZN8v8cint32C2E17chessllvmInternal7v64int8 : inscount = 11, 2 callers
+	_ZN7v8int16C2E17chessllvmInternal7v16int8 : inscount = 11, 2 callers
+	_ZN7v4int32C2E17chessllvmInternal7v16int8 : inscount = 11, 1 callers
+	_ZN3aie6detail14vector_storageIiLj8EE5undefEv : inscount = 13, 1 callers
+	_ZN3aie6detail14vector_storageIiLj4EE5undefEv : inscount = 13, 1 callers
+	_ZN3aie6detail14vector_storageIiLj16EE5undefEv : inscount = 13, 2 callers
+	_ZN3aie6detail14vector_storageI6cint32Lj8EE5undefEv : inscount = 13, 1 callers
+	_ZN3aie6detail14vector_storageIfLj4EE5undefEv : inscount = 13, 1 callers
+	_ZN3aie6detail14vector_storageI6cint32Lj4EE5undefEv : inscount = 13, 1 callers
+	_ZN3aie6detail14vector_storageIfLj16EE5undefEv : inscount = 13, 2 callers
+	_ZN3aie6detail14vector_storageIfLj8EE5undefEv : inscount = 13, 1 callers
+	_ZN3aie6detailL18vector_cast_helperIfLj4E8v2cint32EENS0_14vector_storageIT_XT0_EE4typeEOT1_ : inscount = 15, 1 callers
+	_ZN3aie6detailL18vector_cast_helperIfLj8ERK7v8int32EENS0_14vector_storageIT_XT0_EE4typeEOT1_ : inscount = 15, 1 callers
+	_ZN3aie6detailL18vector_cast_helperIiLj4ERK7v8int16EENS0_14vector_storageIT_XT0_EE4typeEOT1_ : inscount = 15, 1 callers
+	_ZN3aie6detailL18vector_cast_helperIfLj8E8v4cint32EENS0_14vector_storageIT_XT0_EE4typeEOT1_ : inscount = 15, 2 callers
+	_ZN3aie6detailL18vector_cast_helperI6cint32Lj8ERK8v16int32EENS0_14vector_storageIT_XT0_EE4typeEOT1_ : inscount = 15, 1 callers
+	_ZN3aie6detailL18vector_cast_helperI6cint32Lj4ERK7v8floatEENS0_14vector_storageIT_XT0_EE4typeEOT1_ : inscount = 15, 1 callers
+	_ZN3aie6detailL18vector_cast_helperIiLj8E8v4cint32EENS0_14vector_storageIT_XT0_EE4typeEOT1_ : inscount = 15, 2 callers
+	_ZN3aie6detailL18vector_cast_helperI6cint32Lj8ERK8v16floatEENS0_14vector_storageIT_XT0_EE4typeEOT1_ : inscount = 15, 1 callers
+	_ZN3aie6detailL18vector_cast_helperIfLj4ERK7v8int16EENS0_14vector_storageIT_XT0_EE4typeEOT1_ : inscount = 15, 1 callers
+	_ZNK3aie6detail21vector_elem_const_refIiLj8EE3getEv : inscount = 26, 2 callers
+	_Z19log_kernel_functionP12input_streamIfEP13output_streamIfE : inscount = 35, 0 callers
+	_ZN3aie6detail11vector_castIisLj8EEEDaRKNS0_6vectorIT0_XT1_EEE : inscount = 36, 1 callers
+	_ZN3aie6detail11vector_castIfsLj8EEEDaRKNS0_6vectorIT0_XT1_EEE : inscount = 36, 1 callers
+	_ZN3aie6detail11vector_castIfiLj8EEEDaRKNS0_6vectorIT0_XT1_EEE : inscount = 36, 1 callers
+	_ZN3aie6detail15vector_elem_refIiLj8EEaSERKi : inscount = 46, 2 callers
+	_ZN3aie6detail17add_sub_bits_implILj32EiLj8ELNS0_15AddSubOperationE1EE3runERKNS0_6vectorIiLj8EEERKi : inscount = 74, 1 callers
+	__cxx_global_var_init : inscount = 79, 1 callers
+	_ZN3aie6detail27elementary_vector_bits_implILNS0_12ElementaryOpE7ELj32EfiLj8EE3runERKNS0_6vectorIiLj8EEEi : inscount = 102, 1 callers
+	_ZN3aie6detail19broadcast_bits_implILj32EfLj16EE3runERKf : inscount = 105, 1 callers
+	_ZN3aie6detail19broadcast_bits_implILj32EfLj16EE3runILj16EEENS0_6vectorIfLj16EEENS0_21vector_elem_const_refIfXT_EEE : inscount = 107, 1 callers
+	_ZN3aie6detail13bit_bits_implILj32EiLj8ELNS0_5BitOpE0EE3runEiRKNS0_6vectorIiLj8EEE : inscount = 110, 1 callers
+	_ZN3aie6detail13bit_bits_implILj32EiLj8ELNS0_5BitOpE2EE3runEiRKNS0_6vectorIiLj8EEE : inscount = 110, 1 callers
+	_ZN3aie6detail19broadcast_bits_implILj32EfLj8EE3runERKf : inscount = 212, 1 callers
+	_ZL8readincrIL22aie_stream_resource_in0EiET0_P12input_streamIS1_E : inscount = 213, 3 callers
+	_ZL11readincr_v8IL22aie_stream_resource_in0EE7v8int16P12input_streamIsE : inscount = 227, 2 callers
+	_Z27entropy_vec_kernel_functionP12input_streamIiEP13output_streamIfE : inscount = 254, 0 callers
+	_Z32marginal_entropy_kernel_functionP12input_streamIiEP13output_streamIfE : inscount = 289, 1 callers
+	_Z32entropy_vec_pass_kernel_functionP12input_streamIiEPS_IfEP13output_streamIfE : inscount = 316, 0 callers
+	_ZN3aie6detail3adf16stream_in_helperILj8EfL22aie_stream_resource_in0EE8readincrEP12input_streamIfE : inscount = 410, 1 callers
+	_ZN3aie6detail3adf16stream_in_helperILj8EiL22aie_stream_resource_in0EE8readincrEP12input_streamIiE : inscount = 410, 1 callers
+	_ZN3aie6detail10shift_bitsIiLj32ELj8EE3runERKNS0_6vectorIiLj8EEEjj : inscount = 428, 1 callers
+	_Z5log2vN3aie6detail6vectorIfLj8EEE : inscount = 454, 4 callers
+	_ZN3aie6detail3adf17stream_out_helperILj8EfL23aie_stream_resource_out0EE9writeincrEP13output_streamIfENS0_6vectorIfLj8EEE : inscount = 486, 1 callers
+	_ZN3aie6detail17add_sub_bits_implILj32EiLj8ELNS0_15AddSubOperationE1EE3runILj16EEENS0_6vectorIiLj8EEERKS6_NS0_21vector_elem_const_refIiXT_EEE : inscount = 550, 1 callers
+
+Inlining decisions based on profitability metrics :
+	inlining function _ZNK3aie6detail5utils14unroll_contextIjLj0ELj1ELj0EE7currentEv
+	inlining function _ZN3aie6detail5utils14is_same_objectINS0_6vectorIiLj16EEENS3_IiLj8EEEEEbRKT_RKT0_
+	inlining function _ZNSt3__27forwardIZN3aie6detail15shift_bits_implIiLj32ELj8EE3runERKNS2_6vectorIiLj8EEEjjEUlT_E_EEOS9_RNS_16remove_referenceIS9_E4typeE
+	inlining function _ZNK3aie6detail5utils14unroll_contextIjLj0ELj1ELj0EEcvjEv
+	inlining function _Z9writeincrIL23aie_stream_resource_out0EfLj8EEvP13output_streamIT0_ERKN3aie6detail6vectorIS2_XT1_EEE
+	inlining function _ZN3aie6detail21vector_elem_const_refIiLj16EEC2ERKNS0_6vectorIiLj16EEEj
+	inlining function _ZN3aie6detailanIiNS0_21vector_elem_const_refIiLj8EEEEEDaT_T0_
+	inlining function _ZN3aie6detail21vector_elem_const_refIfLj16EEC2ERKNS0_6vectorIfLj16EEEj
+	inlining function _ZN3aie6detailorIiNS0_21vector_elem_const_refIiLj8EEEEEDaT_T0_
+	inlining function _ZN3aie6detail21vector_elem_const_refIiLj8EEC2ERKNS0_6vectorIiLj8EEEj
+	inlining function _ZN3aie6detail15vector_elem_refIiLj8EEC2ERNS0_6vectorIiLj8EEEj
+	inlining function _ZN3aie6detail14broadcast_bitsILj32EfLj8EE3runERKf
+	inlining function _ZN3aie6detail12add_sub_bitsILj32EiLj8ELNS0_15AddSubOperationE1EE3runERKNS0_6vectorIiLj8EEERKi
+	inlining function _ZN3aie6detail22elementary_vector_bitsILNS0_12ElementaryOpE7ELj32EfiLj8EE3runERKNS0_6vectorIiLj8EEEi
+	inlining function _Z10readincr_vILj8EL22aie_stream_resource_in0EfEN3aie6detail6vectorIT1_XT_EEEP12input_streamIS4_E
+	inlining function _Z10readincr_vILj8EL22aie_stream_resource_in0EiEN3aie6detail6vectorIT1_XT_EEEP12input_streamIS4_E
+	inlining function _ZN3aie6detail8bit_bitsILj32EiLj8ELNS0_5BitOpE0EE3runERKiRKNS0_6vectorIiLj8EEE
+	inlining function _ZN3aie6detail8bit_bitsILj32EiLj8ELNS0_5BitOpE2EE3runERKiRKNS0_6vectorIiLj8EEE
+	inlining function _ZN7v8floatC2E17chessllvmInternal7v32int8
+	inlining function _ZN8v4cint32C2E17chessllvmInternal7v32int8
+	inlining function _ZN7v8int32C2E17chessllvmInternal7v32int8
+	inlining function _ZN7v4floatC2E17chessllvmInternal7v16int8
+	inlining function _ZN8v8cint32C2E17chessllvmInternal7v64int8
+	inlining function _ZN7v8int16C2E17chessllvmInternal7v16int8
+	inlining function _ZN7v4int32C2E17chessllvmInternal7v16int8
+	inlining function _ZN3aie6detail14vector_storageIiLj8EE5undefEv
+	inlining function _ZN3aie6detail14vector_storageIiLj4EE5undefEv
+	inlining function _ZN3aie6detail14vector_storageIiLj16EE5undefEv
+	inlining function _ZN3aie6detail14vector_storageI6cint32Lj8EE5undefEv
+	inlining function _ZN3aie6detail14vector_storageIfLj4EE5undefEv
+	inlining function _ZN3aie6detail14vector_storageI6cint32Lj4EE5undefEv
+	inlining function _ZN3aie6detail14vector_storageIfLj16EE5undefEv
+	inlining function _ZN3aie6detail14vector_storageIfLj8EE5undefEv
+	inlining function _ZN3aie6detailL18vector_cast_helperIfLj4E8v2cint32EENS0_14vector_storageIT_XT0_EE4typeEOT1_
+	inlining function _ZN3aie6detailL18vector_cast_helperIfLj8ERK7v8int32EENS0_14vector_storageIT_XT0_EE4typeEOT1_
+	inlining function _ZN3aie6detailL18vector_cast_helperIiLj4ERK7v8int16EENS0_14vector_storageIT_XT0_EE4typeEOT1_
+	inlining function _ZN3aie6detailL18vector_cast_helperIfLj8E8v4cint32EENS0_14vector_storageIT_XT0_EE4typeEOT1_
+	inlining function _ZN3aie6detailL18vector_cast_helperI6cint32Lj8ERK8v16int32EENS0_14vector_storageIT_XT0_EE4typeEOT1_
+	inlining function _ZN3aie6detailL18vector_cast_helperI6cint32Lj4ERK7v8floatEENS0_14vector_storageIT_XT0_EE4typeEOT1_
+	inlining function _ZN3aie6detailL18vector_cast_helperIiLj8E8v4cint32EENS0_14vector_storageIT_XT0_EE4typeEOT1_
+	inlining function _ZN3aie6detailL18vector_cast_helperI6cint32Lj8ERK8v16floatEENS0_14vector_storageIT_XT0_EE4typeEOT1_
+	inlining function _ZN3aie6detailL18vector_cast_helperIfLj4ERK7v8int16EENS0_14vector_storageIT_XT0_EE4typeEOT1_
+	inlining function _ZNK3aie6detail21vector_elem_const_refIiLj8EE3getEv
+	inlining function _ZN3aie6detail11vector_castIisLj8EEEDaRKNS0_6vectorIT0_XT1_EEE
+	inlining function _ZN3aie6detail11vector_castIfsLj8EEEDaRKNS0_6vectorIT0_XT1_EEE
+	inlining function _ZN3aie6detail11vector_castIfiLj8EEEDaRKNS0_6vectorIT0_XT1_EEE
+	inlining function _ZN3aie6detail15vector_elem_refIiLj8EEaSERKi
+	inlining function _ZN3aie6detail17add_sub_bits_implILj32EiLj8ELNS0_15AddSubOperationE1EE3runERKNS0_6vectorIiLj8EEERKi
+	inlining function __cxx_global_var_init
+	inlining function _ZN3aie6detail19broadcast_bits_implILj32EfLj16EE3runILj16EEENS0_6vectorIfLj16EEENS0_21vector_elem_const_refIfXT_EEE
+	inlining function _ZN3aie6detail19broadcast_bits_implILj32EfLj16EE3runERKf
+	inlining function _ZN3aie6detail19broadcast_bits_implILj32EfLj8EE3runERKf
+	inlining function _ZN3aie6detail3adf16stream_in_helperILj8EiL22aie_stream_resource_in0EE8readincrEP12input_streamIiE
+	inlining function _ZN3aie6detail27elementary_vector_bits_implILNS0_12ElementaryOpE7ELj32EfiLj8EE3runERKNS0_6vectorIiLj8EEEi
+	inlining function _ZN3aie6detail10shift_bitsIiLj32ELj8EE3runERKNS0_6vectorIiLj8EEEjj
+	inlining function _ZN3aie6detail17add_sub_bits_implILj32EiLj8ELNS0_15AddSubOperationE1EE3runILj16EEENS0_6vectorIiLj8EEERKS6_NS0_21vector_elem_const_refIiXT_EEE
+	inlining function _ZN3aie6detail13bit_bits_implILj32EiLj8ELNS0_5BitOpE0EE3runEiRKNS0_6vectorIiLj8EEE
+	inlining function _ZN3aie6detail13bit_bits_implILj32EiLj8ELNS0_5BitOpE2EE3runEiRKNS0_6vectorIiLj8EEE
+	inlining function _ZN3aie6detail3adf17stream_out_helperILj8EfL23aie_stream_resource_out0EE9writeincrEP13output_streamIfENS0_6vectorIfLj8EEE
+	inlining function _Z32marginal_entropy_kernel_functionP12input_streamIiEP13output_streamIfE
+	inlining function _ZN3aie6detail3adf16stream_in_helperILj8EfL22aie_stream_resource_in0EE8readincrEP12input_streamIfE
+	inlining function _ZL8readincrIL22aie_stream_resource_in0EiET0_P12input_streamIS1_E
+	inlining function _ZL11readincr_v8IL22aie_stream_resource_in0EE7v8int16P12input_streamIsE
+	inlining function _ZN12stream_utilsL17aie_stream_get_ssIiiEEiP12input_streamIT0_E
+	inlining function _ZN12stream_utilsL18aie_stream_get_wssIsEE7v8int16P12input_streamIsE
+	inlining function _ZL9writeincrIL23aie_stream_resource_out0EEvP13output_streamIfE7v4floatb
+	inlining function _ZZN3aie6detailL10get_ups_opIiLj8EEEDavENKUlDpOT_E_clIJNS0_6vectorIiLj8EEERjEEEDaS4_
+	inlining function _ZL9writeincrIL23aie_stream_resource_out0EEvP13output_streamIsE7v8int16b
+	inlining function _ZZN3aie6detail17add_sub_bits_implILj32EiLj8ELNS0_15AddSubOperationE1EE6get_opEvENKUlDpOT_E_clIJNS0_6vectorIiLj16EEEiijSA_RjiiEEEDaS6_
+	inlining function _ZN12stream_utilsL18aie_stream_put_wmsIsEEvP13output_streamIsE7v8int16Rb
+	inlining function _ZZN3aie6detailL10get_srs_opIiLj8EEEDavENKUlDpOT_E_clIJ7v8acc48RjEEEDaS4_
+	inlining function _ZZN3aie6detail15shift_bits_implIiLj32ELj8EE3runERKNS0_6vectorIiLj8EEEjjENKUlT_E_clINS0_5utils14unroll_contextIjLj0ELj1ELj0EEEEEDaS7_
+	inlining function _ZZN3aie6detail17add_sub_bits_implILj32EiLj8ELNS0_15AddSubOperationE1EE6get_opEvENKUlDpOT_E_clIJNS0_6vectorIiLj16EEEiijRjiiEEEDaS6_
+
+------------------------------------------------------------------------
+
+
+
+--------------- PRAGMA INSERTION LOG (unroll threshold = 3000, max unroll factor = 7) ---------------
+
+Adding pragma to function _ZN3aie6detail3adf16stream_in_helperILj8EiL22aie_stream_resource_in0EE8readincrEP12input_streamIiE :
+	Pragma added to loop at line 84 in file xilinx/software/Vitis/2022.2/aietools/include/aie_api/adf/stream.hpp : chess_loop_range(2,2)
+	Pragma added to loop at line 84 in file xilinx/software/Vitis/2022.2/aietools/include/aie_api/adf/stream.hpp : chess_prepare_for_pipelining
+	Pragma added to loop at line 84 in file xilinx/software/Vitis/2022.2/aietools/include/aie_api/adf/stream.hpp : chess_unroll_loop(2)
+Adding pragma to function _ZN3aie6detail27elementary_vector_bits_implILNS0_12ElementaryOpE7ELj32EfiLj8EE3runERKNS0_6vectorIiLj8EEEi :
+	Pragma added to loop at line 224 in file xilinx/software/Vitis/2022.2/aietools/include/aie_api/detail/aie1/elementary.hpp : chess_loop_range(1,1)
+	Pragma added to loop at line 224 in file xilinx/software/Vitis/2022.2/aietools/include/aie_api/detail/aie1/elementary.hpp : chess_flatten_loop
+Adding pragma to function _ZN3aie6detail13bit_bits_implILj32EiLj8ELNS0_5BitOpE0EE3runEiRKNS0_6vectorIiLj8EEE :
+	Pragma added to loop at line 92 in file xilinx/software/Vitis/2022.2/aietools/include/aie_api/detail/bit.hpp : chess_loop_range(8,8)
+	Pragma added to loop at line 92 in file xilinx/software/Vitis/2022.2/aietools/include/aie_api/detail/bit.hpp : chess_prepare_for_pipelining
+	Pragma added to loop at line 92 in file xilinx/software/Vitis/2022.2/aietools/include/aie_api/detail/bit.hpp : chess_unroll_loop(4)
+Adding pragma to function _ZN3aie6detail13bit_bits_implILj32EiLj8ELNS0_5BitOpE2EE3runEiRKNS0_6vectorIiLj8EEE :
+	Pragma added to loop at line 92 in file xilinx/software/Vitis/2022.2/aietools/include/aie_api/detail/bit.hpp : chess_loop_range(8,8)
+	Pragma added to loop at line 92 in file xilinx/software/Vitis/2022.2/aietools/include/aie_api/detail/bit.hpp : chess_prepare_for_pipelining
+	Pragma added to loop at line 92 in file xilinx/software/Vitis/2022.2/aietools/include/aie_api/detail/bit.hpp : chess_unroll_loop(4)
+Adding pragma to function _Z5log2vN3aie6detail6vectorIfLj8EEE :
+	Pragma added to loop at line 245 in file src/entropy_vect.cpp : chess_loop_range(5,5)
+	Pragma added to loop at line 245 in file src/entropy_vect.cpp : chess_prepare_for_pipelining
+	Pragma added to loop at line 245 in file src/entropy_vect.cpp : chess_unroll_loop(5)
+Adding pragma to function _ZN3aie6detail3adf17stream_out_helperILj8EfL23aie_stream_resource_out0EE9writeincrEP13output_streamIfENS0_6vectorIfLj8EEE :
+	Pragma added to loop at line 131 in file xilinx/software/Vitis/2022.2/aietools/include/aie_api/adf/stream.hpp : chess_loop_range(2,2)
+	Pragma added to loop at line 131 in file xilinx/software/Vitis/2022.2/aietools/include/aie_api/adf/stream.hpp : chess_prepare_for_pipelining
+	Pragma added to loop at line 131 in file xilinx/software/Vitis/2022.2/aietools/include/aie_api/adf/stream.hpp : chess_unroll_loop(2)
+Adding pragma to function _Z32marginal_entropy_kernel_functionP12input_streamIiEP13output_streamIfE :
+	Pragma added to loop at line 69 in file src/entropy_vect.cpp : chess_loop_range(64,64)
+Adding pragma to function _ZN3aie6detail3adf16stream_in_helperILj8EfL22aie_stream_resource_in0EE8readincrEP12input_streamIfE :
+	Pragma added to loop at line 84 in file xilinx/software/Vitis/2022.2/aietools/include/aie_api/adf/stream.hpp : chess_loop_range(2,2)
+	Pragma added to loop at line 84 in file xilinx/software/Vitis/2022.2/aietools/include/aie_api/adf/stream.hpp : chess_prepare_for_pipelining
+	Pragma added to loop at line 84 in file xilinx/software/Vitis/2022.2/aietools/include/aie_api/adf/stream.hpp : chess_unroll_loop(2)
+
+-----------------------------------------------------------------------------------------------------
+

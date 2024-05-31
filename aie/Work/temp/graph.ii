@@ -63291,7 +63291,7 @@ public:
 
 
  input_plio joint_histo[4 * 2];
-        input_plio marginal_histo;
+    input_plio marginal_histo;
  output_plio out_1;
 
  my_graph()
@@ -63307,7 +63307,7 @@ public:
             std::ostringstream input_name;
             std::ostringstream file_name;
             input_name << "joint_histo_" << i;
-            file_name << "data/joint_histo_" << i << ".txt";
+            file_name << "data/joint_test_" << i << ".txt";
       joint_histo[i] = input_plio::create(input_name.str(), plio_32_bits, file_name.str());
 
             source(joint_entropy[i]) = "src/entropy_vect.cpp";
@@ -63316,30 +63316,30 @@ public:
             connect<stream>(joint_histo[i].out[0], joint_entropy[i].in[0]);
 
             runtime<ratio>(joint_entropy[i]) = 0.9;
-            }
+        }
 
-         marginal_entropy = kernel::create(marginal_entropy_kernel_function);
+  marginal_entropy = kernel::create(marginal_entropy_kernel_function);
 
-      marginal_histo = input_plio::create("marginal_histo", plio_32_bits, "data/marginal.txt");
+  marginal_histo = input_plio::create("marginal_histo", plio_32_bits, "data/marginal_test.txt");
 
-            source(marginal_entropy) = "src/entropy_vect.cpp";
-      headers(marginal_entropy) = {"src/mutual_entropy_kernels.h","../common/common.h"};
+  source(marginal_entropy) = "src/entropy_vect.cpp";
+  headers(marginal_entropy) = {"src/mutual_entropy_kernels.h","../common/common.h"};
 
-            connect<stream>(marginal_histo.out[0], marginal_entropy.in[0]);
+  connect<stream>(marginal_histo.out[0], marginal_entropy.in[0]);
 
-            runtime<ratio>(marginal_entropy) = 0.9;
+  runtime<ratio>(marginal_entropy) = 0.9;
 
-            for(int i = 0; i < 3; i++){
-                if(i == 0){
-                    reduce[i] = kernel::create(reduce_kernel_function);
-                }
-                else{
-                    reduce[i] = kernel::create(reduce_vec_kernel_function);
-                }
-                source(reduce[i]) = "src/reduce.cpp";
-          headers(reduce[i]) = {"src/mutual_entropy_kernels.h","../common/common.h"};
-                runtime<ratio>(reduce[i]) = 0.9;
-            }
+  for(int i = 0; i < 3; i++){
+   if(i == 0){
+    reduce[i] = kernel::create(reduce_kernel_function);
+   }
+   else{
+    reduce[i] = kernel::create(reduce_vec_kernel_function);
+   }
+   source(reduce[i]) = "src/reduce.cpp";
+   headers(reduce[i]) = {"src/mutual_entropy_kernels.h","../common/common.h"};
+   runtime<ratio>(reduce[i]) = 0.9;
+  }
 
   out_1 = output_plio::create("out_plio_1", plio_32_bits, "data/out_plio_sink_1.txt");
 

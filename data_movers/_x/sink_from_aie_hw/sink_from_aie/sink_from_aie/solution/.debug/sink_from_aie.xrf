@@ -1,0 +1,15 @@
+Begin Function 'sink_from_aie'
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local x <read_48> <integer> <> 'read' </home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/data_movers/sink_from_aie.cpp:48>
+x /home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/data_movers/sink_from_aie.cpp:48
+reg: x_reg_116[31:0] lv
+
+local gmem1_addr <getelementptr_49> <integer> <> 'getelementptr' </home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/data_movers/sink_from_aie.cpp:49>
+gmem1_addr /home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/data_movers/sink_from_aie.cpp:49
+reg: gmem1_addr_reg_121[63:0] lv
+
+
+End Function 'sink_from_aie'
+

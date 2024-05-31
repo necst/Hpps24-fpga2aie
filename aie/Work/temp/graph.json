@@ -310,7 +310,7 @@
             "qualifiedGraphName": "aie_graph",
             "qualifiedName": "aie_graph.joint_histo[0]",
             "dataWidth": 32,
-            "dataFile": "data/joint_histo_0.txt",
+            "dataFile": "data/joint_test_0.txt",
             "logicalName": "joint_histo_0",
             "instanceId": 0,
             "loc": "src/graph.h:156:2"
@@ -339,7 +339,7 @@
             "qualifiedGraphName": "aie_graph",
             "qualifiedName": "aie_graph.joint_histo[1]",
             "dataWidth": 32,
-            "dataFile": "data/joint_histo_1.txt",
+            "dataFile": "data/joint_test_1.txt",
             "logicalName": "joint_histo_1",
             "instanceId": 1,
             "loc": "src/graph.h:156:2"
@@ -368,7 +368,7 @@
             "qualifiedGraphName": "aie_graph",
             "qualifiedName": "aie_graph.joint_histo[2]",
             "dataWidth": 32,
-            "dataFile": "data/joint_histo_2.txt",
+            "dataFile": "data/joint_test_2.txt",
             "logicalName": "joint_histo_2",
             "instanceId": 2,
             "loc": "src/graph.h:156:2"
@@ -397,7 +397,7 @@
             "qualifiedGraphName": "aie_graph",
             "qualifiedName": "aie_graph.joint_histo[3]",
             "dataWidth": 32,
-            "dataFile": "data/joint_histo_3.txt",
+            "dataFile": "data/joint_test_3.txt",
             "logicalName": "joint_histo_3",
             "instanceId": 3,
             "loc": "src/graph.h:156:2"
@@ -426,7 +426,7 @@
             "qualifiedGraphName": "aie_graph",
             "qualifiedName": "aie_graph.joint_histo[4]",
             "dataWidth": 32,
-            "dataFile": "data/joint_histo_4.txt",
+            "dataFile": "data/joint_test_4.txt",
             "logicalName": "joint_histo_4",
             "instanceId": 4,
             "loc": "src/graph.h:156:2"
@@ -455,7 +455,7 @@
             "qualifiedGraphName": "aie_graph",
             "qualifiedName": "aie_graph.joint_histo[5]",
             "dataWidth": 32,
-            "dataFile": "data/joint_histo_5.txt",
+            "dataFile": "data/joint_test_5.txt",
             "logicalName": "joint_histo_5",
             "instanceId": 5,
             "loc": "src/graph.h:156:2"
@@ -484,7 +484,7 @@
             "qualifiedGraphName": "aie_graph",
             "qualifiedName": "aie_graph.joint_histo[6]",
             "dataWidth": 32,
-            "dataFile": "data/joint_histo_6.txt",
+            "dataFile": "data/joint_test_6.txt",
             "logicalName": "joint_histo_6",
             "instanceId": 6,
             "loc": "src/graph.h:156:2"
@@ -513,7 +513,7 @@
             "qualifiedGraphName": "aie_graph",
             "qualifiedName": "aie_graph.joint_histo[7]",
             "dataWidth": 32,
-            "dataFile": "data/joint_histo_7.txt",
+            "dataFile": "data/joint_test_7.txt",
             "logicalName": "joint_histo_7",
             "instanceId": 7,
             "loc": "src/graph.h:156:2"
@@ -530,7 +530,7 @@
             "runTime": 0.8999,
             "fabric": "me",
             "instanceId": 8,
-            "loc": "src/graph.h:184:29"
+            "loc": "src/graph.h:184:22"
         },
         "i17": {
             "blockType": "b11",
@@ -542,10 +542,10 @@
             "qualifiedGraphName": "aie_graph",
             "qualifiedName": "aie_graph.marginal_histo",
             "dataWidth": 32,
-            "dataFile": "data/marginal.txt",
+            "dataFile": "data/marginal_test.txt",
             "logicalName": "marginal_histo",
             "instanceId": 8,
-            "loc": "src/graph.h:157:9"
+            "loc": "src/graph.h:157:5"
         },
         "i18": {
             "blockType": "b12",
@@ -559,7 +559,7 @@
             "runTime": 0.8999,
             "fabric": "me",
             "instanceId": 9,
-            "loc": "src/graph.h:197:33"
+            "loc": "src/graph.h:197:17"
         },
         "i19": {
             "blockType": "b13",
@@ -573,7 +573,7 @@
             "runTime": 0.8999,
             "fabric": "me",
             "instanceId": 10,
-            "loc": "src/graph.h:200:33"
+            "loc": "src/graph.h:200:17"
         },
         "i20": {
             "blockType": "b13",
@@ -587,7 +587,7 @@
             "runTime": 0.8999,
             "fabric": "me",
             "instanceId": 11,
-            "loc": "src/graph.h:200:33"
+            "loc": "src/graph.h:200:17"
         },
         "i21": {
             "blockType": "b14",
@@ -1123,7 +1123,7 @@
                 ""
             ],
             "locs": [
-                "src/graph.h:191:13"
+                "src/graph.h:191:3"
             ]
         },
         "net9": {

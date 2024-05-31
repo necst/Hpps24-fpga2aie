@@ -5,12 +5,215 @@
         "patch": "0"
     },
     "aie_metadata": {
+        "driver_config": {
+            "hw_gen": 1,
+            "base_address": 2199023255552,
+            "npi_address": 4144627712,
+            "column_shift": 23,
+            "row_shift": 18,
+            "num_rows": 9,
+            "num_columns": 50,
+            "shim_row": 0,
+            "reserved_row_start": 0,
+            "reserved_num_rows": 0,
+            "aie_tile_row_start": 1,
+            "aie_tile_num_rows": 8
+        },
+        "aiecompiler_options": {
+            "broadcast_enable_core": true
+        },
         "graphs": {
             "graph0": {
                 "id": 0,
                 "name": "aie_graph",
-                "pl_kernel_instance_names": []
+                "core_columns": [
+                    22,
+                    22,
+                    23,
+                    23,
+                    24,
+                    24,
+                    25,
+                    25,
+                    26,
+                    26,
+                    27,
+                    27
+                ],
+                "core_rows": [
+                    0,
+                    1,
+                    0,
+                    1,
+                    0,
+                    1,
+                    0,
+                    1,
+                    0,
+                    1,
+                    0,
+                    1
+                ],
+                "iteration_memory_columns": [
+                    22,
+                    23,
+                    22,
+                    23,
+                    24,
+                    24,
+                    25,
+                    26,
+                    26,
+                    26,
+                    27,
+                    27
+                ],
+                "iteration_memory_rows": [
+                    0,
+                    1,
+                    0,
+                    2,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "iteration_memory_addresses": [
+                    16388,
+                    4,
+                    4,
+                    4,
+                    24580,
+                    16388,
+                    4,
+                    16388,
+                    4,
+                    8196,
+                    4,
+                    4
+                ],
+                "multirate_triggers": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "pl_kernel_instance_names": [],
+                "pl_axi_lite_modes": []
             }
+        },
+        "TileMapping": {
+            "AIEKernelToTileMapping": [
+                {
+                    "graph": "aie_graph",
+                    "tile": "aie",
+                    "column": 26,
+                    "row": 1,
+                    "schedule": 0,
+                    "function": "entropy_vec_pass_kernel_function.joint_entropy[0]"
+                },
+                {
+                    "graph": "aie_graph",
+                    "tile": "aie",
+                    "column": 25,
+                    "row": 0,
+                    "schedule": 0,
+                    "function": "entropy_vec_pass_kernel_function.joint_entropy[1]"
+                },
+                {
+                    "graph": "aie_graph",
+                    "tile": "aie",
+                    "column": 22,
+                    "row": 1,
+                    "schedule": 0,
+                    "function": "entropy_vec_pass_kernel_function.joint_entropy[2]"
+                },
+                {
+                    "graph": "aie_graph",
+                    "tile": "aie",
+                    "column": 23,
+                    "row": 0,
+                    "schedule": 0,
+                    "function": "entropy_vec_pass_kernel_function.joint_entropy[3]"
+                },
+                {
+                    "graph": "aie_graph",
+                    "tile": "aie",
+                    "column": 27,
+                    "row": 1,
+                    "schedule": 0,
+                    "function": "entropy_vec_pass_kernel_function.joint_entropy[4]"
+                },
+                {
+                    "graph": "aie_graph",
+                    "tile": "aie",
+                    "column": 26,
+                    "row": 0,
+                    "schedule": 0,
+                    "function": "entropy_vec_kernel_function.joint_entropy[5]"
+                },
+                {
+                    "graph": "aie_graph",
+                    "tile": "aie",
+                    "column": 22,
+                    "row": 0,
+                    "schedule": 0,
+                    "function": "entropy_vec_kernel_function.joint_entropy[6]"
+                },
+                {
+                    "graph": "aie_graph",
+                    "tile": "aie",
+                    "column": 24,
+                    "row": 0,
+                    "schedule": 0,
+                    "function": "entropy_vec_kernel_function.joint_entropy[7]"
+                },
+                {
+                    "graph": "aie_graph",
+                    "tile": "aie",
+                    "column": 27,
+                    "row": 0,
+                    "schedule": 0,
+                    "function": "marginal_entropy_kernel_function.marginal_entropy"
+                },
+                {
+                    "graph": "aie_graph",
+                    "tile": "aie",
+                    "column": 24,
+                    "row": 1,
+                    "schedule": 0,
+                    "function": "reduce_kernel_function.reduce[0]"
+                },
+                {
+                    "graph": "aie_graph",
+                    "tile": "aie",
+                    "column": 25,
+                    "row": 1,
+                    "schedule": 0,
+                    "function": "reduce_vec_kernel_function.reduce[1]"
+                },
+                {
+                    "graph": "aie_graph",
+                    "tile": "aie",
+                    "column": 23,
+                    "row": 1,
+                    "schedule": 0,
+                    "function": "reduce_vec_kernel_function.reduce[2]"
+                }
+            ],
+            "SharedBufferToTileMapping": []
         },
         "RTPs": {},
         "GMIOs": {},
@@ -18,53 +221,124 @@
             "plio0": {
                 "id": 0,
                 "name": "aie_graph.joint_histo[0]",
-                "logical_name": "joint_histo_0"
+                "logical_name": "joint_histo_0",
+                "shim_column": 26,
+                "slaveOrMaster": 0,
+                "stream_id": 5
             },
             "plio1": {
                 "id": 1,
                 "name": "aie_graph.joint_histo[1]",
-                "logical_name": "joint_histo_1"
+                "logical_name": "joint_histo_1",
+                "shim_column": 25,
+                "slaveOrMaster": 0,
+                "stream_id": 4
             },
             "plio2": {
                 "id": 2,
                 "name": "aie_graph.joint_histo[2]",
-                "logical_name": "joint_histo_2"
+                "logical_name": "joint_histo_2",
+                "shim_column": 22,
+                "slaveOrMaster": 0,
+                "stream_id": 0
             },
             "plio3": {
                 "id": 3,
                 "name": "aie_graph.joint_histo[3]",
-                "logical_name": "joint_histo_3"
+                "logical_name": "joint_histo_3",
+                "shim_column": 23,
+                "slaveOrMaster": 0,
+                "stream_id": 0
             },
             "plio4": {
                 "id": 4,
                 "name": "aie_graph.joint_histo[4]",
-                "logical_name": "joint_histo_4"
+                "logical_name": "joint_histo_4",
+                "shim_column": 27,
+                "slaveOrMaster": 0,
+                "stream_id": 1
             },
             "plio5": {
                 "id": 5,
                 "name": "aie_graph.joint_histo[5]",
-                "logical_name": "joint_histo_5"
+                "logical_name": "joint_histo_5",
+                "shim_column": 26,
+                "slaveOrMaster": 0,
+                "stream_id": 6
             },
             "plio6": {
                 "id": 6,
                 "name": "aie_graph.joint_histo[6]",
-                "logical_name": "joint_histo_6"
+                "logical_name": "joint_histo_6",
+                "shim_column": 22,
+                "slaveOrMaster": 0,
+                "stream_id": 6
             },
             "plio7": {
                 "id": 7,
                 "name": "aie_graph.joint_histo[7]",
-                "logical_name": "joint_histo_7"
+                "logical_name": "joint_histo_7",
+                "shim_column": 24,
+                "slaveOrMaster": 0,
+                "stream_id": 5
             },
             "plio8": {
                 "id": 8,
                 "name": "aie_graph.marginal_histo",
-                "logical_name": "marginal_histo"
+                "logical_name": "marginal_histo",
+                "shim_column": 27,
+                "slaveOrMaster": 0,
+                "stream_id": 6
             },
             "plio9": {
                 "id": 9,
                 "name": "aie_graph.out_1",
-                "logical_name": "out_plio_1"
+                "logical_name": "out_plio_1",
+                "shim_column": 24,
+                "slaveOrMaster": 1,
+                "stream_id": 4
             }
-        }
+        },
+        "EventGraphs": {
+            "graph0": {
+                "id": 0,
+                "name": "aie_graph",
+                "core_columns": [
+                    22,
+                    22,
+                    23,
+                    23,
+                    24,
+                    24,
+                    25,
+                    25,
+                    26,
+                    26,
+                    27,
+                    27
+                ],
+                "core_rows": [
+                    0,
+                    1,
+                    0,
+                    1,
+                    0,
+                    1,
+                    0,
+                    1,
+                    0,
+                    1,
+                    0,
+                    1
+                ],
+                "dma_columns": [],
+                "dma_rows": []
+            }
+        },
+        "DeviceData": {
+            "AIEBaseAddress": "0x20000000000",
+            "AIEFrequency": 1250
+        },
+        "TraceGMIOs": {}
     }
 }

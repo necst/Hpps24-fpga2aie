@@ -1,0 +1,7 @@
+INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:project.ensureVersalHasCIPS=false
+INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:bd.enableAutoConnectionsInNoc=1
+INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:constr.restoreXDEFConstraintsASTCL=1
+INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:ips.enableSLRParameter=4
+ERROR: [v++ 60-633] Failed to collect compute units: Kernel "setup_joint_aie" specified in --nk option does not exist.
+INFO: [v++ 60-1662] Stopping dispatch session having empty uuid.
+INFO: [v++ 60-1653] Closing dispatch client.

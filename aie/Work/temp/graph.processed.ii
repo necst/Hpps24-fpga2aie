@@ -63291,7 +63291,7 @@ public:
 
 
  input_plio joint_histo[4 * 2]; adf::frontend::DeclObjectArray __ci4__{adf::frontend::getImplArray(joint_histo), adf::frontend::getArrayDimension(joint_histo), "joint_histo", "src/graph.h:156:2"};
-        input_plio marginal_histo; adf::frontend::DeclObject __ci5__{(adf::ObjectImpl*)marginal_histo.impl.get(), "marginal_histo", "src/graph.h:157:9"};
+    input_plio marginal_histo; adf::frontend::DeclObject __ci5__{(adf::ObjectImpl*)marginal_histo.impl.get(), "marginal_histo", "src/graph.h:157:5"};
  output_plio out_1; adf::frontend::DeclObject __ci6__{(adf::ObjectImpl*)out_1.impl.get(), "out_1", "src/graph.h:158:2"};
 
  my_graph()
@@ -63307,7 +63307,7 @@ public:
             std::ostringstream input_name;
             std::ostringstream file_name;
             input_name << "joint_histo_" << i;
-            file_name << "data/joint_histo_" << i << ".txt";
+            file_name << "data/joint_test_" << i << ".txt";
       joint_histo[i] = input_plio::create(input_name.str(), plio_32_bits, file_name.str());
 
             source(joint_entropy[i]) = "src/entropy_vect.cpp"; adf::frontend::CallExprConstraintFunction __ci9__{"adf::source", "src/graph.h:176:13"};
@@ -63316,30 +63316,30 @@ public:
             connect<stream>(joint_histo[i].out[0], joint_entropy[i].in[0]); adf::frontend::DeclConnect __ci11__{"src/graph.h:179:13", ""};
 
             runtime<ratio>(joint_entropy[i]) = 0.9; adf::frontend::CallExprConstraintFunction __ci12__{"adf::runtime<adf::ratio>", "src/graph.h:181:13"};
-            }
+        }
 
-         marginal_entropy = kernel::create(marginal_entropy_kernel_function); adf::frontend::CallExprKernelCreate __ci13__{"marginal_entropy_kernel_function",false, "src/graph.h:184:29", {"input_stream<int> *", "output_stream<float> *"}, {"input", "output"}, "void", "", ""};
+  marginal_entropy = kernel::create(marginal_entropy_kernel_function); adf::frontend::CallExprKernelCreate __ci13__{"marginal_entropy_kernel_function",false, "src/graph.h:184:22", {"input_stream<int> *", "output_stream<float> *"}, {"input", "output"}, "void", "", ""};
 
-      marginal_histo = input_plio::create("marginal_histo", plio_32_bits, "data/marginal.txt");
+  marginal_histo = input_plio::create("marginal_histo", plio_32_bits, "data/marginal_test.txt");
 
-            source(marginal_entropy) = "src/entropy_vect.cpp"; adf::frontend::CallExprConstraintFunction __ci14__{"adf::source", "src/graph.h:188:13"};
-      headers(marginal_entropy) = {"src/mutual_entropy_kernels.h","../common/common.h"}; adf::frontend::CallExprConstraintFunction __ci15__{"adf::headers", "src/graph.h:189:7"};
+  source(marginal_entropy) = "src/entropy_vect.cpp"; adf::frontend::CallExprConstraintFunction __ci14__{"adf::source", "src/graph.h:188:3"};
+  headers(marginal_entropy) = {"src/mutual_entropy_kernels.h","../common/common.h"}; adf::frontend::CallExprConstraintFunction __ci15__{"adf::headers", "src/graph.h:189:3"};
 
-            connect<stream>(marginal_histo.out[0], marginal_entropy.in[0]); adf::frontend::DeclConnect __ci16__{"src/graph.h:191:13", ""};
+  connect<stream>(marginal_histo.out[0], marginal_entropy.in[0]); adf::frontend::DeclConnect __ci16__{"src/graph.h:191:3", ""};
 
-            runtime<ratio>(marginal_entropy) = 0.9; adf::frontend::CallExprConstraintFunction __ci17__{"adf::runtime<adf::ratio>", "src/graph.h:193:13"};
+  runtime<ratio>(marginal_entropy) = 0.9; adf::frontend::CallExprConstraintFunction __ci17__{"adf::runtime<adf::ratio>", "src/graph.h:193:3"};
 
-            for(int i = 0; i < 3; i++){
-                if(i == 0){
-                    reduce[i] = kernel::create(reduce_kernel_function); adf::frontend::CallExprKernelCreate __ci18__{"reduce_kernel_function",false, "src/graph.h:197:33", {"input_stream<float> *", "input_stream<float> *", "output_stream<float> *"}, {"input_1", "input_2", "output"}, "void", "", ""};
-                }
-                else{
-                    reduce[i] = kernel::create(reduce_vec_kernel_function); adf::frontend::CallExprKernelCreate __ci19__{"reduce_vec_kernel_function",false, "src/graph.h:200:33", {"input_stream<float> *", "input_stream<float> *", "output_stream<float> *"}, {"input_1", "input_2", "output"}, "void", "", ""};
-                }
-                source(reduce[i]) = "src/reduce.cpp"; adf::frontend::CallExprConstraintFunction __ci20__{"adf::source", "src/graph.h:202:17"};
-          headers(reduce[i]) = {"src/mutual_entropy_kernels.h","../common/common.h"}; adf::frontend::CallExprConstraintFunction __ci21__{"adf::headers", "src/graph.h:203:11"};
-                runtime<ratio>(reduce[i]) = 0.9; adf::frontend::CallExprConstraintFunction __ci22__{"adf::runtime<adf::ratio>", "src/graph.h:204:17"};
-            }
+  for(int i = 0; i < 3; i++){
+   if(i == 0){
+    reduce[i] = kernel::create(reduce_kernel_function); adf::frontend::CallExprKernelCreate __ci18__{"reduce_kernel_function",false, "src/graph.h:197:17", {"input_stream<float> *", "input_stream<float> *", "output_stream<float> *"}, {"input_1", "input_2", "output"}, "void", "", ""};
+   }
+   else{
+    reduce[i] = kernel::create(reduce_vec_kernel_function); adf::frontend::CallExprKernelCreate __ci19__{"reduce_vec_kernel_function",false, "src/graph.h:200:17", {"input_stream<float> *", "input_stream<float> *", "output_stream<float> *"}, {"input_1", "input_2", "output"}, "void", "", ""};
+   }
+   source(reduce[i]) = "src/reduce.cpp"; adf::frontend::CallExprConstraintFunction __ci20__{"adf::source", "src/graph.h:202:4"};
+   headers(reduce[i]) = {"src/mutual_entropy_kernels.h","../common/common.h"}; adf::frontend::CallExprConstraintFunction __ci21__{"adf::headers", "src/graph.h:203:4"};
+   runtime<ratio>(reduce[i]) = 0.9; adf::frontend::CallExprConstraintFunction __ci22__{"adf::runtime<adf::ratio>", "src/graph.h:204:4"};
+  }
 
   out_1 = output_plio::create("out_plio_1", plio_32_bits, "data/out_plio_sink_1.txt");
 

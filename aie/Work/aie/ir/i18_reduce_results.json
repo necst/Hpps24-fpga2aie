@@ -1,0 +1,64 @@
+{
+    "ModulePath": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/src/reduce.cpp",
+    "KernelSourcePath": "/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/aie/src/reduce.cpp",
+    "UseCases": [
+        {
+            "Index": 0,
+            "KernelFunction": "reduce_kernel_function",
+            "InitializationFunction": "",
+            "KernelClassCtor": "",
+            "Instances": [
+                "i18"
+            ]
+        },
+        {
+            "Index": 1,
+            "KernelFunction": "reduce_vec_kernel_function",
+            "InitializationFunction": "",
+            "KernelClassCtor": "",
+            "Instances": [
+                "i19",
+                "i20"
+            ]
+        }
+    ],
+    "AccessRecords": [],
+    "ControlRegsUsage": {
+        "RndRecords": {
+            "reduce_kernel_function": {
+                "SetKind": 1,
+                "SetValue": -1,
+                "GetBeforeSet": 0
+            },
+            "reduce_vec_kernel_function": {
+                "SetKind": 1,
+                "SetValue": -1,
+                "GetBeforeSet": 0
+            }
+        },
+        "SatRecords": {
+            "reduce_kernel_function": {
+                "SetKind": 1,
+                "SetValue": -1,
+                "GetBeforeSet": 0
+            },
+            "reduce_vec_kernel_function": {
+                "SetKind": 1,
+                "SetValue": -1,
+                "GetBeforeSet": 0
+            }
+        },
+        "SymSatRecords": {
+            "reduce_kernel_function": {
+                "SetKind": 1,
+                "SetValue": -1,
+                "GetBeforeSet": 0
+            },
+            "reduce_vec_kernel_function": {
+                "SetKind": 1,
+                "SetValue": -1,
+                "GetBeforeSet": 0
+            }
+        }
+    }
+}

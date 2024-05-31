@@ -124,6 +124,13 @@ Module {
                src/reduce.cpp
             }
          }
+         def plkernel ps_b15 {
+            ports {
+            }
+            impl_type: unknown
+            shared_lib: 
+            systemc_lib: 
+         }
       }
       nodes: {
          me  i0:b0 runtime:0.8999 {
@@ -211,6 +218,8 @@ Module {
          }
          plio  nodeinst:i21:b14 {
             portinst: i21_pi0 idx[-1] datatype:strm<float> stream in bw_utlization = 1 (variable name:  out_1.in[0])
+         }
+         pl  nodeinst:ps_i22:ps_b15 {
          }
       }
       connections:{

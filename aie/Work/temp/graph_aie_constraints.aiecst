@@ -1,0 +1,18 @@
+{
+  "GlobalConstraints": {
+    "areaGroup": {
+      "name": "root_area_group",
+      "contain_routing": true,
+      "nodeGroup": ["aie_graph.joint_entropy[0]", "joint_histo_0", "aie_graph.joint_entropy[5]", "joint_histo_5", "aie_graph.joint_entropy[6]", "joint_histo_6", "aie_graph.joint_entropy[7]", "joint_histo_7", "aie_graph.marginal_entropy", "marginal_histo", "aie_graph.reduce[0]", "aie_graph.reduce[1]", "aie_graph.joint_entropy[1]", "aie_graph.reduce[2]", "out_plio_1", "joint_histo_1", "aie_graph.joint_entropy[2]", "joint_histo_2", "aie_graph.joint_entropy[3]", "joint_histo_3", "aie_graph.joint_entropy[4]", "joint_histo_4"],
+      "tileGroup": ["(0,0):(49,7)"],
+      "shimGroup": ["0:49"]
+    },
+    "areaGroup": {
+      "name": "root_area_group0",
+      "contain_routing": true,
+      "nodeGroup": ["aie_graph.joint_entropy[0]", "joint_histo_0", "aie_graph.joint_entropy[5]", "joint_histo_5", "aie_graph.joint_entropy[6]", "joint_histo_6", "aie_graph.joint_entropy[7]", "joint_histo_7", "aie_graph.marginal_entropy", "marginal_histo", "aie_graph.reduce[0]", "aie_graph.reduce[1]", "aie_graph.joint_entropy[1]", "aie_graph.reduce[2]", "out_plio_1", "joint_histo_1", "aie_graph.joint_entropy[2]", "joint_histo_2", "aie_graph.joint_entropy[3]", "joint_histo_3", "aie_graph.joint_entropy[4]", "joint_histo_4"],
+      "tileGroup": ["(0,0):(49,7)"],
+      "shimGroup": ["0:49"]
+    }
+  }
+}

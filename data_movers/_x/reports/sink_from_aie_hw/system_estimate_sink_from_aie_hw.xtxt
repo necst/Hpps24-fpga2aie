@@ -1,0 +1,39 @@
+===============================================================================
+Version:    v++ v2022.2.2 (64-bit)
+Build:      SW Build 3716524 on 2023-02-17-15:43:22
+Copyright:  Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+Created:    Fri May 31 12:49:49 2024
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             sink_from_aie_hw
+Target Device:           xilinx:vck5000:gen4x8_qdma_2:202220.1
+Target Clock:            299.996999MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name    Type  Target              OpenCL Library    Compute Units
+-------------  ----  ------------------  ----------------  -------------
+sink_from_aie  c     fpga0:OCL_REGION_0  sink_from_aie_hw  1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     sink_from_aie_hw
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit     Kernel Name    Module Name    Target Frequency  Estimated Frequency
+---------------  -------------  -------------  ----------------  -------------------
+sink_from_aie_1  sink_from_aie  sink_from_aie  300.300293        411.015198
+
+Latency Information
+Compute Unit     Kernel Name    Module Name    Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+---------------  -------------  -------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+sink_from_aie_1  sink_from_aie  sink_from_aie  71              70             70            70              0.233 us         0.233 us        0.233 us
+
+Area Information
+Compute Unit     Kernel Name    Module Name    FF    LUT   DSP  BRAM  URAM
+---------------  -------------  -------------  ----  ----  ---  ----  ----
+sink_from_aie_1  sink_from_aie  sink_from_aie  1039  1352  0    0     0
+-------------------------------------------------------------------------------
