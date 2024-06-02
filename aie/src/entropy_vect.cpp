@@ -4,7 +4,6 @@
 inline aie::vector<float, 8> log2v(aie::vector<float, 8> x);
 
 ////////////////////////////////////////////KERNELS/////////////////////////////////////////////////
-//#ifndef MARGINAL_ENTROPY_KERNELS
 void log_kernel_function(input_stream<float>* restrict input, output_stream<float>* restrict output){
     for(int i = 0; i < 128; i++){
         aie::vector<float,8> x;
@@ -13,7 +12,6 @@ void log_kernel_function(input_stream<float>* restrict input, output_stream<floa
         writeincr(output, y);
     }
 }
-//#endif
 
 #ifdef ENTROPY_KERNELS
 void entropy_vec_kernel_function(input_stream<int32>* restrict input, output_stream<float>* restrict output){
@@ -72,6 +70,35 @@ void marginal_entropy_kernel_function(input_stream<int32>* restrict input, outpu
         x = fpmul(div, x);
         aie::vector<float, 8> log2x = log2v(x);
         acc = fpmac(acc,log2x, x);  
+    }
+    acc = fpneg(acc);
+    writeincr(output, acc);
+}
+
+void alt_marginal_entropy_kernel_function(input_stream<int32>* restrict input, output_stream<float>* restrict output){
+    aie::vector<int32, 8> x;
+    aie::vector<float, 8> xf;
+    aie::vector<float, 8> div;
+    aie::vector<float, 8> acc = aie::zeros<float, 8>();
+
+    int img_size = readincr(input);
+    div = aie::broadcast<float, 8>(1.0/img_size); //initialize a vector 
+
+    float log_img_size = aie::detail::utils::log2(img_size);
+    aie::vector<float, 8> divlog = aie::broadcast<float, 8>(log_img_size); //initialize a vector
+
+    for (int i = 0; i < LOOPS_M; i++){
+        // read 8 int from input stream and cast to flow
+        aie::vector<float, 8> log2x;
+        x = readincr_v<8>(input);
+        for(int j = 0; j < 8; j++){
+            int xj = x[j];
+            float log_xj = aie::detail::utils::log2(xj);
+            log2x[j] = log_xj;
+        }
+        log2x = fpsub(log2x,divlog);
+        xf = fpmul(aie::to_float(x,0),div);
+        acc = fpmac(acc,log2x, xf); 
     }
     acc = fpneg(acc);
     writeincr(output, acc);
@@ -226,6 +253,7 @@ const aie::vector<float,8> c[3] = {
 };
 #endif
 
+#if POLY_GRADE > 0
 inline aie::vector<float, 8> log2v(aie::vector<float, 8> x){
     //separate the mantissa and get the exponent
     aie::vector<int32, 8> m = as_v8int32(x);
@@ -248,3 +276,4 @@ inline aie::vector<float, 8> log2v(aie::vector<float, 8> x){
 
     return fpadd(exp, y); // log2(2^(exp) * (1+s)) = exp + log2(1+s)
 }
+#endif
