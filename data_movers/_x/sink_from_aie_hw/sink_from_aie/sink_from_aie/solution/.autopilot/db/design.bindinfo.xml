@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<BindInfo>
-	<BindNode BINDTYPE="adapter" DISPLAY="bind_adapter axilite" ID="" IMPL="" LATENCY="" OPTYPE="" PRAGMA="yes" RTLNAME="control_s_axi_U" SOURCE="" VARIABLE="" MODULE="sink_from_aie" LOOP="" BUNDLEDNAME="control" DSP="0" BRAM="0" URAM="0"/>
-	<BindNode BINDTYPE="adapter" DISPLAY="bind_adapter axi_master" ID="" IMPL="" LATENCY="" OPTYPE="" PRAGMA="yes" RTLNAME="gmem1_m_axi_U" SOURCE="" VARIABLE="" MODULE="sink_from_aie" LOOP="" BUNDLEDNAME="gmem1" DSP="0" BRAM="0" URAM="0"/>
-</BindInfo>

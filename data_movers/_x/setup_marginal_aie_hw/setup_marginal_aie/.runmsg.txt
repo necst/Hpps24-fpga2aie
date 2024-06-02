@@ -1,2 +1,0 @@
-performing high-level synthesis for kernel: setup_marginal_aie
-Log file: /home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/data_movers/_x/setup_marginal_aie_hw/setup_marginal_aie/vitis_hls.log

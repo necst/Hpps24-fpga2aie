@@ -1,4 +1,0 @@
-sink_from_aie_gmem1_m_axi
-sink_from_aie_control_s_axi
-sink_from_aie_regslice_both
-sink_from_aie

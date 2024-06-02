@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<BindInfo>
-	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln43_fu_146_p2" SOURCE="/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/data_movers/setup_marginal_aie.cpp:43" VARIABLE="add_ln43" MODULE="setup_marginal_aie_Pipeline_VITIS_LOOP_43_1" LOOP="VITIS_LOOP_43_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
-	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln43_fu_152_p2" SOURCE="/home/users/francesco.santambrogio/Downloads/Hpps24-fpga2aie/data_movers/setup_marginal_aie.cpp:43" VARIABLE="icmp_ln43" MODULE="setup_marginal_aie_Pipeline_VITIS_LOOP_43_1" LOOP="VITIS_LOOP_43_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
-	<BindNode BINDTYPE="adapter" DISPLAY="bind_adapter axilite" ID="" IMPL="" LATENCY="" OPTYPE="" PRAGMA="yes" RTLNAME="control_s_axi_U" SOURCE="" VARIABLE="" MODULE="setup_marginal_aie" LOOP="" BUNDLEDNAME="control" DSP="0" BRAM="0" URAM="0"/>
-	<BindNode BINDTYPE="adapter" DISPLAY="bind_adapter axi_master" ID="" IMPL="" LATENCY="" OPTYPE="" PRAGMA="yes" RTLNAME="gmem0_m_axi_U" SOURCE="" VARIABLE="" MODULE="setup_marginal_aie" LOOP="" BUNDLEDNAME="gmem0" DSP="0" BRAM="0" URAM="0"/>
-</BindInfo>
