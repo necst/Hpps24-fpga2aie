@@ -55,7 +55,7 @@ std::ostream& bold_on(std::ostream& os);
 std::ostream& bold_off(std::ostream& os);
 
 int checkResult(float* nums_joint, float* nums_marginal, float* output_buffer, float image_size, float true_result) {
-    float error = 10e-1;
+    float error = 10e-3;
     if (*output_buffer <= true_result+error && *output_buffer >= true_result-error) {
         printf("Error: %f != %f {output_buffer, true_result}", *output_buffer, true_result);
         return EXIT_FAILURE;
