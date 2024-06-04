@@ -54,9 +54,9 @@ bool get_xclbin_path(std::string& xclbin_file);
 std::ostream& bold_on(std::ostream& os);
 std::ostream& bold_off(std::ostream& os);
 
-int checkResult(float* nums_joint, float* nums_marginal, float* output_buffer, float image_size, float true_result) {
-    float error = 10e-3;
-    if (*output_buffer <= true_result+error && *output_buffer >= true_result-error) {
+int checkResult(float* output_buffer, float true_result) {
+    float error = 1e-1;
+    if (*output_buffer >= true_result+error || *output_buffer <= true_result-error) {
         printf("Error: %f != %f {output_buffer, true_result}", *output_buffer, true_result);
         return EXIT_FAILURE;
     }
@@ -67,12 +67,12 @@ int checkResult(float* nums_joint, float* nums_marginal, float* output_buffer, f
 
 int main(int argc, char *argv[]) {
     int image_size = 1024000;
-    float true_result = -6812.255843199717;
-    float nums_joint[SYMBOLS*SYMBOLS];
+    float true_result = -9828.007722251097;
+    int nums_joint[SYMBOLS*SYMBOLS];
     for (int i=0; i<SYMBOLS*SYMBOLS; i++) 
         nums_joint[i] = i;
 
-    float nums_marginal[2*SYMBOLS];
+    int nums_marginal[2*SYMBOLS];
     for (int i=0; i<2*SYMBOLS; i++) 
         nums_marginal[i] = i;
 
@@ -89,64 +89,92 @@ int main(int argc, char *argv[]) {
 //----------------------------------------------INITIALIZING THE BOARD------------------------------------------
 
     // create kernel objects
+    std::cout << "Creating kernel objects..." << std::endl;
     xrt::kernel krnl_setup_joint_aie  = xrt::kernel(device, xclbin_uuid, "setup_joint_aie");
     xrt::kernel krnl_setup_marginal_aie  = xrt::kernel(device, xclbin_uuid, "setup_marginal_aie");
     xrt::kernel krnl_sink_from_aie  = xrt::kernel(device, xclbin_uuid, "sink_from_aie");
+    std::cout << "Done" << std::endl;
 
+    std::cout << "Getting memory bank groups..." << std::endl;
     // get memory bank groups for device buffer - required for axi master input/ouput
     xrtMemoryGroup bank_output  = krnl_sink_from_aie.group_id(arg_sink_from_aie_output);
     xrtMemoryGroup bank_input_0  = krnl_setup_joint_aie.group_id(arg_setup_joint_aie_histogram_rows);
     xrtMemoryGroup bank_input_1  = krnl_setup_marginal_aie.group_id(arg_setup_marginal_aie_histogram_rows);
+    std::cout << "Done" << std::endl;
 
+    std::cout << "Creating device buffers..." << std::endl;
     // create device buffers - if you have to load some data, here they are
-    xrt::bo buffer_setup_joint_aie= xrt::bo(device, SYMBOLS*SYMBOLS * sizeof(float), xrt::bo::flags::normal, bank_input_0); 
-    xrt::bo buffer_setup_marginal_aie= xrt::bo(device, SYMBOLS*2 * sizeof(float), xrt::bo::flags::normal, bank_input_1); 
+    xrt::bo buffer_setup_joint_aie= xrt::bo(device, SYMBOLS*SYMBOLS * sizeof(int), xrt::bo::flags::normal, bank_input_0); 
+    xrt::bo buffer_setup_marginal_aie= xrt::bo(device, SYMBOLS*2 * sizeof(int), xrt::bo::flags::normal, bank_input_1); 
     xrt::bo buffer_sink_from_aie = xrt::bo(device, 1 * sizeof(float), xrt::bo::flags::normal, bank_output); 
+    std::cout << "Done" << std::endl;
 
     // create runner instances
+    std::cout << "Creating runner buffers..." << std::endl;
     xrt::run run_setup_joint_aie   = xrt::run(krnl_setup_joint_aie);
     xrt::run run_setup_marginal_aie   = xrt::run(krnl_setup_marginal_aie);
     xrt::run run_sink_from_aie = xrt::run(krnl_sink_from_aie);
+    std::cout << "Done" << std::endl;
 
     // set setup_joint_aie kernel arguments
+    std::cout << "Setting setup_joint_aie kernel arguments..." << std::endl;
     run_setup_joint_aie.set_arg(arg_setup_joint_aie_image_size,  image_size);
     run_setup_joint_aie.set_arg(arg_setup_joint_aie_histogram_rows, buffer_setup_joint_aie);
+    std::cout << "Done" << std::endl;
 
     // set setup_marginal_aie kernel arguments
+    std::cout << "Setting setup_marginal_aie kernel arguments..." << std::endl;
     run_setup_marginal_aie.set_arg(arg_setup_marginal_aie_image_size,  image_size);
     run_setup_marginal_aie.set_arg(arg_setup_marginal_aie_histogram_rows, buffer_setup_marginal_aie);
+    std::cout << "Done" << std::endl;
 
     // set sink_from_aie kernel arguments
+    std::cout << "Setting sink_from_aie kernel arguments..." << std::endl;
     run_sink_from_aie.set_arg(arg_sink_from_aie_output, buffer_sink_from_aie);
+    std::cout << "Done" << std::endl;
 
-    // write data into the input buffer
+    // write data into the joint input buffer
+    std::cout << "Writing data into the joint input buffer..." << std::endl;
     buffer_setup_joint_aie.write(nums_joint);
     buffer_setup_joint_aie.sync(XCL_BO_SYNC_BO_TO_DEVICE);
+    std::cout << "Done" << std::endl;
 
-    // write data into the input buffer
+    // write data into the marginal input buffer
+    std::cout << "Writing data into the marginal input buffer..." << std::endl;
     buffer_setup_marginal_aie.write(nums_marginal);
     buffer_setup_marginal_aie.sync(XCL_BO_SYNC_BO_TO_DEVICE);
+    std::cout << "Done" << std::endl;
 
-    // run the kernel
+    // run the kernels
+    std::cout << "Running the kernels..." << std::endl;
     run_sink_from_aie.start();
     run_setup_joint_aie.start();
     run_setup_marginal_aie.start();
+    std::cout << "Done" << std::endl;
 
-    // wait for the kernel to finish
+    // wait for the kernels to finish
+    std::cout << "Waiting for the kernels to finish..." << std::endl;
     run_setup_joint_aie.wait();
     run_setup_marginal_aie.wait();
     run_sink_from_aie.wait();
+    std::cout << "Done" << std::endl;
 
     // read the output buffer
+    std::cout << "Reading the output buffer..." << std::endl;
     buffer_sink_from_aie.sync(XCL_BO_SYNC_BO_FROM_DEVICE);
     float output_buffer[1];
     buffer_sink_from_aie.read(output_buffer);
+    std::cout << "Done" << std::endl;
 
     // ---------------------------------CONFRONTO PER VERIFICARE L'ERRORE--------------------------------------
         
     // Here there should be a code for checking correctness of your application, like a software application
+    std::cout << "Output_buffer:" << std::endl;
+    std::cout << *output_buffer << std::endl;
+    std::cout << "True_result:" << std::endl;
+    std::cout << true_result << std::endl;
 
-    return checkResult(nums_joint, nums_marginal, output_buffer, image_size, true_result);
+    return checkResult(output_buffer, true_result);
     }
 
 

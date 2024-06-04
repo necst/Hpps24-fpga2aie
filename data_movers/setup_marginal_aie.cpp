@@ -40,15 +40,9 @@ void setup_marginal_aie(int image_size, int* histogram_rows, hls::stream<int>& s
 	#pragma HLS interface s_axilite port=return bundle=control
 
 	s.write(image_size);
-	for (int j = 0; j < LOOPS_M; j++) {
-		s.write(histogram_rows[j*8+0]);
-		s.write(histogram_rows[j*8+1]);
-		s.write(histogram_rows[j*8+2]);
-		s.write(histogram_rows[j*8+3]);
-		s.write(histogram_rows[j*8+4]);
-		s.write(histogram_rows[j*8+5]);
-		s.write(histogram_rows[j*8+6]);
-		s.write(histogram_rows[j*8+7]);
+
+	for (int j = 0; j < 2*SYMBOLS; j++) {
+		s.write(histogram_rows[j]);
 	}
 }
 }

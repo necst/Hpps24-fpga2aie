@@ -111,8 +111,8 @@ public:
 		// II argument: the type of the PLIO that will be read/written. Test both plio_32_bits and plio_128_bits to verify the difference
 		// III argument: the path to the file that will be read/written for simulation
 
-		joint_histo = input_plio::create("joint_histo", plio_32_bits, "data/joint.txt");
-		marginal_histo = input_plio::create("marginal_histo", plio_32_bits, "data/marginal.txt");
+		joint_histo = input_plio::create("joint_histo", plio_32_bits, "data/joint_test.txt");
+		marginal_histo = input_plio::create("marginal_histo", plio_32_bits, "data/marginal_test.txt");
 		out_1 = output_plio::create("out_plio_1", plio_32_bits, "data/out_plio_sink_1.txt");
 
 		// ------kernel connection------
