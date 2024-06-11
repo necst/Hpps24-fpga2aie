@@ -25,6 +25,7 @@ SOFTWARE.
 
 #include <ap_int.h>
 #include <hls_stream.h>
+#include <hls_math.h>
 #include <ap_axi_sdata.h>
 #include "../common/common.h"
 
@@ -32,9 +33,11 @@ SOFTWARE.
 extern "C" {
 
 void setup_joint_aie(
-	int image_size, 
-	int* histogram_rows, 
-	hls::stream<int>& s) {
+	int32_t image_size, 
+	int32_t* histogram_rows, 
+	hls::stream<ap_int<sizeof(int32_t) * 8 * 8>>& s) {
+
+		// ap_int<sizeof(int32_t) * 8 * 8>> histogram_rows 
 
 	#pragma HLS interface m_axi port=histogram_rows depth=100 offset=slave bundle=gmem0
 	#pragma HLS interface axis port=s
@@ -42,10 +45,29 @@ void setup_joint_aie(
 	#pragma HLS interface s_axilite port=image_size bundle=control
 	#pragma HLS interface s_axilite port=return bundle=control
 
-	s.write(image_size);
+	ap_int<sizeof(int32_t)*8*8> input;
+	input.range(31,0) = image_size;
+	input.range(63,32) = 0;
+	input.range(95,64) = 0;
+	input.range(127,96) = 0;
+	input.range(159,128) = 0;
+	input.range(191,160) = 0;
+	input.range(223,192) = 0;
+	input.range(255,224) = 0;
 
-	for (int j = 0; j < SYMBOLS*SYMBOLS; j++) {
-		s.write(histogram_rows[j]);
+	s.write(input);
+
+	for (int j = 0; j < LOOPS_J; j++) {
+		// no 8 input.range, just s.write(input)
+		input.range(31,0) = histogram_rows[j*8+0];
+		input.range(63,32) = histogram_rows[j*8+1];
+		input.range(95,64) = histogram_rows[j*8+2];
+		input.range(127,96) = histogram_rows[j*8+3];
+		input.range(159,128) = histogram_rows[j*8+4];
+		input.range(191,160) = histogram_rows[j*8+5];
+		input.range(223,192) = histogram_rows[j*8+6];
+		input.range(255,224) = histogram_rows[j*8+7];
+		s.write(input);
 	}
 }
 }

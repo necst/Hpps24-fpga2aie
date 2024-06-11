@@ -19,7 +19,8 @@ void entropy_vec_kernel_function(input_stream<int32>* restrict input, output_str
     aie::vector<float, 8> div;
     aie::vector<float, 8> acc = aie::zeros<float, 8>();
 
-    float img_size = readincr(input);
+    aie::vector<int32_t,8> first_inputs = readincr_v<8>(input);
+    int img_size = first_inputs[0];
     div = aie::broadcast<float, 8>(1.0/img_size); //initialize a vector 
 
     for (int i = 0; i < LOOPS_J; i++){
@@ -38,7 +39,8 @@ void entropy_vec_pass_kernel_function(input_stream<int32>* restrict input_PL, in
     aie::vector<float, 8> div;
     aie::vector<float, 8> acc = aie::zeros<float, 8>();
 
-    float img_size = readincr(input_PL);
+    aie::vector<int32_t,8> first_inputs = readincr_v<8>(input_PL);
+    int img_size = first_inputs[0];
     div = aie::broadcast<float, 8>(1.0/img_size); //initialize a vector 
 
     for (int i = 0; i < LOOPS_J; i++){
@@ -61,7 +63,8 @@ void marginal_entropy_kernel_function(input_stream<int32>* restrict input, outpu
     aie::vector<float, 8> div;
     aie::vector<float, 8> acc = aie::zeros<float, 8>();
 
-    float img_size = readincr(input);
+    aie::vector<int32_t,8> first_inputs = readincr_v<8>(input);
+    int img_size = first_inputs[0];
     div = aie::broadcast<float, 8>(1.0/img_size); //initialize a vector 
 
     for (int i = 0; i < LOOPS_M; i++){
@@ -81,7 +84,8 @@ void alt_marginal_entropy_kernel_function(input_stream<int32>* restrict input, o
     aie::vector<float, 8> div;
     aie::vector<float, 8> acc = aie::zeros<float, 8>();
 
-    int img_size = readincr(input);
+    aie::vector<int32_t,8> first_inputs = readincr_v<8>(input);
+    int img_size = first_inputs[0];
     div = aie::broadcast<float, 8>(1.0/img_size); //initialize a vector 
 
     float log_img_size = aie::detail::utils::log2(img_size);

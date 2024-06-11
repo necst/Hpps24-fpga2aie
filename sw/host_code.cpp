@@ -66,13 +66,13 @@ int checkResult(float* output_buffer, float true_result) {
 }
 
 int main(int argc, char *argv[]) {
-    int image_size = 1024000;
+    int32_t image_size = 1024000;
     float true_result = -9828.007722251097;
-    int nums_joint[SYMBOLS*SYMBOLS];
+    int32_t nums_joint[SYMBOLS*SYMBOLS];
     for (int i=0; i<SYMBOLS*SYMBOLS; i++) 
         nums_joint[i] = i;
 
-    int nums_marginal[2*SYMBOLS];
+    int32_t nums_marginal[2*SYMBOLS];
     for (int i=0; i<2*SYMBOLS; i++) 
         nums_marginal[i] = i;
 
@@ -104,8 +104,8 @@ int main(int argc, char *argv[]) {
 
     std::cout << "Creating device buffers..." << std::endl;
     // create device buffers - if you have to load some data, here they are
-    xrt::bo buffer_setup_joint_aie= xrt::bo(device, SYMBOLS*SYMBOLS * sizeof(int), xrt::bo::flags::normal, bank_input_0); 
-    xrt::bo buffer_setup_marginal_aie= xrt::bo(device, SYMBOLS*2 * sizeof(int), xrt::bo::flags::normal, bank_input_1); 
+    xrt::bo buffer_setup_joint_aie= xrt::bo(device, SYMBOLS*SYMBOLS * sizeof(int32_t), xrt::bo::flags::normal, bank_input_0); 
+    xrt::bo buffer_setup_marginal_aie= xrt::bo(device, SYMBOLS*2 * sizeof(int32_t), xrt::bo::flags::normal, bank_input_1); 
     xrt::bo buffer_sink_from_aie = xrt::bo(device, 1 * sizeof(float), xrt::bo::flags::normal, bank_output); 
     std::cout << "Done" << std::endl;
 

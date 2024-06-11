@@ -34,6 +34,7 @@ clean:
 
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #Compile AIE code
+#TODO:--xlopt=0
 aie_compile: libadf.a
 
 libadf.a: src/*
@@ -42,7 +43,7 @@ libadf.a: src/*
 	@rm -rf Work libadf.a
 	@mkdir -p Work
 	@aiecompiler --target=hw --platform=$(PLATFORM) --include="src" --include="../common" --workdir=./Work --heapsize=2048 --stacksize=4096 --xlopt=2 -v src/graph.cpp
-	
+
 aie_compile_x86: 
 	@echo "INFO:- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
 	@echo "INFO:Running aiecompiler for x86sim..."

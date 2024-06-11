@@ -27,6 +27,7 @@ SOFTWARE.
 #include <fstream>
 #include <ap_axi_sdata.h>
 #include <cmath>
+#include <hls_math.h>
 #include "../setup_joint_aie.cpp"
 #include <iostream>
 #include "../common/common.h"
@@ -40,18 +41,14 @@ void read_from_stream(float *buffer, hls::stream<float> &stream, size_t size) {
 int main(int argc, char* argv[]) {
     // In a testbench, you will use you kernel as a C function
     // You will need to create the input and output of your function
-    hls::stream<int> s;
-    int image_size = 1024000;
-    int *histogram_rows = new int[SYMBOLS*SYMBOLS];
+    hls::stream<ap_int<sizeof(int32_t) * 8 * 8>> s;
+    int32_t image_size = 1024000;
+    int32_t *histogram_rows = new int[SYMBOLS*SYMBOLS];
     for (unsigned int i = 0; i < SYMBOLS*SYMBOLS; i++) {
         histogram_rows[i] = i;
     }
     setup_joint_aie(image_size, histogram_rows, s);
 
-    // If the function worked I can print values in the stream and check them
-    for(int i = 0; i < SYMBOLS*SYMBOLS+1; i++) {
-        std::cout << s.read() << std::endl;
-    }
     // Here you will se a warning: THIS IS THE MOST IMPORTANT PART OF THE TESTBENCH
 
     // Indeed, in testbench you can check if you stream and loop are correctly sized. 
@@ -67,9 +64,14 @@ int main(int argc, char* argv[]) {
     file.open("../../aie/data/joint_test.txt");
     if (file.is_open()) {
         //firstly I write the size, which will be, according to setup_aie, size/4
-        file << image_size << std::endl;
-        for (unsigned int i = 0; i < SYMBOLS*SYMBOLS; i++) {
-            file << histogram_rows[i] << std::endl;
+    	ap_int<sizeof(int32_t)*8*8> input;
+        for (unsigned int i = 0; i < LOOPS_J+1; i++) {
+            input = s.read();
+            for (unsigned int j = 0; j < 8; j++) {
+                float val = input.range(31 + j * 32, j * 32);
+                file << val << std::endl;
+                std::cout<<val<<std::endl;
+            }
         }
         file.close();
     } else {
