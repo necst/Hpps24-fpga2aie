@@ -1,4 +1,5 @@
 #include "mutual_entropy_kernels.h"
+#include <stdint.h>
 
 void reduce_vec_kernel_function(input_stream<float>* restrict input_1, input_stream<float>* restrict input_2, output_stream<float>* restrict output){
     aie::vector<float, 8> x;

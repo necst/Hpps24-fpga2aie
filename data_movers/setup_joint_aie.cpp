@@ -22,7 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-
+#include <stdint.h>
 #include <ap_int.h>
 #include <hls_stream.h>
 #include <hls_math.h>
@@ -37,9 +37,9 @@ void setup_joint_aie(
 	int32_t* histogram_rows, 
 	hls::stream<ap_int<sizeof(int32_t) * 8 * 8>>& s) {
 
-		// ap_int<sizeof(int32_t) * 8 * 8>> histogram_rows 
+	// ap_int<sizeof(int32_t) * 8 * 8>> histogram_rows 
 
-	#pragma HLS interface m_axi port=histogram_rows depth=100 offset=slave bundle=gmem0
+	#pragma HLS interface m_axi port=histogram_rows depth=256*257 offset=slave bundle=gmem1
 	#pragma HLS interface axis port=s
 	#pragma HLS interface s_axilite port=histogram_rows bundle=control
 	#pragma HLS interface s_axilite port=image_size bundle=control
@@ -57,7 +57,7 @@ void setup_joint_aie(
 
 	s.write(input);
 
-	for (int j = 0; j < LOOPS_J; j++) {
+	for (int32_t j = 0; j < LOOPS_J; j++) {
 		// no 8 input.range, just s.write(input)
 		input.range(31,0) = histogram_rows[j*8+0];
 		input.range(63,32) = histogram_rows[j*8+1];

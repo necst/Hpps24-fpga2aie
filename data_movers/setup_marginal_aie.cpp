@@ -22,7 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-
+#include <stdint.h>
 #include <ap_int.h>
 #include <hls_stream.h>
 #include <hls_math.h>
@@ -37,7 +37,7 @@ void setup_marginal_aie(
 	int32_t* histogram_rows, 
 	hls::stream<ap_int<sizeof(int32_t) * 8 * 8>>& s) {
 
-	#pragma HLS interface m_axi port=histogram_rows depth=100 offset=slave bundle=gmem0
+	#pragma HLS interface m_axi port=histogram_rows depth=256*3 offset=slave bundle=gmem0
 	#pragma HLS interface axis port=s
 	#pragma HLS interface s_axilite port=histogram_rows bundle=control
 	#pragma HLS interface s_axilite port=image_size bundle=control
@@ -55,7 +55,7 @@ void setup_marginal_aie(
 
 	s.write(input);
 
-	for (int j = 0; j < LOOPS_M; j++) {
+	for (int32_t j = 0; j < LOOPS_M; j++) {
 		input.range(31,0) = histogram_rows[j*8+0];
 		input.range(63,32) = histogram_rows[j*8+1];
 		input.range(95,64) = histogram_rows[j*8+2];

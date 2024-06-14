@@ -22,6 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+#include <stdint.h>
 #include <ap_int.h>
 #include <hls_stream.h>
 #include <hls_math.h>
@@ -33,19 +34,21 @@ extern "C" {
 // We need 1 write what the AIE sends to the PL, into memory
 // We need 1 input from host
 
-void sink_from_aie(
-    hls::stream<float>& input_stream, 
-    float* output)
-{
+    void sink_from_aie(
+        hls::stream<float>& input_stream, 
+        float* output)
+    {
 
-// PRAGMA for stream
-#pragma HLS interface axis port=input_stream // there are several options, just look for them :) 
-// PRAGMA for memory interation - AXI master-slave
-#pragma HLS INTERFACE m_axi port=output depth=100 offset=slave bundle=gmem1
-#pragma HLS INTERFACE s_axilite port=output bundle=control
-// PRAGMA for AXI-LITE : required to move params from host to PL
-#pragma HLS interface s_axilite port=return bundle=control
-float x = input_stream.read();
-*output = x;
+    // PRAGMA for stream
+    #pragma HLS interface axis port=input_stream // there are several options, just look for them :) 
+    // PRAGMA for memory interation - AXI master-slave
+    #pragma HLS INTERFACE m_axi port=output depth=100 offset=slave bundle=gmem2
+    #pragma HLS INTERFACE s_axilite port=output bundle=control
+    // PRAGMA for AXI-LITE : required to move params from host to PL
+    #pragma HLS interface s_axilite port=return bundle=control
+
+    float x = input_stream.read();
+    output[0] = x;
+    
 }
 }

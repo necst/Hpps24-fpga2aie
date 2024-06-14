@@ -155,10 +155,12 @@ public:
 		out_1 = output_plio::create("out_plio_1", plio_32_bits, "data/out_plio_sink_1.txt");
 
 		// ------kernel connection------
-		connect<stream>(joint_histo.out[0], joint_entropy.in[0]);
-		connect<stream>(joint_entropy.out[0], reduce.in[0]);
-        connect<stream>(marginal_histo.out[0], marginal_entropy.in[0]);
-		connect<stream>(marginal_entropy.out[0], reduce.in[1]);
+        connect<stream>marginal_in(marginal_histo.out[0], marginal_entropy.in[0]);
+		connect<stream>reduce_marginal_in(marginal_entropy.out[0], reduce.in[0]);
+		fifo_depth(reduce_marginal_in) = 256;
+		connect<stream>joint_in(joint_histo.out[0], joint_entropy.in[0]);
+		connect<stream>reduce_joint_in(joint_entropy.out[0], reduce.in[1]);
+		fifo_depth(reduce_joint_in) = 256;
 		connect<stream>(reduce.out[0], out_1.in[0]);
 
 		// set kernel source and headers

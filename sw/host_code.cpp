@@ -22,6 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+#include <stdint.h>
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
@@ -55,7 +56,7 @@ std::ostream& bold_on(std::ostream& os);
 std::ostream& bold_off(std::ostream& os);
 
 int checkResult(float* output_buffer, float true_result) {
-    float error = 1e-1;
+    float error = 1e-2;
     if (*output_buffer >= true_result+error || *output_buffer <= true_result-error) {
         printf("Error: %f != %f {output_buffer, true_result}", *output_buffer, true_result);
         return EXIT_FAILURE;
@@ -66,14 +67,15 @@ int checkResult(float* output_buffer, float true_result) {
 }
 
 int main(int argc, char *argv[]) {
+
     int32_t image_size = 1024000;
-    float true_result = -9828.007722251097;
+
     int32_t nums_joint[SYMBOLS*SYMBOLS];
-    for (int i=0; i<SYMBOLS*SYMBOLS; i++) 
+    for (int32_t i=0; i<SYMBOLS*SYMBOLS; i++) 
         nums_joint[i] = i;
 
     int32_t nums_marginal[2*SYMBOLS];
-    for (int i=0; i<2*SYMBOLS; i++) 
+    for (int32_t i=0; i<2*SYMBOLS; i++) 
         nums_marginal[i] = i;
 
 //------------------------------------------------LOADING XCLBIN------------------------------------------    
@@ -147,15 +149,17 @@ int main(int argc, char *argv[]) {
 
     // run the kernels
     std::cout << "Running the kernels..." << std::endl;
-    run_sink_from_aie.start();
     run_setup_joint_aie.start();
     run_setup_marginal_aie.start();
+    run_sink_from_aie.start();
     std::cout << "Done" << std::endl;
 
     // wait for the kernels to finish
-    std::cout << "Waiting for the kernels to finish..." << std::endl;
+    std::cout << "Waiting for the setup_joint_aie kernel to finish..." << std::endl;
     run_setup_joint_aie.wait();
+    std::cout << "Waiting for the setup_marginal_aie kernel to finish..." << std::endl;
     run_setup_marginal_aie.wait();
+    std::cout << "Waiting for the sink_from_aie kernel to finish..." << std::endl;
     run_sink_from_aie.wait();
     std::cout << "Done" << std::endl;
 
@@ -169,6 +173,8 @@ int main(int argc, char *argv[]) {
     // ---------------------------------CONFRONTO PER VERIFICARE L'ERRORE--------------------------------------
         
     // Here there should be a code for checking correctness of your application, like a software application
+    float true_result = -9828.007722251097;
+
     std::cout << "Output_buffer:" << std::endl;
     std::cout << *output_buffer << std::endl;
     std::cout << "True_result:" << std::endl;

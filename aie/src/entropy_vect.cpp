@@ -1,4 +1,5 @@
 #include "mutual_entropy_kernels.h"
+#include <stdint.h>
 
 #define POLY_GRADE 6
 inline aie::vector<float, 8> log2v(aie::vector<float, 8> x);
@@ -14,16 +15,16 @@ void log_kernel_function(input_stream<float>* restrict input, output_stream<floa
 }
 
 #ifdef ENTROPY_KERNELS
-void entropy_vec_kernel_function(input_stream<int32>* restrict input, output_stream<float>* restrict output){
+void entropy_vec_kernel_function(input_stream<int32_t>* restrict input, output_stream<float>* restrict output){
     aie::vector<float, 8> x;
     aie::vector<float, 8> div;
     aie::vector<float, 8> acc = aie::zeros<float, 8>();
 
     aie::vector<int32_t,8> first_inputs = readincr_v<8>(input);
-    int img_size = first_inputs[0];
+    int32_t img_size = first_inputs[0];
     div = aie::broadcast<float, 8>(1.0/img_size); //initialize a vector 
 
-    for (int i = 0; i < LOOPS_J; i++){
+    for (int32_t i = 0; i < LOOPS_J; i++){
         // read 8 int from input stream and cast to flow
         x = aie::to_float(readincr_v<8>(input),0);
         x = fpmul(div, x);
@@ -34,16 +35,16 @@ void entropy_vec_kernel_function(input_stream<int32>* restrict input, output_str
     writeincr(output, acc);
 }
 
-void entropy_vec_pass_kernel_function(input_stream<int32>* restrict input_PL, input_stream<float>* restrict input_AIE, output_stream<float>* restrict output){
+void entropy_vec_pass_kernel_function(input_stream<int32_t>* restrict input_PL, input_stream<float>* restrict input_AIE, output_stream<float>* restrict output){
     aie::vector<float, 8> x;
     aie::vector<float, 8> div;
     aie::vector<float, 8> acc = aie::zeros<float, 8>();
 
     aie::vector<int32_t,8> first_inputs = readincr_v<8>(input_PL);
-    int img_size = first_inputs[0];
+    int32_t img_size = first_inputs[0];
     div = aie::broadcast<float, 8>(1.0/img_size); //initialize a vector 
 
-    for (int i = 0; i < LOOPS_J; i++){
+    for (int32_t i = 0; i < LOOPS_J; i++){
         // read 8 int from input stream and cast to flow
         x = aie::to_float(readincr_v<8>(input_PL),0);
         x = fpmul(div, x);
@@ -58,16 +59,16 @@ void entropy_vec_pass_kernel_function(input_stream<int32>* restrict input_PL, in
 #endif
 
 #ifdef MARGINAL_ENTROPY_KERNELS
-void marginal_entropy_kernel_function(input_stream<int32>* restrict input, output_stream<float>* restrict output){
+void marginal_entropy_kernel_function(input_stream<int32_t>* restrict input, output_stream<float>* restrict output){
     aie::vector<float, 8> x;
     aie::vector<float, 8> div;
     aie::vector<float, 8> acc = aie::zeros<float, 8>();
 
     aie::vector<int32_t,8> first_inputs = readincr_v<8>(input);
-    int img_size = first_inputs[0];
+    int32_t img_size = first_inputs[0];
     div = aie::broadcast<float, 8>(1.0/img_size); //initialize a vector 
 
-    for (int i = 0; i < LOOPS_M; i++){
+    for (int32_t i = 0; i < LOOPS_M; i++){
         // read 8 int from input stream and cast to flow
         x = aie::to_float(readincr_v<8>(input),0);
         x = fpmul(div, x);
@@ -78,20 +79,20 @@ void marginal_entropy_kernel_function(input_stream<int32>* restrict input, outpu
     writeincr(output, acc);
 }
 
-void alt_marginal_entropy_kernel_function(input_stream<int32>* restrict input, output_stream<float>* restrict output){
+void alt_marginal_entropy_kernel_function(input_stream<int32_t>* restrict input, output_stream<float>* restrict output){
     aie::vector<int32, 8> x;
     aie::vector<float, 8> xf;
     aie::vector<float, 8> div;
     aie::vector<float, 8> acc = aie::zeros<float, 8>();
 
     aie::vector<int32_t,8> first_inputs = readincr_v<8>(input);
-    int img_size = first_inputs[0];
+    int32_t img_size = first_inputs[0];
     div = aie::broadcast<float, 8>(1.0/img_size); //initialize a vector 
 
     float log_img_size = aie::detail::utils::log2(img_size);
     aie::vector<float, 8> divlog = aie::broadcast<float, 8>(log_img_size); //initialize a vector
 
-    for (int i = 0; i < LOOPS_M; i++){
+    for (int32_t i = 0; i < LOOPS_M; i++){
         // read 8 int from input stream and cast to flow
         aie::vector<float, 8> log2x;
         x = readincr_v<8>(input);
