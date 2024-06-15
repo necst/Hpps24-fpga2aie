@@ -144,7 +144,7 @@ public:
 		// ------kernel creation------
         joint_entropy = kernel::create(entropy_vec_kernel_function);
 	    marginal_entropy = kernel::create(marginal_entropy_kernel_function);
-        reduce = kernel::create(reduce_kernel_function);
+        reduce = kernel::create(reduce_vec_kernel_function);
 		// ------Input and Output PLIO creation------
 		// I argument: a name, that will be used to refer to the port in the block design
 		// II argument: the type of the PLIO that will be read/written. Test both plio_32_bits and plio_128_bits to verify the difference

@@ -55,10 +55,10 @@ bool get_xclbin_path(std::string& xclbin_file);
 std::ostream& bold_on(std::ostream& os);
 std::ostream& bold_off(std::ostream& os);
 
-int checkResult(float* output_buffer, float true_result) {
+int checkResult(float output, float true_result) {
     float error = 1e-2;
-    if (*output_buffer >= true_result+error || *output_buffer <= true_result-error) {
-        printf("Error: %f != %f {output_buffer, true_result}", *output_buffer, true_result);
+    if (output >= true_result+error || output <= true_result-error) {
+        printf("Error: %f != %f {output, true_result}", output, true_result);
         return EXIT_FAILURE;
     }
 
@@ -79,6 +79,8 @@ int main(int argc, char *argv[]) {
         nums_marginal[i] = i;
 
 //------------------------------------------------LOADING XCLBIN------------------------------------------    
+    for(int i = 0; i < 5; i++){
+    std::cout << i << " out of " << 5 << std::endl;
     std::string xclbin_file;
     if (!get_xclbin_path(xclbin_file))
         return EXIT_FAILURE;
@@ -108,7 +110,7 @@ int main(int argc, char *argv[]) {
     // create device buffers - if you have to load some data, here they are
     xrt::bo buffer_setup_joint_aie= xrt::bo(device, SYMBOLS*SYMBOLS * sizeof(int32_t), xrt::bo::flags::normal, bank_input_0); 
     xrt::bo buffer_setup_marginal_aie= xrt::bo(device, SYMBOLS*2 * sizeof(int32_t), xrt::bo::flags::normal, bank_input_1); 
-    xrt::bo buffer_sink_from_aie = xrt::bo(device, 1 * sizeof(float), xrt::bo::flags::normal, bank_output); 
+    xrt::bo buffer_sink_from_aie = xrt::bo(device, 8 * sizeof(float), xrt::bo::flags::normal, bank_output); 
     std::cout << "Done" << std::endl;
 
     // create runner instances
@@ -166,7 +168,7 @@ int main(int argc, char *argv[]) {
     // read the output buffer
     std::cout << "Reading the output buffer..." << std::endl;
     buffer_sink_from_aie.sync(XCL_BO_SYNC_BO_FROM_DEVICE);
-    float output_buffer[1];
+    float output_buffer[8];
     buffer_sink_from_aie.read(output_buffer);
     std::cout << "Done" << std::endl;
 
@@ -175,12 +177,20 @@ int main(int argc, char *argv[]) {
     // Here there should be a code for checking correctness of your application, like a software application
     float true_result = -9828.007722251097;
 
-    std::cout << "Output_buffer:" << std::endl;
-    std::cout << *output_buffer << std::endl;
+    float tot = 0.0;
+
+    for(int i = 0; i < 8; i++){
+        tot += output_buffer[i];
+    }
+
+    std::cout << "Sum of Output_buffer:" << std::endl;
+    std::cout << tot << std::endl;
     std::cout << "True_result:" << std::endl;
     std::cout << true_result << std::endl;
 
-    return checkResult(output_buffer, true_result);
+    checkResult(tot, true_result);
+    }
+    return 0;
     }
 
 

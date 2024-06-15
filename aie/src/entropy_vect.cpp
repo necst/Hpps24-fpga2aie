@@ -112,7 +112,7 @@ void alt_marginal_entropy_kernel_function(input_stream<int32_t>* restrict input,
 
 ////////////////////////////////////////////FUNCTIONS/////////////////////////////////////////////////
 #if POLY_GRADE == 20
-const aie::vector<float,8> c[21] = {
+const aie::vector<float,8> coeff[21] = {
     aie::broadcast<float, 8>(-2.162482451650974),
     aie::broadcast<float, 8>(2.438341095966947),
     aie::broadcast<float, 8>(0.1493355999272119),
@@ -137,7 +137,7 @@ const aie::vector<float,8> c[21] = {
 };
 #endif
 #if POLY_GRADE == 15
-const aie::vector<float,8> c[16] = {
+const aie::vector<float,8> coeff[16] = {
     aie::broadcast<float, 8>(-2.185021107954832),
     aie::broadcast<float, 8>(2.591126066768347),
     aie::broadcast<float, 8>(-0.026689732297413428),
@@ -157,7 +157,7 @@ const aie::vector<float,8> c[16] = {
 };
 #endif
 #if POLY_GRADE == 12
-const aie::vector<float,8> c[13] = {
+const aie::vector<float,8> coeff[13] = {
     aie::broadcast<float,8>(-2.887605696836763),
     aie::broadcast<float,8>(5.0464806274001),
     aie::broadcast<float,8>(-2.5040164131633027),
@@ -174,7 +174,7 @@ const aie::vector<float,8> c[13] = {
 };
 #endif
 #if POLY_GRADE == 10
-const aie::vector<float,8> c[11] = {
+const aie::vector<float,8> coeff[11] = {
     aie::broadcast<float, 8>(-2.937870076739335),
     aie::broadcast<float, 8>(5.308370375277232),
     aie::broadcast<float, 8>(-2.8884561054059446),
@@ -189,7 +189,7 @@ const aie::vector<float,8> c[11] = {
 };
 #endif
 #if POLY_GRADE == 9
-const aie::vector<float,8> c[10] = {
+const aie::vector<float,8> coeff[10] = {
     aie::broadcast<float, 8>(-3.1750414844983847),
     aie::broadcast<float, 8>(6.5780956852036),
     aie::broadcast<float, 8>(-5.6253832154062655),
@@ -203,7 +203,7 @@ const aie::vector<float,8> c[10] = {
 };
 #endif
 #if POLY_GRADE == 8
-const aie::vector<float,8> c[9] = {
+const aie::vector<float,8> coeff[9] = {
     aie::broadcast<float, 8>(-3.418518623611719),
     aie::broadcast<float, 8>(8.117256024257928),
     aie::broadcast<float, 8>(-9.918274048480985),
@@ -216,7 +216,7 @@ const aie::vector<float,8> c[9] = {
 };
 #endif
 #if POLY_GRADE == 7
-const aie::vector<float,8> c[8] = {
+const aie::vector<float,8> coeff[8] = {
     aie::broadcast<float, 8>(-3.236836230162079),
     aie::broadcast<float, 8>(7.092516614528918),
     aie::broadcast<float, 8>(-7.410437824819416),
@@ -228,7 +228,7 @@ const aie::vector<float,8> c[8] = {
 };
 #endif
 #if POLY_GRADE == 6
-const aie::vector<float,8> c[7] = {
+const aie::vector<float,8> coeff[7] = {
     aie::broadcast<float, 8>(-3.0298541069195313),
     aie::broadcast<float, 8>(6.071708738859809),
     aie::broadcast<float, 8>(-5.2733111083994615),
@@ -240,7 +240,7 @@ const aie::vector<float,8> c[7] = {
 #endif
 
 #if POLY_GRADE == 5
-const aie::vector<float,8> c[6] = {
+const aie::vector<float,8> coeff[6] = {
     aie::broadcast<float, 8>(-2.788370597139466),
     aie::broadcast<float, 8>(5.051742828537882),
     aie::broadcast<float, 8>(-3.498433370197163),
@@ -251,7 +251,7 @@ const aie::vector<float,8> c[6] = {
 #endif
 
 #if POLY_GRADE == 2
-const aie::vector<float,8> c[3] = {
+const aie::vector<float,8> coeff[3] = {
     aie::broadcast<float, 8>(-1.650456069306855),
     aie::broadcast<float, 8>(1.9964060767155798),
     aie::broadcast<float, 8>(-0.33722549505883914)
@@ -260,25 +260,25 @@ const aie::vector<float,8> c[3] = {
 
 #if POLY_GRADE > 0
 inline aie::vector<float, 8> log2v(aie::vector<float, 8> x){
-    //separate the mantissa and get the exponent
-    aie::vector<int32, 8> m = as_v8int32(x);
-    m = aie::downshift(m,23); // keep only mantissa
-    m = aie::sub(m,127); // remove bias
-    aie::vector<float, 8> exp =  aie::to_float(m,0);
+    //get the exponent
+    aie::vector<int32, 8> e_int = as_v8int32(x);
+    e_int = aie::downshift(e_int,23);
+    e_int = aie::sub(e_int,127); // remove bias
+    aie::vector<float, 8> exp =  aie::to_float(e_int,0);
 
-    // (-1)^sign * 2^(m-127) * (1+s) --> (1+s) as fp32
-    aie::vector<int32,8> sig_int = as_v8int32(x);
-    sig_int = aie::bit_and(0x007fffff, sig_int);
-    sig_int = aie::bit_or(0x3f800000, sig_int);
-    aie::vector<float, 8> sig = as_v8float(sig_int);
+    // overwrite the exponent with 128
+    aie::vector<int32,8> m_int = as_v8int32(x);
+    m_int = aie::bit_and(0x007fffff, m_int);
+    m_int = aie::bit_or(0x3f800000, m_int);
+    aie::vector<float, 8> m = as_v8float(m_int); // m = 1+ mantissa
 
-    // Polynomial approx of log2(1+s)
+    // Grade G polynomial approx of log2(1+mantissa)
     aie::vector<float,8> y;
-    y = fpmac(c[POLY_GRADE-1], sig, c[POLY_GRADE]);
+    y = fpmac(coeff[POLY_GRADE-1], m, coeff[POLY_GRADE]);
     for(int i = POLY_GRADE - 2; i >= 0; i--){
-        y = fpmac(c[i], sig, y);
+        y = fpmac(coeff[i], m, y); // y = coeff[i] +  m*y
     }
-
-    return fpadd(exp, y); // log2(2^(exp) * (1+s)) = exp + log2(1+s)
+    
+    return fpadd(exp, y); // log2(2^(exp) * (1+mantissa)) = exp + log2(1+mantissa)
 }
 #endif

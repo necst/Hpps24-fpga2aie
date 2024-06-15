@@ -36,7 +36,7 @@ extern "C" {
 
     void sink_from_aie(
         hls::stream<float>& input_stream, 
-        float* output)
+        float output[8])
     {
 
     // PRAGMA for stream
@@ -47,8 +47,9 @@ extern "C" {
     // PRAGMA for AXI-LITE : required to move params from host to PL
     #pragma HLS interface s_axilite port=return bundle=control
 
-    float x = input_stream.read();
-    output[0] = x;
-    
+    for(int i = 0; i < 8; i++){
+        float x = input_stream.read();
+        output[i] = x;
+    }
 }
 }
