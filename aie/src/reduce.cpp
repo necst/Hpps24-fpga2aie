@@ -21,5 +21,5 @@ void reduce_kernel_function(input_stream<float>* restrict input_1, input_stream<
     aie::vector<float, 4> out = aie::broadcast<float,4>(0.0);
     float tot = aie::reduce_add(z);
     out[0] = tot;
-    writeincr(output, tot);
+    writeincr(output, out);
 }

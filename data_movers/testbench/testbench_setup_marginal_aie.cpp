@@ -43,9 +43,11 @@ int main(int argc, char* argv[]) {
     // You will need to create the input and output of your function
     hls::stream<ap_int<sizeof(int32_t) * 8 * 8>> s;
     int32_t image_size = 1024000;
-    int32_t *histogram_rows = new int[2*SYMBOLS];
-    for (unsigned int i = 0; i < 2*SYMBOLS; i++) {
-        histogram_rows[i] = i;
+    ap_int<sizeof(int32_t) * 8 * 8> *histogram_rows = new ap_int<sizeof(int32_t) * 8 * 8>[LOOPS_M];
+    for (unsigned int i = 0; i < LOOPS_M; i++) {
+        for (unsigned int j = 0; j < 8; j++) {
+            histogram_rows[i].range(31 + 32*j, 32*j) = i*8 + j;
+        }
     }
     setup_marginal_aie(image_size, histogram_rows, s);
 

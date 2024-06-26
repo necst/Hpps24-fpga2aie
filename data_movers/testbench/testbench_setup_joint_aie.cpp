@@ -43,9 +43,11 @@ int main(int argc, char* argv[]) {
     // You will need to create the input and output of your function
     hls::stream<ap_int<sizeof(int32_t) * 8 * 8>> s;
     int32_t image_size = 1024000;
-    int32_t *histogram_rows = new int[SYMBOLS*SYMBOLS];
-    for (unsigned int i = 0; i < SYMBOLS*SYMBOLS; i++) {
-        histogram_rows[i] = i;
+    ap_int<sizeof(int32_t) * 8 * 8> *histogram_rows = new ap_int<sizeof(int32_t) * 8 * 8>[LOOPS_J];
+    for (unsigned int i = 0; i < LOOPS_J; i++) {
+        for (unsigned int j = 0; j < 8; j++) {
+            histogram_rows[i].range(31 + 32*j, 32*j) = i*8 + j;
+        }
     }
     setup_joint_aie(image_size, histogram_rows, s);
 
