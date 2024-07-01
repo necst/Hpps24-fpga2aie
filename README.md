@@ -35,7 +35,7 @@ Before running the project, ensure you have the necessary tools and dependencies
      ```bash
      make build_hw TARGET=hw PLATFORM=xilinx_vck5000_gen4x8_qdma_2_202220_1
      ```
-     This command will compile the AIE (AI Engine), data movers, and link them into a hardware binary (`overlay_hw.xclbin`).
+     This command will compile the AIE (AI Engine), data movers, and link them into a hardware binary (`overlay_hw.xclbin`). Note that we have already included the bitstream in the `hw` directory, so this step can be skipped.
 
 4. **Build Software Object**
      ```bash
@@ -53,17 +53,25 @@ Before running the project, ensure you have the necessary tools and dependencies
      ```
      This command will copy the necessary files (`host_overlay.exe` and `overlay_hw.xclbin`) into a `build/hw_build` directory.
 
-7. **Run Testbenches (Optional)**
+7. **Run Testbenches with x86 (Optional)**
      ```bash
      make testbench_all
      ```
      This command will compile AIE for x86, set up testbenches for joint AIE, and marginal AIE, and sink from AIE in the `data_movers` directory.
 
-8. **Clean Up (Optional)**
+8. **Run AIE kernels with VLIW architecture (Optional)**
+     ```bash
+     make all
+     ```
+     This command will first compile AIE for VLIW and then simulate it in the `aie` directory.
+
+9. **Clean Up (Optional)**
      ```bash
      make clean
      ```
      This command will clean up compiled binaries and temporary files from all directories (`aie`, `data_movers`, `hw`, `sw`).
+
+Further optional commands can be found in the Makefiles in the different directories
 
 ## Implementation Details
 
