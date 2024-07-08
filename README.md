@@ -5,7 +5,7 @@ Mutual Information (MI) is a crucial similarity metric widely used in image regi
 This project presents a hardware-accelerated solution leveraging the AI Engine of the ACAP Versal VCK5000 for efficient entropy computation using joint and marginal histograms of two digital images. Our approach focuses on extensive parallelization across multiple tiles and SIMD operations, enhancing performance significantly.
 
 Key highlights of this work include:
-- **Novel Vectorized Logarithm Implementation**: We introduce a new vectorized base-two logarithm function, absent in the current AIE API, which outperforms the Arm® Cortex®-A72 CPU and the existing AIE API logarithm implementation. This new function achieves a $1.49\times$ speedup with minimal error margins for values in the range $[0, 100]$.
+- **Novel Vectorized Logarithm Implementation**: We introduce a new vectorized base-two logarithm function, absent in the current AIE API, which outperforms the Intel i7-4770 CPU and the existing AIE API logarithm implementation. This new function achieves a $1.49\times$ speedup with minimal error margins for values in the range $[0, 100]$.
 - **Performance Evaluation**: Through three different graph implementations of the AIE, we observe substantial speedups in entropy computation for MI, particularly with parallelized kernels, achieving a $9.71\times$ improvement.
 - **Broader Applications**: While focused on image registration, our method has potential applications in other areas requiring efficient MI computation, such as feature selection and cryptanalysis.
 
@@ -97,7 +97,7 @@ The following table presents the performance comparison for the logarithm comput
 
 | Method          | Latency (ms) | Throughput (10^6 log/s) | Speedup  |
 |-----------------|--------------|------------------------|----------|
-| CPU (Arm® Cortex®-A72) | 1.78  | 73.636                 | +0%      |
+| CPU (Intel i7-4770) | 1.78  | 73.636                 | +0%      |
 | AIE (utils)     | 20.6         | 6.363                  | -91.37%  |
 | AIE (our)       | 1.21         | 108.324                | +49.46%  |
 
@@ -108,16 +108,16 @@ To test the AMD Versal VCK5000 on the computation of Mutual Information, we crea
 <img src="https://github.com/necst/Hpps24-fpga2aie/assets/102242995/0a176de3-b095-4828-b5ec-c0f05b6a2294" width="600" />
 
 
-The following table summarizes the average latency and throughput measurements for MI computation using the Arm® Cortex®-A72 CPU and AI Engine (AIE) configurations with 3 and 12 kernels.
+The following table summarizes the average latency and throughput measurements for MI computation using the CPU and AI Engine (AIE) configurations with 3 and 12 kernels.
 
 | Method            | Mean Latency (ms) | Mean Throughput (jobs/ms) |
 |-------------------|-------------------|---------------------------|
-| CPU (Arm® Cortex®-A72)| 1.515         | 1.123                     |
+| CPU (Intel i7-4770)| 1.515         | 1.123                     |
 | AIE (3 kernels)   | 0.720             | 1.436                     |
 | AIE (12 kernels)  | 0.156             | 6.684                     |
 
 
-As shown in the performance comparison table, a single AIE tile achieves a speedup of $1.49\times$ compared to the Arm® Cortex®-A72 CPU. The error introduced by the polynomial approximation is minimal, within the range $[-4.29 \times 10^{-6}, 5.24 \times 10^{-6}]$ for $x \in [0,100]$. In contrast, the AIE API Utils logarithm is significantly slower and less accurate than the CPU, with errors within the range $[0, 0.99]$ and performance that is nearly 10 times slower.
+As shown in the performance comparison table, a single AIE tile achieves a speedup of $1.49\times$ compared to the CPU. The error introduced by the polynomial approximation is minimal, within the range $[-4.29 \times 10^{-6}, 5.24 \times 10^{-6}]$ for $x \in [0,100]$. In contrast, the AIE API Utils logarithm is significantly slower and less accurate than the CPU, with errors within the range $[0, 0.99]$ and performance that is nearly 10 times slower.
 
 ## Future Work
 
