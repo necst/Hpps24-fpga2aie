@@ -98,6 +98,8 @@
  
  #define MYROWS DIMENSION // Y
  #define MYCOLS DIMENSION
+
+ #define MIN_IMG_SIZE MYROWS*MYCOLS
  
  /*********** SIM used values **********/
  #define MAX_RANGE (int)(MAX_FREQUENCY - 1)
@@ -129,7 +131,7 @@
  #define J_HISTO_ROWS 256
  //3
  #define J_HISTO_COLS J_HISTO_ROWS
- #define MIN_HIST_BITS 32
+ #define MIN_HIST_BITS 24
  //4
  #define MIN_HIST_BITS_NO_OVERFLOW MIN_HIST_BITS - 1
 //#define MIN_J_HISTO_BITS (int)(std::ceil(std::log2(N_COUPLES_MAX * MYROWS * MYCOLS)))
@@ -209,9 +211,9 @@
  /*****************/
  
  #ifndef CACHING
-     extern "C" void mutual_information_master(hls::stream<INPUT_DATA_TYPE> &stream_input_img, INPUT_DATA_TYPE * input_ref, data_t * mutual_info, unsigned int n_couples, unsigned int padding);
+     extern "C" void mutual_information_master(int image_size, INPUT_DATA_TYPE * stream_input_img, INPUT_DATA_TYPE * input_ref, unsigned int n_couples,unsigned int padding,hls::stream<PACKED_HIST_DATA_TYPE>& joint_hist_stream, hls::stream<PACKED_HIST_DATA_TYPE>& marginal_hist_stream); 
  #else
-     extern "C" void mutual_information_master(INPUT_DATA_TYPE * input_img,  data_t * mutual_info, unsigned int functionality, int* status, unsigned int n_couples);
+     extern "C" void mutual_information_master(int image_size, INPUT_DATA_TYPE * stream_input_img, INPUT_DATA_TYPE * input_ref, unsigned int n_couples,unsigned int padding,hls::stream<PACKED_HIST_DATA_TYPE>& joint_hist_stream, hls::stream<PACKED_HIST_DATA_TYPE>& marginal_hist_stream);
  #endif
  
  //11 

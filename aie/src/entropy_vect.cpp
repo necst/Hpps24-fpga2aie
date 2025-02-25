@@ -1,7 +1,7 @@
 #include "mutual_entropy_kernels.h"
 #include <stdint.h>
 
-#define POLY_GRADE 6
+#define POLY_GRADE 2
 inline aie::vector<float, 8> log2v(aie::vector<float, 8> x);
 
 ////////////////////////////////////////////KERNELS/////////////////////////////////////////////////

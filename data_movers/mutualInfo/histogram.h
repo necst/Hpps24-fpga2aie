@@ -128,11 +128,11 @@ template<typename Tin, unsigned int dim, typename Tout, unsigned int STREAM, typ
 void sum_joint_histogram(hls::stream<Tin> in_stream[STREAM], hls::stream<Tout>& j_h_stream, unsigned int padding){
 
 	static TtmpOut tmp[ENTROPY_PE];
-#pragma HLS ARRAY_PARTITION variable=tmp complete dim=1
+	#pragma HLS ARRAY_PARTITION variable=tmp complete dim=1
 
 	for(int i = 0; i < dim; i++){
-#pragma HLS PIPELINE
-		ap_int<sizeof(int32_t) * 8 * 8> out = 0;
+		#pragma HLS PIPELINE
+		PACKED_HIST_DATA_TYPE out = 0;
 		for(int j = 0; j < STREAM; j++){
 			Tin elem = in_stream[j].read();
 			for(int k = 0; k < ENTROPY_PE; k++){
@@ -154,7 +154,7 @@ void sum_joint_histogram(hls::stream<Tin> in_stream[STREAM], hls::stream<Tout>& 
 template<typename Tin, unsigned int dim, typename Tout, typename TtmpIn, unsigned int bitsTtmpIn, typename TtmpOut, unsigned int bitsTtmpOut>
 void convert(hls::stream<Tin> &in_stream, hls::stream<Tout> &out_stream){
 	for(int i = 0; i < dim; i++){
-#pragma HLS PIPELINE
+		#pragma HLS PIPELINE
 		Tin in = in_stream.read();
 		Tout out = 0;
 		for(int k = 0; k < ENTROPY_PE; k++){

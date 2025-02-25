@@ -6,7 +6,7 @@
 #include "./mutualInfo/histogram.h"
 #include "./mutualInfo/entropy.h"
 #include "./mutualInfo/utils.hpp"
-#include "./mutual_info.hpp"
+#include "./mutualInfo/mutual_info.hpp"
 
 #include "../common/common.h"
 
@@ -20,7 +20,7 @@
 #include <hls_math.h>
 #include <ap_axi_sdata.h>
 
-const unsigned int fifo_in_depth =  (N_COUPLES_MAX*MYROWS*MYCOLS)/(HIST_PE);
+const unsigned int fifo_in_depth =  (MYROWS*MYCOLS*N_COUPLES_MAX)/(HIST_PE);
 const unsigned int fifo_out_depth = 1;
 const unsigned int pe_j_h_partition = HIST_PE;
 const unsigned int maxCouples=N_COUPLES_MAX;
@@ -36,8 +36,7 @@ typedef enum FUNCTION_T {
 
 
 void compute(
-int32_t img_size,
-INPUT_DATA_TYPE * flt_stream, 
+INPUT_DATA_TYPE * input_img, 
 INPUT_DATA_TYPE * input_ref, 
 unsigned int n_couples,
 unsigned int padding, 
@@ -50,72 +49,59 @@ hls::stream<PACKED_HIST_DATA_TYPE>& marginal_hist_stream
 
 #pragma HLS DATAFLOW
 
+
 static	hls::stream<INPUT_DATA_TYPE> ref_stream("ref_stream");
 #pragma HLS STREAM variable=ref_stream depth=2 dim=1
+#pragma HLS bind_storage variable=ref_stream type=RAM_1P impl=uram
 static	hls::stream<INPUT_DATA_TYPE> flt_stream("flt_stream");
 #pragma HLS STREAM variable=flt_stream depth=2 dim=1
+#pragma HLS bind_storage variable=flt_stream type=RAM_1P impl=uram
 
 static  hls::stream<UNPACK_DATA_TYPE> ref_pe_stream[HIST_PE];
 #pragma HLS STREAM variable=ref_pe_stream depth=2 dim=1
+#pragma HLS bind_storage variable=ref_pe_stream type=RAM_1P impl=uram
 static  hls::stream<UNPACK_DATA_TYPE> flt_pe_stream[HIST_PE];
 #pragma HLS STREAM variable=flt_pe_stream depth=2 dim=1
+#pragma HLS bind_storage variable=flt_pe_stream type=RAM_1P impl=uram
 
 static	hls::stream<PACKED_HIST_PE_DATA_TYPE> j_h_pe_stream[HIST_PE];
 #pragma HLS STREAM variable=j_h_pe_stream depth=2 dim=1
 
-static	hls::stream<PACKED_HIST_DATA_TYPE>& joint_j_h_stream("joint_j_h_stream");
+static	hls::stream<PACKED_HIST_DATA_TYPE> joint_j_h_stream("joint_j_h_stream");
 #pragma HLS STREAM variable=joint_j_h_stream depth=2 dim=1
-static	hls::stream<PACKED_HIST_DATA_TYPE>& joint_j_h_stream_0("joint_j_h_stream_0");
+#pragma HLS bind_storage variable=joint_j_h_stream type=RAM_1P impl=uram
+static	hls::stream<PACKED_HIST_DATA_TYPE> joint_j_h_stream_0("joint_j_h_stream_0");
 #pragma HLS STREAM variable=joint_j_h_stream_0 depth=2 dim=1
-static	hls::stream<PACKED_HIST_DATA_TYPE>& joint_j_h_stream_1("joint_j_h_stream_1");
+#pragma HLS bind_storage variable=joint_j_h_stream_0 type=RAM_1P impl=uram
+static	hls::stream<PACKED_HIST_DATA_TYPE> joint_j_h_stream_1("joint_j_h_stream_1");
 #pragma HLS STREAM variable=joint_j_h_stream_1 depth=2 dim=1
-static	hls::stream<PACKED_HIST_DATA_TYPE>& joint_j_h_stream_2("joint_j_h_stream_2");
+#pragma HLS bind_storage variable=joint_j_h_stream_1 type=RAM_1P impl=uram
+static	hls::stream<PACKED_HIST_DATA_TYPE> joint_j_h_stream_2("joint_j_h_stream_2");
 #pragma HLS STREAM variable=joint_j_h_stream_2 depth=2 dim=1
+#pragma HLS bind_storage variable=joint_j_h_stream_2 type=RAM_1P impl=uram
 
-static	hls::stream<PACKED_HIST_DATA_TYPE>& row_hist_stream("row_hist_stream");
+static	hls::stream<PACKED_HIST_DATA_TYPE> row_hist_stream("row_hist_stream");
 #pragma HLS STREAM variable=row_hist_stream depth=2 dim=1
-static	hls::stream<PACKED_HIST_DATA_TYPE>& col_hist_stream("col_hist_stream");
+#pragma HLS bind_storage variable=row_hist_stream type=RAM_1P impl=uram
+static	hls::stream<PACKED_HIST_DATA_TYPE> col_hist_stream("col_hist_stream");
 #pragma HLS STREAM variable=col_hist_stream depth=2 dim=1
+#pragma HLS bind_storage variable=col_hist_stream type=RAM_1P impl=uram
 
-
-static	hls::stream<OUT_ENTROPY_TYPE> full_entropy_stream("full_entropy_stream");
-#pragma HLS STREAM variable=full_entropy_stream depth=2 dim=1
-static	hls::stream<OUT_ENTROPY_TYPE> row_entropy_stream("row_entropy_stream");
-#pragma HLS STREAM variable=row_entropy_stream depth=2 dim=1
-static	hls::stream<OUT_ENTROPY_TYPE> col_entropy_stream("col_entropy_stream");
-#pragma HLS STREAM variable=col_entropy_stream depth=2 dim=1
-
-static	hls::stream<HIST_TYPE> full_hist_split_stream[ENTROPY_PE];
-#pragma HLS STREAM variable=full_hist_split_stream depth=2 dim=1
-static	hls::stream<HIST_TYPE> row_hist_split_stream[ENTROPY_PE];
-#pragma HLS STREAM variable=row_hist_split_stream depth=2 dim=1
-static	hls::stream<HIST_TYPE> col_hist_split_stream[ENTROPY_PE];
-#pragma HLS STREAM variable=col_hist_split_stream depth=2 dim=1
-
-static	hls::stream<OUT_ENTROPY_TYPE> full_entropy_split_stream[ENTROPY_PE];
-#pragma HLS STREAM variable=full_entropy_split_stream depth=2 dim=1
-static	hls::stream<OUT_ENTROPY_TYPE> row_entropy_split_stream[ENTROPY_PE];
-#pragma HLS STREAM variable=row_entropy_split_stream depth=2 dim=1
-static	hls::stream<OUT_ENTROPY_TYPE> col_entropy_split_stream[ENTROPY_PE];
-#pragma HLS STREAM variable=col_entropy_split_stream depth=2 dim=1
-
-
-static	hls::stream<data_t> mutual_information_stream("mutual_information_stream");
-#pragma HLS STREAM variable=mutual_information_stream depth=2 dim=1
 
 
 	// Step 1: read data from DDR and split them
 	
-	axi2stream<INPUT_DATA_TYPE, NUM_INPUT_DATA>(flt_stream, input_img);
-	axi2stream_volume<INPUT_DATA_TYPE, NUM_INPUT_DATA>(ref_stream, input_ref,n_couples);
+	axi2stream_volume<INPUT_DATA_TYPE, NUM_INPUT_DATA>(flt_stream, input_img, n_couples);
+	axi2stream_volume<INPUT_DATA_TYPE, NUM_INPUT_DATA>(ref_stream, input_ref, n_couples);
 
-	split_stream_volume<INPUT_DATA_TYPE, UNPACK_DATA_TYPE, UNPACK_DATA_BITWIDTH, NUM_INPUT_DATA, HIST_PE>(ref_stream, ref_pe_stream,n_couples);
-	split_stream_volume<INPUT_DATA_TYPE, UNPACK_DATA_TYPE, UNPACK_DATA_BITWIDTH, NUM_INPUT_DATA, HIST_PE>(flt_stream, flt_pe_stream,n_couples);
+	split_stream_volume<INPUT_DATA_TYPE, UNPACK_DATA_TYPE, UNPACK_DATA_BITWIDTH, NUM_INPUT_DATA, HIST_PE>(ref_stream, ref_pe_stream, n_couples);
+	split_stream_volume<INPUT_DATA_TYPE, UNPACK_DATA_TYPE, UNPACK_DATA_BITWIDTH, NUM_INPUT_DATA, HIST_PE>(flt_stream, flt_pe_stream, n_couples);
 	// End Step 1
 
 
 	// Step 2: Compute two histograms in parallel
-	WRAPPER_HIST(HIST_PE)<UNPACK_DATA_TYPE, NUM_INPUT_DATA, HIST_PE_TYPE, PACKED_HIST_PE_DATA_TYPE, MIN_HIST_PE_BITS>(ref_pe_stream, flt_pe_stream, j_h_pe_stream,n_couples);
+	WRAPPER_HIST(HIST_PE)<UNPACK_DATA_TYPE, NUM_INPUT_DATA, HIST_PE_TYPE, PACKED_HIST_PE_DATA_TYPE, MIN_HIST_PE_BITS>(ref_pe_stream, flt_pe_stream, j_h_pe_stream, n_couples);
+
 	sum_joint_histogram<PACKED_HIST_PE_DATA_TYPE, J_HISTO_ROWS*J_HISTO_COLS/ENTROPY_PE, PACKED_HIST_DATA_TYPE, HIST_PE, HIST_PE_TYPE, MIN_HIST_PE_BITS, HIST_TYPE, MIN_HIST_BITS>(j_h_pe_stream, joint_j_h_stream, padding);
 	// End Step 2
 
@@ -124,13 +110,14 @@ static	hls::stream<data_t> mutual_information_stream("mutual_information_stream"
 	tri_stream<PACKED_HIST_DATA_TYPE, J_HISTO_ROWS*J_HISTO_COLS/ENTROPY_PE>(joint_j_h_stream, joint_j_h_stream_0, joint_j_h_stream_1, joint_j_h_stream_2);
 
 	hist_row<PACKED_HIST_DATA_TYPE, J_HISTO_ROWS, J_HISTO_COLS/ENTROPY_PE, PACKED_HIST_DATA_TYPE, HIST_TYPE, MIN_HIST_BITS>(joint_j_h_stream_0, row_hist_stream);
+
 	hist_col<PACKED_HIST_DATA_TYPE, J_HISTO_ROWS, J_HISTO_COLS/ENTROPY_PE>(joint_j_h_stream_1, col_hist_stream);
 
-    for (int32_t i = 0; i < LOOPS_J; i++) {
-        #pragma HLS PIPELINE
-        ap_int<sizeof(int32_t) * 8 * 8> value = joint_j_h_stream_2.read();
-        joint_hist_stream.write(value);
-    }
+	for (int32_t i = 0; i < LOOPS_J; i++) {
+		#pragma HLS PIPELINE
+		PACKED_HIST_DATA_TYPE value = joint_j_h_stream_2.read();
+		joint_hist_stream.write(value);
+	}
 	// End Step 3
 
 	// Step 4: Merge row_hist_stream and col_hist_stream into marginal_hist_stream
@@ -150,7 +137,7 @@ static	hls::stream<data_t> mutual_information_stream("mutual_information_stream"
 template<typename T, unsigned int size>
 void copyData(T* in, T* out){
 	for(int i = 0; i < size; i++){
-    #pragma HLS PIPELINE
+	#pragma HLS PIPELINE
 		out[i] = in[i];
 	}
 }
@@ -158,7 +145,7 @@ void copyData(T* in, T* out){
 
 void mutual_information_master(
 int32_t image_size,
-INPUT_DATA_TYPE * stream_input_img, 
+INPUT_DATA_TYPE * input_img, 
 INPUT_DATA_TYPE * input_ref, 
 unsigned int n_couples,
 unsigned int padding,
@@ -167,11 +154,10 @@ hls::stream<PACKED_HIST_DATA_TYPE>& marginal_hist_stream
 ) {
 
 
-
 	// Streams for images Master Axi (Host -> FPGA)
 	//#pragma HLS INTERFACE m_axi port=input_img depth=fifo_in_depth offset=slave bundle=gmem2
 	#pragma HLS INTERFACE m_axi port=input_ref depth=fifo_in_depth offset=slave bundle=gmem1
-	#pragma HLS INTERFACE m_axi port=stream_input_img depth=fifo_in_depth offset=slave bundle=gmem0
+	#pragma HLS INTERFACE m_axi port=input_img depth=fifo_in_depth offset=slave bundle=gmem0
 
 	// Streams for histograms Axi streams (FPGA -> AIE)
 	#pragma HLS interface axis port=joint_hist_stream
@@ -180,7 +166,7 @@ hls::stream<PACKED_HIST_DATA_TYPE>& marginal_hist_stream
 	// Axi lite
 	//#pragma HLS INTERFACE s_axilite port=input_img bundle=control
 	#pragma HLS interface s_axilite port=image_size bundle=control
-	#pragma HLS INTERFACE s_axilite port=stream_input_img bundle=control
+	#pragma HLS INTERFACE s_axilite port=input_img bundle=control
 	#pragma HLS INTERFACE s_axilite port=input_ref bundle=control
 	#pragma HLS INTERFACE s_axilite port=n_couples register bundle=control
 	#pragma HLS INTERFACE s_axilite port=padding register bundle=control
@@ -200,5 +186,5 @@ hls::stream<PACKED_HIST_DATA_TYPE>& marginal_hist_stream
 		n_couples = N_COUPLES_MAX;
 
 	// Main compute function
-	compute(image_size, stream_input_img, input_ref, n_couples, padding, joint_hist_stream, marginal_hist_stream);
+	compute(input_img, input_ref, n_couples, padding, joint_hist_stream, marginal_hist_stream);
 }

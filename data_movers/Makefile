@@ -44,36 +44,26 @@ TARGET := hw
 
 XOCCFLAGS := --platform $(PLATFORM) -t $(TARGET)  -s -g
 
-compile: setup_joint_aie_$(TARGET).xo setup_marginal_aie_$(TARGET).xo sink_from_aie_$(TARGET).xo 
+compile: mutual_information_master_$(TARGET).xo sink_from_aie_$(TARGET).xo 
 
-setup_joint_aie_$(TARGET).xo: ./setup_joint_aie.cpp
-	v++ $(XOCCFLAGS) --kernel setup_joint_aie -c -o $@ $<
-
-setup_marginal_aie_$(TARGET).xo: ./setup_marginal_aie.cpp
-	v++ $(XOCCFLAGS) --kernel setup_marginal_aie -c -o $@ $<
+mutual_information_master_$(TARGET).xo: ./mutual_information_master.cpp
+	v++ $(XOCCFLAGS) --kernel mutual_information_master -c -o $@ $<
 
 sink_from_aie_$(TARGET).xo: ./sink_from_aie.cpp
 	v++ $(XOCCFLAGS) --kernel sink_from_aie -c -o $@ $<
 
 # as every C++ program, you may add libraies like: `pkg-config --libs opencv` `pkg-config --cflags opencv`
+testbench_mutual_information_master: testbench/testbench_mutual_information_master.cpp
+	g++ -std=c++14 -I. -I$(XILINX_HLS)/include -o testbench/$@ $^ -O2  
+	
+run_testbench_mutual_information_master: testbench_mutual_information_master
+	cd testbench && ./testbench_mutual_information_master
+
 testbench_sink_from_aie: testbench/testbench_sink_from_aie.cpp
 	g++ -std=c++14 -I. -I$(XILINX_HLS)/include -o testbench/$@ $^ -O2  
 	
 run_testbench_sink_from_aie: testbench_sink_from_aie
 	cd testbench && ./testbench_sink_from_aie 
-
-testbench_setup_joint_aie: testbench/testbench_setup_joint_aie.cpp
-	g++ -std=c++14 -I. -I$(XILINX_HLS)/include -o testbench/$@ $^ -O2
-
-run_testbench_setup_joint_aie: testbench_setup_joint_aie
-	cd testbench && ./testbench_setup_joint_aie
-
-testbench_setup_marginal_aie: testbench/testbench_setup_marginal_aie.cpp
-	g++ -std=c++14 -I. -I$(XILINX_HLS)/include -o testbench/$@ $^ -O2
-
-run_testbench_setup_marginal_aie: testbench_setup_marginal_aie
-	cd testbench && ./testbench_setup_marginal_aie
-
 
 ################## clean up
 clean:
