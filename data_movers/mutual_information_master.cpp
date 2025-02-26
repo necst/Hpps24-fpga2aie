@@ -66,6 +66,7 @@ static  hls::stream<UNPACK_DATA_TYPE> flt_pe_stream[HIST_PE];
 
 static	hls::stream<PACKED_HIST_PE_DATA_TYPE> j_h_pe_stream[HIST_PE];
 #pragma HLS STREAM variable=j_h_pe_stream depth=2 dim=1
+#pragma HLS bind_storage variable=j_h_pe_stream type=RAM_1P impl=uram
 
 static	hls::stream<PACKED_HIST_DATA_TYPE> joint_j_h_stream("joint_j_h_stream");
 #pragma HLS STREAM variable=joint_j_h_stream depth=2 dim=1
@@ -162,6 +163,7 @@ hls::stream<PACKED_HIST_DATA_TYPE>& marginal_hist_stream
 	// Streams for histograms Axi streams (FPGA -> AIE)
 	#pragma HLS interface axis port=joint_hist_stream
 	#pragma HLS interface axis port=marginal_hist_stream
+
 
 	// Axi lite
 	//#pragma HLS INTERFACE s_axilite port=input_img bundle=control
