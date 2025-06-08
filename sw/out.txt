@@ -1,6 +1,0 @@
-Image size: 512 x 512
-Actual size: 512 x 512 x 523776
-Padding: 0
-Program running in hardware emulation mode
-
-
