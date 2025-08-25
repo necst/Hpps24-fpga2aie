@@ -1,0 +1,87 @@
+<ENTRY>
+{
+ "thisFile": "/home/giacomo.brunetta/Hpps24-fpga2aie/Versal/Hpps24-fpga2aie-1+16/data_movers/mutual_information_master_hw.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Mon Aug 25 18:33:19 2025",
+ "timestampMillis": "1756146799663",
+ "buildStep": {
+  "cmdId": "a814175f-935c-45be-904e-76e992b94c7d",
+  "name": "v++",
+  "logFile": "/home/giacomo.brunetta/Hpps24-fpga2aie/Versal/Hpps24-fpga2aie-1+16/data_movers/_x/mutual_information_master_hw/mutual_information_master_hw.steps.log",
+  "commandLine": "/home/xilinx/Vitis/2024.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --platform xilinx_vck5000_gen4x8_qdma_2_202220_1 -t hw -s -g --kernel mutual_information_master -c -o mutual_information_master_hw.xo mutual_information_master.cpp ",
+  "args": [
+   "--platform",
+   "xilinx_vck5000_gen4x8_qdma_2_202220_1",
+   "-t",
+   "hw",
+   "-s",
+   "-g",
+   "--kernel",
+   "mutual_information_master",
+   "-c",
+   "-o",
+   "mutual_information_master_hw.xo",
+   "mutual_information_master.cpp"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/giacomo.brunetta/Hpps24-fpga2aie/Versal/Hpps24-fpga2aie-1+16/data_movers"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Aug 25 18:33:19 2025",
+ "timestampMillis": "1756146799664",
+ "status": {
+  "cmdId": "a814175f-935c-45be-904e-76e992b94c7d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Aug 25 18:33:21 2025",
+ "timestampMillis": "1756146801188",
+ "status": {
+  "cmdId": "a814175f-935c-45be-904e-76e992b94c7d",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Aug 25 18:33:21 2025",
+ "timestampMillis": "1756146801258",
+ "report": {
+  "path": "/home/giacomo.brunetta/Hpps24-fpga2aie/Versal/Hpps24-fpga2aie-1+16/data_movers/_x/reports/mutual_information_master_hw/v++_compile_mutual_information_master_hw_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Aug 25 18:33:21 2025",
+ "timestampMillis": "1756146801258",
+ "report": {
+  "path": "/home/giacomo.brunetta/Hpps24-fpga2aie/Versal/Hpps24-fpga2aie-1+16/data_movers/_x/v++_compile_mutual_information_master_hw_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
