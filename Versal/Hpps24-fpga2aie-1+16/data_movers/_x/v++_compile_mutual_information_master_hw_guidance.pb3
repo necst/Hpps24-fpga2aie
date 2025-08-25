@@ -1,3 +1,0 @@
-
-€
-(v++_compile_mutual_information_master_hw$4a1171d3-ea23-4060-87d6-5619b243e62e"­/home/xilinx/Vitis/2024.2/bin/unwrapped/lnx64.o/v++  --vivado.prop "run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}" --advanced.misc "report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}" --advanced.misc "report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}" --platform xilinx_vck5000_gen4x8_qdma_2_202220_1 -t hw -s -g --kernel mutual_information_master -c -o mutual_information_master_hw.xo mutual_information_master.cpp 
