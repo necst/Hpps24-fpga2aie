@@ -1,3 +1,10 @@
+# Data folders
+PET/
+CT/
+CSV/
+NII/
+PNG/
+
 # Prerequisites
 *.d
 
