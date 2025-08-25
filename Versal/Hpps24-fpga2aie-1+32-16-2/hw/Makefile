@@ -37,7 +37,7 @@ PLATFORM := xilinx_vck5000_gen4x8_qdma_2_202220_1
 #PLATFORM := xilinx_vck5000_gen4x8_xdma_2_202210_1
 TARGET := hw
 
-XOCCLFLAGS := --kernel_frequency 200 --platform $(PLATFORM) -t $(TARGET)  -s -g
+XOCCLFLAGS := --kernel_frequency 350 --platform $(PLATFORM) -t $(TARGET)  -s -g
 
 AIE_OBJ := ../aie/libadf.a
 XOS     := ../data_movers/mutual_information_master_$(TARGET).xo 
