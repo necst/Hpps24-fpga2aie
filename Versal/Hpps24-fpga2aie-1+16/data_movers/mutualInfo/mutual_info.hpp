@@ -109,11 +109,11 @@
   Joint Histogram computations
  */
  
- #define HIST_PE 32
+ #define HIST_PE 16
  //2
  #define UNPACK_DATA_BITWIDTH 8
  //0
- #define N_COUPLES_MAX 64
+ #define N_COUPLES_MAX 256
  // 13
  #define UNPACK_DATA_TYPE ap_uint<UNPACK_DATA_BITWIDTH>
  
