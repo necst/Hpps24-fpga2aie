@@ -109,7 +109,7 @@
   Joint Histogram computations
  */
  
- #define HIST_PE 16
+ #define HIST_PE 32
  //2
  #define UNPACK_DATA_BITWIDTH 8
  //0

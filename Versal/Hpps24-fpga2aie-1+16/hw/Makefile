@@ -37,23 +37,25 @@ PLATFORM := xilinx_vck5000_gen4x8_qdma_2_202220_1
 #PLATFORM := xilinx_vck5000_gen4x8_xdma_2_202210_1
 TARGET := hw
 
-XOCCLFLAGS := --kernel_frequency 350 --platform $(PLATFORM) -t $(TARGET)  -s -g
+XOCCLFLAGS := --kernel_frequency 400 --platform $(PLATFORM) -t $(TARGET)  -s -g
 
 AIE_OBJ := ../aie/libadf.a
 XOS     := ../data_movers/mutual_information_master_$(TARGET).xo 
 XOS     += ../data_movers/sink_from_aie_$(TARGET).xo 
 XSA_OBJ := overlay_$(TARGET).xsa
 XCLBIN  := overlay_$(TARGET).xclbin
+JOBS := 8
+
 
 .phony: clean
 
 all: $(XCLBIN)
 
 $(XCLBIN): $(XSA_OBJ) $(AIE_OBJ)
-	v++ -p -t $(TARGET) -f $(PLATFORM) $^ -o $@ --package.boot_mode=ospi
+	v++ -p -j $(JOBS) -t $(TARGET) -f $(PLATFORM) $^ -o $@ --package.boot_mode=ospi
 
 $(XSA_OBJ): $(XOS) $(AIE_OBJ)
-	v++ -l $(XOCCFLAGS) $(XOCCLFLAGS) --config xclbin_overlay.cfg -o $@ $^
+	v++ -l $(XOCCFLAGS) $(XOCCLFLAGS) -j $(JOBS) --config xclbin_overlay.cfg -o $@ $^
 
 clean:
 	$(RM) -r _x .Xil .ipcache *.ltx *.log *.sh *.jou *.info *.xclbin *.xo.* *.str *.xsa *.cdo.bin *bif *BIN *.package_summary *.link_summary *.txt *.bin && rm -rf cfg emulation_data sim

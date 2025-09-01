@@ -42,7 +42,8 @@ TARGET := hw
 
 ################## hardware build 
 
-XOCCFLAGS := --platform $(PLATFORM) -t $(TARGET)  -s -g
+JOBS := 8
+XOCCFLAGS := --platform $(PLATFORM) -t $(TARGET)  -s -g -j $(JOBS)
 
 compile: mutual_information_master_$(TARGET).xo sink_from_aie_$(TARGET).xo 
 
