@@ -113,7 +113,7 @@
  //2
  #define UNPACK_DATA_BITWIDTH 8
  //0
- #define N_COUPLES_MAX 512
+ #define N_COUPLES_MAX 64
  // 13
  #define UNPACK_DATA_TYPE ap_uint<UNPACK_DATA_BITWIDTH>
  
