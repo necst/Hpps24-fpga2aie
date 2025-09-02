@@ -1,7 +1,7 @@
 #include "mutual_entropy_kernels.h"
 #include <stdint.h>
 
-#define POLY_GRADE 6 
+#define POLY_GRADE 4
 inline aie::vector<float, 8> log2v(aie::vector<float, 8> x);
 
 ////////////////////////////////////////////KERNELS/////////////////////////////////////////////////
@@ -260,6 +260,17 @@ const aie::vector<float,8> coeff[6] = {
     aie::broadcast<float, 8>(0.043542578304217594)
 };
 #endif
+
+#if POLY_GRADE == 4
+const aie::vector<float,8> coeff[5] = { 
+  aie::broadcast<float,8>(-2.4983296980106164),
+  aie::broadcast<float,8>(4.032139393066219),
+  aie::broadcast<float,8>(-2.084365696520831),
+  aie::broadcast<float,8>(0.6300559196504109),
+  aie::broadcast<float,8>(-0.0793168435948846)
+};
+#endif
+
 
 #if POLY_GRADE == 2
 const aie::vector<float,8> coeff[3] = {
