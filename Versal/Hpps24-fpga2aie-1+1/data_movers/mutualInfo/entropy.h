@@ -66,6 +66,8 @@ void hist_row(hls::stream<T> &in_stream, hls::stream<T> &out_stream){
 
 	static Ttmp acc_array[dim0];
 #pragma HLS ARRAY_PARTITION variable=acc_array cyclic factor=ENTROPY_PE_CONST dim=1
+#pragma HLS bind_storage variable=acc_array type=RAM_1P impl=uram
+
 	Ttmp acc_val = 0;
 
 	for(int i = 0; i < dim0; i++){
@@ -104,6 +106,7 @@ template<typename T, unsigned int dim0, unsigned int dim1>
 void hist_col(hls::stream<T> &in_stream, hls::stream<T> &out_stream){
 
 	static T acc_array[dim1];
+	#pragma HLS bind_storage variable=acc_array type=RAM_1P impl=uram
 
 	for(int i = 0; i < dim0; i++){
 		for(int j = 0; j < dim1; j++){

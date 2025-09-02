@@ -109,7 +109,7 @@
   Joint Histogram computations
  */
  
- #define HIST_PE 16
+ #define HIST_PE 32
  //2
  #define UNPACK_DATA_BITWIDTH 8
  //0
@@ -131,7 +131,7 @@
  #define J_HISTO_ROWS 256
  //3
  #define J_HISTO_COLS J_HISTO_ROWS
- #define MIN_HIST_BITS 24
+ #define MIN_HIST_BITS 32
  //4
  #define MIN_HIST_BITS_NO_OVERFLOW MIN_HIST_BITS - 1
 //#define MIN_J_HISTO_BITS (int)(std::ceil(std::log2(N_COUPLES_MAX * MYROWS * MYCOLS)))

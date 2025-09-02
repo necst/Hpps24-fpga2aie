@@ -20,6 +20,7 @@ void joint_histogram(hls::stream<Tin> &ref_stream, hls::stream<Tin> &flt_stream,
 	static Thist j_h[HIST_PE][J_HISTO_ROWS][J_HISTO_COLS] = {0};
 #pragma HLS ARRAY_PARTITION variable=j_h complete dim=1
 #pragma HLS ARRAY_PARTITION variable=j_h cyclic factor=ENTROPY_PE_CONST dim=3
+#pragma HLS bind_storage variable=j_h type=RAM_1P impl=uram
 
 	Tin old_x = 0, old_y = 0;
 	Thist acc = 0;
@@ -76,6 +77,7 @@ void joint_histogram_volume(hls::stream<Tin> &ref_stream, hls::stream<Tin> &flt_
 	static Thist j_h[HIST_PE][J_HISTO_ROWS][J_HISTO_COLS] = {0};
 #pragma HLS ARRAY_PARTITION variable=j_h complete dim=1
 #pragma HLS ARRAY_PARTITION variable=j_h cyclic factor=ENTROPY_PE_CONST dim=3
+#pragma HLS bind_storage variable=j_h type=RAM_1P impl=uram
 
 	Tin old_x = 0, old_y = 0;
 	Thist acc = 0;
@@ -129,6 +131,7 @@ void sum_joint_histogram(hls::stream<Tin> in_stream[STREAM], hls::stream<Tout>& 
 
 	static TtmpOut tmp[ENTROPY_PE];
 	#pragma HLS ARRAY_PARTITION variable=tmp complete dim=1
+	#pragma HLS bind_storage variable=tmp type=RAM_1P impl=uram
 
 	for(int i = 0; i < dim; i++){
 		#pragma HLS PIPELINE

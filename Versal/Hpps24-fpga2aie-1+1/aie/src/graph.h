@@ -234,10 +234,12 @@ public:
 		runtime<ratio>(marginal_entropy) = 0.9;
 
 		for(int i = 0; i < REDUCERS; i++){
-			if (i==0)
+			if (i==0) {
 				reduce[i] = kernel::create(reduce_kernel_function);
-			else
+			}
+			else {
 				reduce[i] = kernel::create(reduce_vec_kernel_function);
+			}
 			source(reduce[i])  = "src/reduce.cpp";
 			headers(reduce[i]) = {"src/mutual_entropy_kernels.h","../common/common.h"};
 			runtime<ratio>(reduce[i]) = 0.9;
@@ -315,10 +317,12 @@ public:
 	runtime<ratio>(marginal_entropy) = 0.9;
 
 	for(int i = 0; i < REDUCERS; i++){
-		if (i==0)
+		if (i==0) {
 			reduce[i] = kernel::create(reduce_kernel_function);
-		else
+		}
+		else {
 			reduce[i] = kernel::create(reduce_vec_kernel_function);
+		}
 		source(reduce[i])  = "src/reduce.cpp";
 		headers(reduce[i]) = {"src/mutual_entropy_kernels.h","../common/common.h"};
 		runtime<ratio>(reduce[i]) = 0.9;
@@ -395,10 +399,12 @@ public:
 
 		//create reducers
 		for(int i = 0; i < REDUCERS; i++){
-			if (i==0)
+			if (i==0) {
 				reduce[i] = kernel::create(reduce_kernel_function);
-			else
+			}
+			else {
 				reduce[i] = kernel::create(reduce_vec_kernel_function);
+			}
 			source(reduce[i])  = "src/reduce.cpp";
 			headers(reduce[i]) = {"src/mutual_entropy_kernels.h","../common/common.h"};
 			runtime<ratio>(reduce[i]) = 0.9;
@@ -494,10 +500,12 @@ public:
 		}
 		//create reducers
 		for(int i = 0; i < REDUCERS; i++){
-			if (i==0)
+			if (i==0) {
 				reduce[i] = kernel::create(reduce_kernel_function);
-			else
+			}
+			else {
 				reduce[i] = kernel::create(reduce_vec_kernel_function);
+			}
 			source(reduce[i])  = "src/reduce.cpp";
 			headers(reduce[i]) = {"src/mutual_entropy_kernels.h","../common/common.h"};
 			runtime<ratio>(reduce[i]) = 0.9;
@@ -593,10 +601,12 @@ public:
 		}
 		//create reducers
 		for(int i = 0; i < REDUCERS; i++){
-			if (i==0)
+			if (i==0) {
 				reduce[i] = kernel::create(reduce_kernel_function);
-			else
+			}
+			else {
 				reduce[i] = kernel::create(reduce_vec_kernel_function);
+			}
 			source(reduce[i])  = "src/reduce.cpp";
 			headers(reduce[i]) = {"src/mutual_entropy_kernels.h","../common/common.h"};
 			runtime<ratio>(reduce[i]) = 0.9;
